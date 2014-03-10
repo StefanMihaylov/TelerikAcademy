@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 DurankulakNumbers", "DurankulakNumbers\01 DurankulakNumbers.csproj", "{C9C03861-E641-403D-8A6E-ACDD03CF3141}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 JoroTheRabbit", "JoroTheRabbit\02 JoroTheRabbit.csproj", "{681A6A0A-6EC6-4932-BA6B-486A72BAD9E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 Laser", "Laser\03 Laser.csproj", "{1B13E107-1DA6-4AAC-9D31-EFDC74C3A8AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 CSharpBrackets", "CSharpBrackets\04 CSharpBrackets.csproj", "{163A1E1B-C520-4695-8422-B06B03A1D023}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 TwoIsBetterThanOne", "TwoIsBetterThanOne\05 TwoIsBetterThanOne.csproj", "{BFC16858-ADFE-4430-BE49-BBE9DA479420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 TwoIsBetterThanOne - Autor", "TwoIsBetterThanOne - Autor\05 TwoIsBetterThanOne - Autor.csproj", "{1341CD3D-77AC-43F0-9A34-39FA06982995}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9C03861-E641-403D-8A6E-ACDD03CF3141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C03861-E641-403D-8A6E-ACDD03CF3141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C03861-E641-403D-8A6E-ACDD03CF3141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C03861-E641-403D-8A6E-ACDD03CF3141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{681A6A0A-6EC6-4932-BA6B-486A72BAD9E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{681A6A0A-6EC6-4932-BA6B-486A72BAD9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{681A6A0A-6EC6-4932-BA6B-486A72BAD9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{681A6A0A-6EC6-4932-BA6B-486A72BAD9E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B13E107-1DA6-4AAC-9D31-EFDC74C3A8AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B13E107-1DA6-4AAC-9D31-EFDC74C3A8AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B13E107-1DA6-4AAC-9D31-EFDC74C3A8AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B13E107-1DA6-4AAC-9D31-EFDC74C3A8AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{163A1E1B-C520-4695-8422-B06B03A1D023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{163A1E1B-C520-4695-8422-B06B03A1D023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{163A1E1B-C520-4695-8422-B06B03A1D023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{163A1E1B-C520-4695-8422-B06B03A1D023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC16858-ADFE-4430-BE49-BBE9DA479420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC16858-ADFE-4430-BE49-BBE9DA479420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC16858-ADFE-4430-BE49-BBE9DA479420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC16858-ADFE-4430-BE49-BBE9DA479420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1341CD3D-77AC-43F0-9A34-39FA06982995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1341CD3D-77AC-43F0-9A34-39FA06982995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1341CD3D-77AC-43F0-9A34-39FA06982995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1341CD3D-77AC-43F0-9A34-39FA06982995}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 Zerg", "Zerg\01 Zerg.csproj", "{82453038-E69A-4290-88BA-5F6387C79ED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 MovingLetters", "MovingLetters\02 MovingLetters.csproj", "{501121E6-8DE5-4F38-B1DE-2205A051DA77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 Trails3D", "Trails3D\03 Trails3D.csproj", "{5F74136C-1F98-4437-926D-CC210DFC2B99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 EncodeAndDecode", "EncodeAndDecode\04 EncodeAndDecode.csproj", "{C6928A6B-252E-4034-A295-3983D9541EB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 TheyAreGreen", "TheyAreGreen\05 TheyAreGreen.csproj", "{6E2431D7-376B-4B98-B3D5-81BD40ABF7F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 Trails3D_Kenov", "Trails3D_Kenov\03 Trails3D_Kenov.csproj", "{18A2887A-3C13-436E-BCF0-ECB46BC9BA42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82453038-E69A-4290-88BA-5F6387C79ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82453038-E69A-4290-88BA-5F6387C79ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82453038-E69A-4290-88BA-5F6387C79ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82453038-E69A-4290-88BA-5F6387C79ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{501121E6-8DE5-4F38-B1DE-2205A051DA77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501121E6-8DE5-4F38-B1DE-2205A051DA77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501121E6-8DE5-4F38-B1DE-2205A051DA77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501121E6-8DE5-4F38-B1DE-2205A051DA77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F74136C-1F98-4437-926D-CC210DFC2B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F74136C-1F98-4437-926D-CC210DFC2B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F74136C-1F98-4437-926D-CC210DFC2B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F74136C-1F98-4437-926D-CC210DFC2B99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6928A6B-252E-4034-A295-3983D9541EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6928A6B-252E-4034-A295-3983D9541EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6928A6B-252E-4034-A295-3983D9541EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6928A6B-252E-4034-A295-3983D9541EB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E2431D7-376B-4B98-B3D5-81BD40ABF7F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E2431D7-376B-4B98-B3D5-81BD40ABF7F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E2431D7-376B-4B98-B3D5-81BD40ABF7F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E2431D7-376B-4B98-B3D5-81BD40ABF7F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A2887A-3C13-436E-BCF0-ECB46BC9BA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A2887A-3C13-436E-BCF0-ECB46BC9BA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A2887A-3C13-436E-BCF0-ECB46BC9BA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A2887A-3C13-436E-BCF0-ECB46BC9BA42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

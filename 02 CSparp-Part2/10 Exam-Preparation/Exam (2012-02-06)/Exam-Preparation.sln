@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 SevenSegmentDigit - brutal force", "SevenSegmentDigit\02 SevenSegmentDigit - brutal force.csproj", "{E276D3F6-4CB3-4D3B-AE0C-F3B60BBF580D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 Tubes", "03 Tubes\03 Tubes.csproj", "{AFAA5A1C-C534-489A-BB55-29A2AE4B8CA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 ThreeDStars", "ThreeDStars\04 ThreeDStars.csproj", "{A52CF8FB-89F8-415A-BE4E-F8903E542E26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 Brackets", "Brackets\05 Brackets.csproj", "{32A9A496-4716-42D9-9E82-1D822A9DFD81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E276D3F6-4CB3-4D3B-AE0C-F3B60BBF580D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E276D3F6-4CB3-4D3B-AE0C-F3B60BBF580D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E276D3F6-4CB3-4D3B-AE0C-F3B60BBF580D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E276D3F6-4CB3-4D3B-AE0C-F3B60BBF580D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFAA5A1C-C534-489A-BB55-29A2AE4B8CA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFAA5A1C-C534-489A-BB55-29A2AE4B8CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFAA5A1C-C534-489A-BB55-29A2AE4B8CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFAA5A1C-C534-489A-BB55-29A2AE4B8CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A52CF8FB-89F8-415A-BE4E-F8903E542E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A52CF8FB-89F8-415A-BE4E-F8903E542E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A52CF8FB-89F8-415A-BE4E-F8903E542E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A52CF8FB-89F8-415A-BE4E-F8903E542E26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A9A496-4716-42D9-9E82-1D822A9DFD81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A9A496-4716-42D9-9E82-1D822A9DFD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A9A496-4716-42D9-9E82-1D822A9DFD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A9A496-4716-42D9-9E82-1D822A9DFD81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
