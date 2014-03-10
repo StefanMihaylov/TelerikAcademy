@@ -1,0 +1,35 @@
+﻿
+// 1. Describe the strings in C#. What is typical for the string data type? Describe the most important methods of the String    class.
+
+
+In computer programming, a string is traditionally a sequence of characters, either as a literal constant or as some kind of variable. The latter may allow its elements to be mutated and/or the length changed, or it may be fixed (after creation). A string is generally understood as a data type and is often implemented as an array of bytes (or words) that stores a sequence of elements, typically characters, using some character encoding. A string may also denote more general arrays or other sequence (or list) data types and structures.
+
+ Methods:
+ String.Length - Gets the number of characters in the current String object.
+
+ String.Compare(String, String) - Compares two specified String objects and returns an integer that indicates their relative position in the sort order.
+
+ String.Contains - Returns a value indicating whether a specified substring occurs within this string.
+
+ String.Equals(String) - Determines whether this instance and another specified String object have the same value.
+
+ String.Format(String, Object[]) - Replaces the format item in a specified string with the string representation of a corresponding object in a specified array.
+
+ String.IndexOf(String, Int) - Reports the zero-based index of the first occurrence of the specified string in this instance. The search starts at a specified character position.
+
+ String.LastIndexOf(Char, Int) - Reports the zero-based index position of the last occurrence of a specified Unicode character within this instance. The search starts at a specified character position and proceeds backward toward the beginning of the string.
+
+ String.PadLeft(Int32) - Returns a new string that right-aligns the characters in this instance by padding them with spaces on the left, for a specified total length.
+
+ String.Split(Char[]) - Returns a string array that contains the substrings in this instance that are delimited by elements of a specified Unicode character array.
+
+ String.Substring(Int32, Int32) - Retrieves a substring from this instance. The substring starts at a specified character position and has a specified length.
+
+ String.ToLower() - Returns a copy of this string converted to lowercase.
+
+ String.ToUpper() - Returns a copy of this string converted to uppercase.
+
+ String.Trim() - Removes all leading and trailing white-space characters from the current String object.
+
+
+ //	This is enough for this "important" exersise :)
