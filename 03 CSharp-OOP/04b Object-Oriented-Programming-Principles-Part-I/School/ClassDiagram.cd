@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="School.Person">
+    <Position X="5.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAMAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="School.Student">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Discipline">
+    <Position X="8.75" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAMAAAAABAEAIAAAASAAAAEAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Discipline.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="School.Teacher">
+    <Position X="5.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEQAAAAACAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Teacher.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Disciplines" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="School.Class">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <AssociationLine Name="Students" Type="School.Student" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="5" />
+        <Point X="4" Y="5" />
+        <Point X="4" Y="4.078" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Teachers" Type="School.Teacher" FixedFromPoint="true">
+      <Path>
+        <Point X="2" Y="5.938" />
+        <Point X="5.5" Y="5.938" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAMAAAQAAAkAAAAAAAAAAAAAABAAAIAQgACAAI=</HashCode>
+      <FileName>Class.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Students" />
+      <Property Name="Teachers" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="School.Test">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Test.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.School">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <AssociationLine Name="Classes" Type="School.Class">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.793" Y="0.47" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAACAFAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>School.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Classes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Interface Name="School.ICommentable">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICommentable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
