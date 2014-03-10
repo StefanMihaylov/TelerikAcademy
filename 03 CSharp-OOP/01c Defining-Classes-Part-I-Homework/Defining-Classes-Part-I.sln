@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00 MobilePhone", "MobilePhone\00 MobilePhone.csproj", "{67E48222-3B10-4D2D-AFF6-1D12665E3EA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07 GSMTest", "GSMTest\07 GSMTest.csproj", "{30128F66-6C2F-4B7E-872A-82A53149DB61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7E2CE2C-4052-4AB9-ADE1-A9CEEAC4E54B}"
+	ProjectSection(SolutionItems) = preProject
+		Exersices.txt = Exersices.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12 GSMCallHistoryTest", "GSMCallHistoryTest\12 GSMCallHistoryTest.csproj", "{F3741C8C-3155-4874-BE43-07E3D9BAD193}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67E48222-3B10-4D2D-AFF6-1D12665E3EA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67E48222-3B10-4D2D-AFF6-1D12665E3EA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67E48222-3B10-4D2D-AFF6-1D12665E3EA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67E48222-3B10-4D2D-AFF6-1D12665E3EA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30128F66-6C2F-4B7E-872A-82A53149DB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30128F66-6C2F-4B7E-872A-82A53149DB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30128F66-6C2F-4B7E-872A-82A53149DB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30128F66-6C2F-4B7E-872A-82A53149DB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3741C8C-3155-4874-BE43-07E3D9BAD193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3741C8C-3155-4874-BE43-07E3D9BAD193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3741C8C-3155-4874-BE43-07E3D9BAD193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3741C8C-3155-4874-BE43-07E3D9BAD193}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
