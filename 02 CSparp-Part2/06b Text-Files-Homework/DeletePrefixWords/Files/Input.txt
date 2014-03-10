@@ -1,0 +1,5 @@
+start stop forth back up down - start stop forth back up down - start stop forth back up down
+start teststop1 forth testbac_k up down - start stop testfor2th back up down - test_start stop forth back up down 
+start stop forth back testup_ down - start stop forth back up testdown - start stop testforth back testup down
+start stop testforth back up testdown - start stop forth back up down - start stop forth testback up down
+teststart stop testforth back up testdown - start teststop forth testback up down - start stop testforth back up down
