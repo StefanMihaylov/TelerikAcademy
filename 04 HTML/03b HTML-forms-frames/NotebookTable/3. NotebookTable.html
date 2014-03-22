@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Notebook Details</title>
+    <style>
+        .mainTable, .links {
+            border-collapse: collapse;
+            border: 2px solid gray;
+        }
+
+        .price, .links, fieldset{
+            text-align: center;
+        }
+
+        a {
+            color: deepskyblue;
+        }
+
+        #sliders{
+            text-align:center;
+            padding:5px
+        }
+        .slider{
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <table class="mainTable">
+        <thead>
+            <tr class="links">
+                <td colspan="2" class="mainTable">
+                    <a href="">Apple</a>
+                    <a href="">Toshiba</a>
+                    <a href="">Lenovo</a>
+                    <a href="">Dell</a>
+                    <a href="">Asus</a>
+                    <a href="">Hacer</a>
+                    <a href="">HP</a>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <table class="mainTable">
+                        <tr>
+                            <td>
+                                <fieldset>
+                                    <legend>Apple MacBook Air</legend>
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2">
+                                                <img src="notebook.jpg" alt="notebook picture" width="90" />
+                                            </td>
+                                            <td> 64GB SSD </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 2GB DDR </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="price">1300 USD</td>
+                                            <td>Intel Core i<sub>5</sub></td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                            </td>
+                            <td>
+                                <fieldset>
+                                    <legend>Apple MacBook Air</legend>
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2">
+                                                <img src="notebook.jpg" alt="notebook picture" width="90" />
+                                            </td>
+                                            <td> 64GB SSD </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 2GB DDR </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="price">1300 USD</td>
+                                            <td>Intel Core i<sub>5</sub></td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <fieldset>
+                                    <legend>Apple MacBook Air</legend>
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2">
+                                                <img src="notebook.jpg" alt="notebook picture" width="90" />
+                                            </td>
+                                            <td> 64GB SSD </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 2GB DDR </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="price">1300 USD</td>
+                                            <td>Intel Core i<sub>5</sub></td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                            </td>
+                            <td>
+                                <fieldset>
+                                    <legend>Apple MacBook Air</legend>
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2">
+                                                <img src="notebook.jpg" alt="notebook picture" width="90" />
+                                            </td>
+                                            <td> 64GB SSD </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 2GB DDR </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="price">1300 USD</td>
+                                            <td>Intel Core i<sub>5</sub></td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+                <td id="sliders">
+                    <div class="slider">
+                        <label for="minPrice">Min price: 500 USD</label> <br />
+                        <input type="range" id="minPrice" name="minPrice" min="0" max="6000" />
+                    </div>
+                    <div class="slider">
+                        <label for="maxPrice">Max price: 1500 USD</label> <br />
+                        <input type="range" id="maxPrice" name="maxPrice" min="0" max="6000" />
+                    </div>
+                    <div class="slider">
+                        <label for="minRAM">Min RAM: 4 GB</label> <br />
+                        <input type="range" id="minRAM" name="minRAM" min="0" max="1024" />
+                    </div>
+                    <div class="slider">
+                        <label for="maxRAM">Max RAM: 16 GB</label> <br />
+                        <input type="range" id="maxRAM" name="maxRAM" min="0" max="1024" />
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+</html>

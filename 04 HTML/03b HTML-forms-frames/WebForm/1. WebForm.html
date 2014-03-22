@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Web form</title>
+    <style>
+        table, td, th {
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding-right: 5px
+        }
+
+        .label {
+            text-align: right;
+            width: 150px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        [name=city] {
+            width: 150px;
+        }
+
+        [name=state], [name=post] {
+            width: 50px;
+        }
+
+        [name=phone1], [name=phone2] {
+            width: 35px;
+        }
+
+        [name=phone3] {
+            width: 100px;
+        }
+
+        [name=month], [name=day] {
+            width: 30px;
+        }
+
+        #buttons {
+            background-color: skyblue;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <form method="post" action="some.file">
+        <!-- This table can contain 4 columns, but table with 2 cols is simple and looks the same -->
+        <table>
+            <tr>
+                <td class="label"> <label for="ln">Last Name</label> </td>
+                <td> <input type="text" id="ln" name="lastName" placeholder="Nakov" /> </td>
+            </tr>
+            <tr>
+                <td class="label"> <label for="fn">First Name</label> </td>
+                <td> <input type="text" id="fn" name="firstName" placeholder="Svetlin" /> </td>
+            </tr>
+            <tr>
+                <td class="label"> <label for="address">Address</label> </td>
+                <td>
+                    <textarea id="address" name="address" rows="3"
+                              placeholder="17 Hristo Botev blvd, floor 3, apt. 12"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="label"> <label for="city">City</label> </td>
+                <td>
+                    <div>
+                        <input type="text" id="city" name="city" placeholder="Kaspichan" />
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="label"> <label for="post">Zip/Postal code</label> </td>
+                <td> <input type="number" id="post" name="post" placeholder="9325" /> </td>
+            </tr>
+            <tr>
+                <td class="label"> <label for="country">Country</label> </td>
+                <td>
+                    <select id="country" name="country">
+                        <option>United states</option>
+                        <option>Germany</option>
+                        <option selected="selected">Bulgaria</option>
+                        <option>United Kingdom</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label"> <label for="phone">Phone(country code, area code, number)</label> </td>
+                <td>
+                    (+<input type="number" id="phone" name="phone1" value="359" />)
+                    <input type="number" name="phone2" placeholder="88" />
+                    <input type="number" name="phone3" placeholder="87654321" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label"> <label for="email">E-mail</label> </td>
+                <td> <input type="email" id="email" name="email" placeholder="nakov@kaspichan.bg" /> </td>
+            </tr>
+            <tr>
+                <td class="label"> <label for="month">Birth day</label> </td>
+                <td>
+                    <label for="month">Month</label>
+                    <input type="number" id="month" name="month" min="01" max="12" placeholder="06" />
+                    <label for="day">Day</label>
+                    <input type="number" id="day" name="day" min="01" max="31" placeholder="14" />
+                    <label for="year">Year(4 digits)</label>
+                    <input type="number" id="year" name="year" min="1900" max="2099" placeholder="1980" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label"> <label for="gender">Gender</label> </td>
+                <td>
+                    <select id="gender" name="gender">
+                        <option selected="selected">Male</option>
+                        <option>Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label"> <label>Starting Date</label> </td>
+                <td>
+                    <input type="radio" id="spring" name="startDate">
+                    <label for="spring">Spring 2013</label>
+                    <input type="radio" id="autumn" name="startDate" checked="checked">
+                    <label for="autumn">Autumn 2013</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="label"> <label for="comments">Comments/Questions</label> </td>
+                <td>
+                    <textarea id="comments" name="comments" rows="4" cols="30"
+                              placeholder="Please send me more information about the logging"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" id="buttons">
+                    <input type="submit" value="Submit" />
+                    <input type="reset" value="Clear the form" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
