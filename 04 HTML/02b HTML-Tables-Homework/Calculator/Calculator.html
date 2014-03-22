@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Windows Calculator</title>
+    <meta charset="utf-8" />
+    <style>
+        table {
+            text-align: center;
+            background-color: darkgrey;
+            border: outset;
+            border-collapse: collapse;
+        }
+
+        #text {
+            text-align: right;
+            width: 203px;
+            height: 25px;
+        }
+       
+        .button {
+            width: 40px;
+            height: 30px;
+        }
+
+        #Enter {
+            width: 40px;
+            height: 61px;
+            font-weight:bold;
+        }
+
+        #Zero {
+            width: 81px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="5"><input type="text" id="text" placeholder="123456" readonly /></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button" value="MC" name="MC" /></td>
+                <td><input type="button" class="button" value="MR" name="MR" /></td>
+                <td><input type="button" class="button" value="MS" name="MS" /></td>
+                <td><input type="button" class="button" value="M+" name="Mplus" /></td>
+                <td><input type="button" class="button" value="M-" name="Mminus" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button" value="7" name="seven" /></td>
+                <td><input type="button" class="button" value="8" name="eight" /></td>
+                <td><input type="button" class="button" value="9" name="nine" /></td>
+                <td><input type="button" class="button" value="/" name="devide" /></td>
+                <td><input type="button" class="button" value="%" name="percent" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button" value="4" name="four" /></td>
+                <td><input type="button" class="button" value="5" name="five" /></td>
+                <td><input type="button" class="button" value="6" name="six" /></td>
+                <td><input type="button" class="button" value="*" name="muliply" /></td>
+                <td><input type="button" class="button" value="1/x" name="reciprocal" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="button" value="1" name="one" /></td>
+                <td><input type="button" class="button" value="2" name="two" /></td>
+                <td><input type="button" class="button" value="3" name="three" /></td>
+                <td><input type="button" class="button" value="-" name="minus" /></td>
+                <td rowspan="2"><input type="button" id="Enter" value="=" name="Enter" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" id="Zero" value="0" name="zero" /></td>
+                <td><input type="button" class="button" value="." name="dot" /></td>
+                <td><input type="button" class="button" value="+" name="plus" /></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

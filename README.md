@@ -41,3 +41,5 @@ This repository contains all homeworks and projects written during attending the
 10 Exam (2014-03-05)
 
  HTML course:
+01 HTML fundamentals
+02 HTML Tables

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Enter the form</title>
+    <meta charset="utf-8" />
+    <style>
+        #Req {
+            font-weight: bold;
+        }
+
+        #Button {
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="bla.bla">
+        <div>
+            <label for="name">Member name:</label>
+            <input type="text" id="name" required="required" placeholder="Enter your name"/>
+            <span class="Req">*req</span>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required="required" placeholder="username@domain.com"/>
+            <span class="Req">*req</span>
+        </div>
+        <div>
+            <label for="school">School:</label>
+            <input type="text" id="school" required="required" placeholder="School name" />
+            <span class="Req">*req</span>
+        </div>
+        <div>
+            <input id="Button" type="image" src="Submit.gif" alt="Submit button" />
+        </div>
+    </form>
+</body>
+</html>
