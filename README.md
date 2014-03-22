@@ -40,7 +40,7 @@ This repository contains all homeworks and projects written during attending the
 09 Exam Preparation
 10 Exam (2014-03-05)
 
-<b>HTML course:</b>
-01 HTML fundamentals
-02 HTML Tables
+<h1>HTML course:</h1><br/>
+<b>01</b> HTML fundamentals
+<b>02</b> HTML Tables
 <b>03</b> HTML forms and frames
