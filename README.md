@@ -44,3 +44,6 @@ This repository contains all homeworks and projects written during attending the
 <b>01</b> HTML fundamentals;
 <b>02</b> HTML Tables;
 <b>03</b> HTML forms and frames;
+<b>04</b> Semantic Web
+
+<strong>CSS course:</strong><br/>
