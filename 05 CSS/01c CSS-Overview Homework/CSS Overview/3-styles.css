@@ -1,0 +1,50 @@
+﻿body {
+    background-color: #A9A9A9;
+    font-size: 20px;
+}
+
+h1 {
+    color: #FAFAD2;
+}
+
+body > header > h1 {
+    font-size: 40px;
+}
+
+body > header, body > footer {
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+    header nav ul a {
+        text-decoration: none;
+        color: white;
+    }
+
+    header nav ul li:nth-of-type(4) a {
+        text-decoration: underline;
+    }
+
+.current {
+    background-color: #D3D3D3;
+}
+
+section article:nth-child(2) {
+    display: none;
+}
+
+article > header{
+    font-size: 28px;
+}
+
+article > footer {
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}

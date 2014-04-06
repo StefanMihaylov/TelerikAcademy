@@ -1,0 +1,58 @@
+﻿body {
+    background-color: #595959;
+    font-family: Tahoma;
+}
+
+th, td {
+    padding: 5px;
+    padding-right: 20px;
+}
+
+thead {
+    color: #B9B9B9;
+    font-size: 20px;
+    text-align: left;
+}
+
+.left {
+    color: #D0D0D0;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.right {
+    font-size: 14px;
+}
+
+tbody > tr:first-of-type > td:first-of-type {
+    vertical-align: top;
+}
+
+#name {
+    background: url(imgs/circle.png) no-repeat;
+    background-size: 15px 15px;
+    background-position: 0 7px;
+    padding-left: 20px;
+}
+
+#link {
+    text-decoration: none;
+}
+
+#link, #email, #name {
+    color: #F0F0A0;
+}
+
+#support {
+    color: #f00000;
+    text-shadow: 1px 1px 3px #b00000;
+}
+
+#resp-time, #action {
+    color: #A0A0A0;
+}
+
+#status {
+    color: #E07030;
+}

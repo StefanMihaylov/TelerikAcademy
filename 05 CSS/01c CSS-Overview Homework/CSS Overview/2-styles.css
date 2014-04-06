@@ -1,0 +1,55 @@
+﻿table, th, td {
+    border: 1px solid #C8C7AD;
+    border-collapse: collapse;    
+
+    padding: 5px;
+
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.firstCol{
+    width: 150px;
+}
+
+.secondCol, .thirdCol{
+    width: 120px;
+}
+
+thead {
+    text-align: left;
+    color: #ECF5D0;
+
+    /*Gradient color from http://www.colorzilla.com/gradient-editor/ */
+    background: #5ec306;
+    background: -moz-linear-gradient(top, #5ec306 0%, #4fb405 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5ec306), color-stop(100%,#4fb405));
+    background: -webkit-linear-gradient(top, #5ec306 0%,#4fb405 100%);
+    background: -o-linear-gradient(top, #5ec306 0%,#4fb405 100%);
+    background: -ms-linear-gradient(top, #5ec306 0%,#4fb405 100%);
+    background: linear-gradient(to bottom, #5ec306 0%,#4fb405 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ec306', endColorstr='#4fb405',GradientType=0 );
+}
+
+tbody tr:nth-child(2n) {
+    background-color: #ECECD8;
+}
+
+.germany {
+    background: url(imgs/Germany_flag.png);
+}
+
+.mexico {
+    background: url(imgs/Mexico_flag.png);
+}
+
+.uk {
+    background: url(imgs/United_Kingdom_flag.png);
+}
+
+.germany, .uk, .mexico {
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    background-position: 5px 9px;
+    padding-left: 30px;
+}
