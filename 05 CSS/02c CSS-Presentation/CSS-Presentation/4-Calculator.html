@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calculator</title>
+    <meta charset="utf-8" />
+    <link href="4-styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="main_frame">
+        <header id="title_bar" class="clearfix">
+            <img src="calc_images/logo.png" alt="Calculator logo" width="12" height="16" />
+            <h1>Calculator</h1>
+            <input type="image" src="calc_images/exit.png" alt="Exit button" width="48" height="19" />
+            <input type="image" src="calc_images/maximize.png" alt="Maximize button" width="26" height="19" />
+            <input type="image" src="calc_images/minimize.png" alt="Minimize button" width="29" height="19" />
+        </header>
+        <nav id="main_menu">
+            <ul>
+                <li><a href="#">View</a></li>
+                <li><a href="#">Edit</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+        <section>
+            <input type="number" id="result" value="8854455" disabled="disabled" />
+            <div id="bin_result">
+                <ul class="bin_value">
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>0000</li>
+                </ul>
+                <ul class="bit_index">
+                    <li>63</li>
+                    <li>47</li>
+                    <li>32</li>
+                </ul>
+                <ul class="bin_value">
+                    <li>0000</li>
+                    <li>0000</li>
+                    <li>1000</li>
+                    <li>0111</li>
+                    <li>0001</li>
+                    <li>1011</li>
+                    <li>1011</li>
+                    <li>0111</li>
+                </ul>
+                <ul class="bit_index">
+                    <li>31</li>
+                    <li>15</li>
+                    <li id="last_bit_index">0</li>
+                </ul>
+            </div>
+            <aside>
+                <ul>
+                    <li>
+                        <input type="radio" id="Hex" name="num_system" />
+                        <label for="Hex">Hex</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="Dec" name="num_system" checked="checked" />
+                        <label for="Dec">Dec</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="Oct" name="num_system" />
+                        <label for="Oct">Oct</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="Bin" name="num_system" />
+                        <label for="Bin">Bin</label>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <input type="radio" id="Qword" name="memory_size" checked="checked" />
+                        <label for="Qword">Qword</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="Dword" name="memory_size" />
+                        <label for="Dword">Dword</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="Word" name="memory_size" />
+                        <label for="Word">Word</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="Byte" name="memory_size" />
+                        <label for="Byte">Byte</label>
+                    </li>
+                </ul>
+            </aside>
+
+            <div id="buttons" class="clearfix">
+                <input type="button" value=" " class="disabled" />
+                <input type="button" value="Mod" class="bulging" />
+                <input type="button" value="A" class="disabled letters" />
+                <input type="button" value="MC" class="disabled" />
+                <input type="button" value="MR" class="disabled" />
+                <input type="button" value="MS" class="disabled" />
+                <input type="button" value="M+" class="disabled" />
+                <input type="button" value="M-" class="disabled" />
+
+                <input type="button" value="(" class="bulging" />
+                <input type="button" value=")" class="bulging" />
+                <input type="button" value="B" class="disabled letters" />
+                <input type="button" value="←" class="bulging" />
+                <input type="button" value="CE" class="bulging" />
+                <input type="button" value="C" class="bulging" />
+                <input type="button" value="±" class="bulging" />
+                <input type="button" value="√" class="disabled" />
+
+                <input type="button" value="RoL" class="bulging" />
+                <input type="button" value="RoR" class="bulging" />
+                <input type="button" value="C" class="disabled letters" />
+                <input type="button" value="7" class="flat" />
+                <input type="button" value="8" class="flat" />
+                <input type="button" value="9" class="flat" />
+                <input type="button" value="/" class="bulging" />
+                <input type="button" value="%" class="disabled" />
+
+                <input type="button" value="Or" class="bulging" />
+                <input type="button" value="Xor" class="bulging" />
+                <input type="button" value="D" class="disabled letters" />
+                <input type="button" value="4" class="flat" />
+                <input type="button" value="5" class="flat" />
+                <input type="button" value="6" class="flat" />
+                <input type="button" value="*" class="bulging" />
+                <input type="button" value="1/x" class="disabled" />
+
+                <input type="button" value="Lsh" class="bulging" />
+                <input type="button" value="Rsh" class="bulging" />
+                <input type="button" value="E" class="disabled letters" />
+                <input type="button" value="1" class="flat" />
+                <input type="button" value="2" class="flat" />
+                <input type="button" value="3" class="flat" />
+                <input type="button" value="-" class="bulging" />
+                <input type="button" value="=" class="bulging" id="enter" />
+
+                <input type="button" value="Not" class="bulging" />
+                <input type="button" value="And" class="bulging" />
+                <input type="button" value="F" class="disabled letters" />
+                <input type="button" value="0" class="flat" id="zero" />
+                <input type="button" value="." class="disabled" />
+                <input type="button" value="+" class="bulging" />
+            </div>
+        </section>
+    </div>
+</body>
+</html>

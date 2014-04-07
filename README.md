@@ -47,3 +47,5 @@ This repository contains all homeworks and projects written during attending the
 <b>04</b> Semantic Web
 
 <strong>CSS course:</strong><br/>
+<b>01</b> CSS Overview;
+<b>02</b> CSS Presentation;

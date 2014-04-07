@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sixty nested divs</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        /* this styling is short so I decided that external CSS file is not necessary*/
+        div {
+            width: 97%;
+        }
+
+        .bordered { /*boder on every third "div" */
+            background-color: black;
+            border: 2px solid red;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /* 60 nested divs added by javascript. 
+        Благодарности на Дончо, че показа този код на лекцията (възстановен по памет и чрез Гугъл). 
+        Написах 60-те div-a наръка и ги замених с това. Кратко и ясно! :) */
+        var sixtyDivs = "";
+        for (var i = 0; i < 20; i++) {
+            sixtyDivs += "<div class=\"bordered\"> <div> <div>";
+        }
+        for (var i = 0; i < 60; i++) {
+            sixtyDivs += "</div>";
+        }
+        document.body.innerHTML = sixtyDivs;
+    </script>    
+</body>
+</html>

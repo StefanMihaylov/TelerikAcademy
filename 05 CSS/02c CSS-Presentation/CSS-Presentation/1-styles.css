@@ -1,0 +1,16 @@
+﻿div {
+    color: #0094ff;
+    font-family: Consolas;
+    font-size: 20px;
+    width:800px;
+}
+
+    div:first-line {
+        font-weight: bold;
+        line-height: 60px;
+    }
+
+    div:first-letter {
+        font-family: 'Edwardian Script ITC';
+        font-size: 50px;
+    }

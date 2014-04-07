@@ -1,0 +1,56 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        div, nav, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body > div {
+            border: 2px solid black;
+            background-color: gray;
+            width: 300px;
+        }
+
+            body > div > div {
+                border: 1px solid red;
+                background-color: skyblue;
+                margin: 7px;
+            }
+
+        #main_menu {
+            border: 1px solid black;
+            background-color: lightgray;
+            margin: 7px;
+        }
+
+            #main_menu ul {
+                border: 1px solid blue;
+                background-color: yellowgreen;
+                margin: 7px;
+                list-style-type: none;
+            }
+
+                #main_menu ul li {
+                    display: inline;
+                    margin:2px;
+                }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <nav id="main_menu" class="clearfix">
+                <ul>
+                    <li><a href="#">View</a></li>
+                    <li><a href="#">Edit</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
