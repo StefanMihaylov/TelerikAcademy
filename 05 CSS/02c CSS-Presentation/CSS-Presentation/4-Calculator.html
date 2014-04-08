@@ -7,22 +7,26 @@
 </head>
 <body>
     <div id="main_frame">
-        <header id="title_bar" class="clearfix">
+        <header>
             <img src="calc_images/logo.png" alt="Calculator logo" width="12" height="16" />
             <h1>Calculator</h1>
-            <input type="image" src="calc_images/exit.png" alt="Exit button" width="48" height="19" />
-            <input type="image" src="calc_images/maximize.png" alt="Maximize button" width="26" height="19" />
-            <input type="image" src="calc_images/minimize.png" alt="Minimize button" width="29" height="19" />
+            <div id="control_buttons">
+                <input type="image" src="calc_images/minimize.png" alt="Minimize button" width="29" height="19" />
+                <input type="image" src="calc_images/maximize.png" alt="Maximize button" width="26" height="19" />
+                <input type="image" src="calc_images/exit.png" alt="Exit button" width="48" height="19" />
+            </div>
         </header>
-        <nav id="main_menu">
-            <ul>
-                <li><a href="#">View</a></li>
-                <li><a href="#">Edit</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </nav>
         <section>
-            <input type="number" id="result" value="8854455" disabled="disabled" />
+            <nav id="main_menu">
+                <ul>
+                    <li><a href="#" class="menu_buttons">View</a></li>
+                    <li><a href="#" class="menu_buttons">Edit</a></li>
+                    <li><a href="#" class="menu_buttons">Help</a></li>
+                </ul>
+            </nav>
+
+            <div id="result">8854455</div>
+
             <div id="bin_result">
                 <ul class="bin_value">
                     <li>0000</li>
@@ -95,7 +99,7 @@
                 </ul>
             </aside>
 
-            <div id="buttons" class="clearfix">
+            <div class="buttons">
                 <input type="button" value=" " class="disabled" />
                 <input type="button" value="Mod" class="bulging" />
                 <input type="button" value="A" class="disabled letters" />
