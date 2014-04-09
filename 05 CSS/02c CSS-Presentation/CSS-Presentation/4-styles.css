@@ -194,8 +194,6 @@ aside {
 
 /* Buttons */
 .buttons {
-    display: inline-block;
-    /* this don't work, so I use relative position I have no time. It is 2 am :( */
     position: relative;
     left: 89px;
     top: -185px;
