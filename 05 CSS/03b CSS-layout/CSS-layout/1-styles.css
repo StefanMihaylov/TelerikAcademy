@@ -1,0 +1,31 @@
+﻿nav, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding-left: 15px;
+    opacity: 0.8; /* make the colour lighter*/
+}
+
+nav li > ul {
+    display: none;
+}
+
+nav li:hover > a {
+    text-decoration: underline;
+}
+
+nav li:hover > ul {
+    display: block;
+}

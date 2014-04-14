@@ -1,0 +1,79 @@
+﻿body, h1, div, fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+}
+
+#wrapper {
+    border: 2px solid #363636;
+    border-radius: 3px;
+    width: 680px;
+    height: 480px;
+}
+
+header {
+    padding: 10px;
+    margin: 0 20px;
+    text-align: center;
+    border-bottom: 2px solid #393939;
+}
+
+    header a {
+        color: deepskyblue;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+section,
+section fieldset,
+aside {
+    display: inline-block;
+}
+
+section {
+    border: 2px solid #444444;
+    margin: 10px;
+    width: 434px;
+    height: 410px;
+}
+
+    section fieldset {
+        border: 2px solid #3B3B3B;
+        text-align: center;
+        margin: 5px;
+        width: 200px;
+        height: 120px;
+    }
+
+        section fieldset img {
+            float: left;
+        }
+
+        section fieldset span {
+            display: inline-block;
+            margin: 5px;
+        }
+
+            section fieldset span:first-of-type {
+                margin-top: 20px;
+            }
+
+            section fieldset span:last-of-type {
+                padding-left: 20px;
+            }
+
+
+aside {
+    position: relative;
+    top: -50px;
+}
+
+    aside label,
+    aside input {
+        display: block;
+        font-size: 1.4em;
+        margin: 10px auto;
+    }

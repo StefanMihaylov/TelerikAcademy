@@ -1,0 +1,82 @@
+﻿body, hi, article, div, form, p, input, img {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+    }
+
+#wrapper {
+    background-color: #EEEEEE;
+    font-size: 14px;
+    line-height: 16px;
+    width: 404px;
+    height: 538px;
+    /*margin: 0 auto;*/
+}
+
+    #wrapper h1 {
+        font-size: 1.4em;
+        font-weight: normal;
+        padding-left: 15px;
+        padding-top: 15px;
+        margin-top: 0;
+        margin-bottom: 35px;
+    }
+
+article {
+    background-color: white;
+    border: 1px solid #A6A6A6;
+    width: 352px;
+    height: 88px;
+    padding: 15px;
+    margin: 10px;
+    margin-bottom: 38px;
+}
+
+    article:last-of-type {
+        height: 98px;
+    }
+
+    article img {
+        float: left;
+        border: 1px solid #AAAAAA;
+        margin-right: 15px;
+    }
+
+    article form {
+        float: right;
+        margin-top: 15px;
+    }
+
+form {
+}
+
+    form input.listen_button,
+    form input.add_button {
+        /*Stack overflow :)*/
+        background-color: transparent; /* make the button transparent */
+        background-repeat: no-repeat; /* make the background image appear only once */
+        background-position: 0px 0px; /* equivalent to 'top left' */
+        border: none; /* assuming we don't want any borders */
+        cursor: pointer; /* make the cursor like hovering over an <a> element */
+        height: 25px;
+    }
+
+    form input.listen_button {
+        background-image: url(Images/2-Listen_button.png);
+        width: 73px;
+    }
+
+    form input.add_button {
+        background-image: url(Images/2-Add_button.png);
+        width: 60px;
+    }

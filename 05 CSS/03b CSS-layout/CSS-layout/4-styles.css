@@ -1,0 +1,186 @@
+﻿body, div, p, ul, li, nav, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 20px;
+}
+
+#wrapper {
+    background: #F1F1F1;
+    border: 1px solid black;
+    padding-top: 10px;
+}
+
+a {
+    color: #92110F;
+}
+
+nav, section, aside {
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+nav,
+aside {
+    width: 16%;
+}
+
+/* Right navigation */
+nav {
+    padding: 10px;
+}
+
+    nav a h1:before {
+        content: "---";
+        background-image: url(Images/4-home.png);
+        background-color: transparent;
+        background-repeat: no-repeat;
+        color: transparent;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: black;
+    }
+
+    nav ul {
+        list-style: none;
+    }
+
+    nav > ul > li {
+        margin-top: 20px;
+    }
+
+        nav > ul > li > a {
+            color: #840000;
+            font-weight: bold;
+        }
+
+/* Central content*/
+section {
+    width: 60%;
+    border: 1px solid #707070;
+    background: white;
+    padding: 0px 10px;
+}
+
+    section header h1 {
+        font-size: 1.6em;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    section header,
+    section footer {
+        margin: 10px 0px;
+        padding: 10px 0px;
+        border-bottom: 2px solid #707070;
+    }
+
+    section footer {
+        border-top: 2px solid #707070;
+    }
+
+    section article h1,
+    aside div h2 {
+        background-color: #808080;
+        color: white;
+    }
+
+    section article h1 {
+        margin: 20px 0;
+    }
+
+.Previous_button,
+.Next_button {
+    border: 3px solid black;
+    width: 120px;
+    height: 30px;
+}
+    /*Add arrow on the button 
+        http://css-tricks.com/snippets/css/css-triangle/ */
+    .Next_button:after,
+    .Previous_button:before {
+        content: '';
+        display: inline-block;
+        width: 0px;
+        height: 0px;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+    }
+
+    .Previous_button:before {
+        margin-right: 10px;
+        text-align: left;
+        border-right: 10px solid black;
+    }
+
+    .Next_button:after {
+        margin-left: 10px;
+        text-align: right;
+        border-left: 10px solid black;
+    }
+
+
+
+section article p,
+section article a {
+    margin: 5px 0px;
+}
+
+section article:first-of-type p:first-of-type:before {
+    content: " ";
+    background-image: url(Images/4-logocss.gif);
+    background-repeat: no-repeat;
+    color: transparent;
+    width: 95px;
+    height: 84px;
+    margin-right: 10px;
+    float: left;
+}
+
+/* Right bar*/
+aside div {
+    border: 1px solid #707070;
+    background-color: white;
+    margin: 3px;
+}
+
+    aside div h2 {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    aside div:first-of-type {
+        margin-top: 0;
+    }
+
+    aside div a {
+        display: block;
+        width: 90%;
+        text-align: center;
+    }
+
+    aside div:first-of-type input:first-of-type {
+        border: 2px solid #A9BDD0;
+        width: 70%;
+        margin: 10px;
+    }
+
+    aside div:nth-of-type(2) input {
+        display: block;
+        background-color: #D4F0FE;
+        border: 3px solid #8EB4D1;
+        color: #44CEFE;
+        border-radius: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0 auto;
+        width: 140px;
+        height: 40px;
+    }

@@ -1,0 +1,80 @@
+﻿body, header, div, p, for, input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: verdana;
+}
+
+#wrapper {
+    border: 1px solid #806850;
+    border-radius: 10px;
+    background-color: #3B3B3B;
+    width: 660px;
+    height: 297px;
+}
+
+    #wrapper header {
+        background: linear-gradient(1deg, transparent 5%, #3B3B3B 30%), linear-gradient(-1deg, transparent 5%, #3B3B3B 30%), linear-gradient(to bottom, #252525, #252525);
+        border-radius: 10px;
+    }
+
+        #wrapper header img {
+            margin: 5px;
+            margin-left: 10px;
+        }
+
+        #wrapper header form {
+            display: inline;
+            position: relative;
+            margin-left: 20px;
+            top: -20px;
+        }
+
+            #wrapper header form label {
+                color: white;
+                font-size: 1.4em;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+
+            #wrapper header form input {
+                border: 1px solid #819DB3;
+                width: 135px;
+                margin-right: 20px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+            }
+
+                #wrapper header form input:last-of-type {
+                    /*Stack overflow :)*/
+                    background-image: url(Images/3-Go_button.png);
+                    background-color: transparent; /* make the button transparent */
+                    background-repeat: no-repeat; /* make the background image appear only once */
+                    background-position: 0px 0px; /* equivalent to 'top left' */
+                    border: none; /* assuming we don't want any borders */
+                    cursor: pointer; /* make the cursor like hovering over an <a> element */
+                    color: transparent;
+                    margin-right: 0;
+                    width: 56px;
+                    height: 28px;
+                }
+
+section {
+    color: #A5A5A5;
+    margin: 0px 45px 0px 10px;
+}
+
+    section h1 {
+        color: #F4D719;
+        font-size: 1.8em;
+        font-weight: normal;
+        margin: 15px 0;
+    }
+
+    section strong {
+        color: #FDFDFD;
+        font-weight: normal;
+    }
