@@ -1,0 +1,62 @@
+﻿body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em, figure, img {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgray;
+
+    h1 {
+        text-align: center;
+        color: forestgreen;
+    }
+
+    ul {
+        list-style-type: none;
+        text-align: center;
+        border: 3px solid forestgreen;
+        border-radius: 30px;
+        width: 1024px;
+        margin: 0 auto;
+
+        li {
+            display: inline-block;
+            padding: 5px;
+
+            label:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    div {
+
+        input {
+            display: none;
+        }
+
+        figure {
+            display: none;
+            margin: 10px 0;
+            text-align: center;
+
+            img {
+                width: 700px;
+                height: auto;
+            }
+
+            figcaption {
+                text-align: center;
+                font-size: 1.2em;
+            }
+        }
+
+        input:checked + figure {
+            display: block;
+        }
+    }
+
+    footer {
+        text-align: center;
+    }
+}

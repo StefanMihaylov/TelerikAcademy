@@ -1,0 +1,234 @@
+﻿body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix() {
+    zoom: 1;
+
+    &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+.gradient(@start, @start_position @middle,@middle_position, @end, @end_position) {
+    background: @start;
+    background: -moz-linear-gradient(top, @start @start_position, @middle @middle_position, @end @end_position);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop( @start_position,@start), color-stop(@middle_position,@middle), color-stop(51%,@end));
+    background: -webkit-linear-gradient(top, @start @start_position,@middle @middle_position,@end @end_position);
+    background: -o-linear-gradient(top, @start @start_position,@middle @middle_position,@end @end_position);
+    background: -ms-linear-gradient(top, @start @start_position,@middle @middle_position,@end @end_position);
+    background: linear-gradient(to bottom, @start @start_position,@middle @middle_position,@end @end_position);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@start', endColorstr='@end',GradientType=0 );
+}
+
+@form-items-border: #603382;
+@form-items-background: #B35EF3;
+@sub-menu-background: #B35EF3;
+@autor-name: #D0A3F7;
+@aside-special-color: #A496AF;
+
+
+body {
+    font-size: 14px;
+    font-family: Arial;
+    color: white;
+    .gradient(#d593ff, 5%, #901cef, 20%, #9215f2, 50%);
+
+    a {
+        text-decoration: none;
+    }
+
+    & > header {
+        padding: 25px 15px 5px;
+
+        #header-container {
+
+            #logo-container {
+            }
+
+            #reg-form-container {
+                float: right;
+                position: relative;
+                left: -50px;
+                top: -70px;
+                .clearfix();
+
+                div {
+                    text-align: right;
+
+                    label {
+                        margin: 5px;
+                    }
+
+                    input {
+                        margin: 5px;
+                        border: 1px solid @form-items-border;
+                        border-radius: 10px;
+                        background-color: @form-items-background;
+                        padding: 1px 5px;
+                    }
+                }
+
+                button {
+                    font-weight: bold;
+                    padding: 5px 8px;
+                    border: 1px solid @form-items-border;
+                    border-style: outset; /*don't work :( */
+                    border-radius: 10px;
+                    color: white;
+                    background-color: @form-items-background;
+                }
+            }
+        }
+
+        nav {
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 20px;
+            width: 70%;
+            padding-left: 10px;
+
+            ul {
+                list-style-type: none;
+
+                & > li {
+                    display: inline-block;
+                    padding: 10px;
+                    position: relative;
+
+                    &:hover ul {
+                        display: block;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: white;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                ul.nav-list {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    background-color: @sub-menu-background;
+                    border-radius: 5px;
+                    width: 200px;
+                    margin-top: 10px;
+
+                    li {
+                        display: block;
+                        margin: 0 10px;
+                        border-bottom: 1px solid black;
+
+                        &:last-of-type {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        width: 75%;
+        float: left;
+        .clearfix();
+
+        article {
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+
+            header {
+                h1 {
+                    font-size: 1.4em;
+                    margin: 5px;
+                }
+            }
+
+            p {
+            }
+
+            footer {
+                text-align: right;
+
+                a {
+                    color: @autor-name;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    aside {
+        float: left;
+        width: 20%;
+        margin: 20px;
+        .clearfix();
+
+        ul {
+            list-style-type: none;
+        }
+
+        & > ul {
+
+            & > li {
+                border: 1px solid black;
+                border-radius: 10px;
+                padding: 15px;
+                margin: 15px 0;
+
+                a {
+                    color: @aside-special-color;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                strong {
+                    color: @aside-special-color;
+                }
+
+                em {
+                    color: @aside-special-color;
+                }
+
+                ul {
+                    li {
+                        margin: 5px 10px;
+                        padding-left: 25px;
+                        background-image: url(images/li-dot.png);
+                        background-position: left center;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+
+    & > footer {
+        .clearfix();
+        clear: both;
+        display: block;
+        text-align: center;
+        padding: 20px;
+
+        p {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    }
+}

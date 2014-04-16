@@ -1,0 +1,211 @@
+﻿body,
+header,
+section,
+footer,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+label,
+p,
+fieldset,
+nav,
+ul,
+li,
+a,
+span,
+strong,
+em {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 14px;
+  font-family: Arial;
+  color: white;
+  background: #d593ff;
+  background: -moz-linear-gradient(top, #d593ff 5%, #901cef 20%, #9215f2 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #d593ff), color-stop(20%, #901cef), color-stop(51%, #9215f2));
+  background: -webkit-linear-gradient(top, #d593ff 5%, #901cef 20%, #9215f2 50%);
+  background: -o-linear-gradient(top, #d593ff 5%, #901cef 20%, #9215f2 50%);
+  background: -ms-linear-gradient(top, #d593ff 5%, #901cef 20%, #9215f2 50%);
+  background: linear-gradient(to bottom, #d593ff 5%, #901cef 20%, #9215f2 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@end', GradientType=0);
+}
+body a {
+  text-decoration: none;
+}
+body > header {
+  padding: 25px 15px 5px;
+}
+body > header #header-container #reg-form-container {
+  float: right;
+  position: relative;
+  left: -50px;
+  top: -70px;
+  zoom: 1;
+}
+body > header #header-container #reg-form-container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+}
+body > header #header-container #reg-form-container div {
+  text-align: right;
+}
+body > header #header-container #reg-form-container div label {
+  margin: 5px;
+}
+body > header #header-container #reg-form-container div input {
+  margin: 5px;
+  border: 1px solid #603382;
+  border-radius: 10px;
+  background-color: #b35ef3;
+  padding: 1px 5px;
+}
+body > header #header-container #reg-form-container button {
+  font-weight: bold;
+  padding: 5px 8px;
+  border: 1px solid #603382;
+  border-style: outset;
+  /*don't work :( */
+  border-radius: 10px;
+  color: white;
+  background-color: #b35ef3;
+}
+body > header nav {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  width: 70%;
+  padding-left: 10px;
+}
+body > header nav ul {
+  list-style-type: none;
+}
+body > header nav ul > li {
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+}
+body > header nav ul > li:hover ul {
+  display: block;
+}
+body > header nav ul a {
+  text-decoration: none;
+  color: white;
+}
+body > header nav ul a:hover {
+  text-decoration: underline;
+}
+body > header nav ul ul.nav-list {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #b35ef3;
+  border-radius: 5px;
+  width: 200px;
+  margin-top: 10px;
+}
+body > header nav ul ul.nav-list li {
+  display: block;
+  margin: 0 10px;
+  border-bottom: 1px solid black;
+}
+body > header nav ul ul.nav-list li:last-of-type {
+  border-bottom: none;
+}
+body section {
+  width: 75%;
+  float: left;
+  zoom: 1;
+}
+body section:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+}
+body section article {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+body section article header h1 {
+  font-size: 1.4em;
+  margin: 5px;
+}
+body section article footer {
+  text-align: right;
+}
+body section article footer a {
+  color: #d0a3f7;
+}
+body section article footer a:hover {
+  text-decoration: underline;
+}
+body aside {
+  float: left;
+  width: 20%;
+  margin: 20px;
+  zoom: 1;
+}
+body aside:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+}
+body aside ul {
+  list-style-type: none;
+}
+body aside > ul > li {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+}
+body aside > ul > li a {
+  color: #a496af;
+}
+body aside > ul > li a:hover {
+  text-decoration: underline;
+}
+body aside > ul > li strong {
+  color: #a496af;
+}
+body aside > ul > li em {
+  color: #a496af;
+}
+body aside > ul > li ul li {
+  margin: 5px 10px;
+  padding-left: 25px;
+  background-image: url(images/li-dot.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+body > footer {
+  zoom: 1;
+  clear: both;
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+body > footer:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+}
+body > footer p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/*# sourceMappingURL=1-styles.css.map */
