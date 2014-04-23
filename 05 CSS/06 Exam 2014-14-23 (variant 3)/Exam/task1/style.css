@@ -1,0 +1,101 @@
+﻿body,
+header,
+section,
+footer,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+label,
+p,
+fieldset,
+nav,
+ul,
+li,
+a,
+span,
+strong,
+em {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+html,
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 14px;
+}
+.clear {
+  clear: both;
+}
+#wrapper {
+  width: 960px;
+  padding: 0 4px;
+}
+#wrapper header div#archive ul {
+  text-align: right;
+}
+#wrapper header div#archive ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+#wrapper header div#archive ul li a {
+  color: #333333;
+  font-size: 10px;
+}
+#wrapper header div#header {
+  background-image: url(images/topnav_divider.png);
+  background-repeat: repeat-x;
+}
+#wrapper header div#header nav {
+  display: inline-block;
+}
+#wrapper header div#header nav ul {
+  display: inline-block;
+  padding: 10px 40px;
+  padding-bottom: 15px;
+}
+#wrapper header div#header nav ul li {
+  display: inline-block;
+  padding: 10px 10px;
+}
+#wrapper header div#header nav ul li a {
+  color: #FEFFFF;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+#wrapper header div#header h1 {
+  display: inline-block;
+  font-size: 28px;
+  color: #FEFFFF;
+  position: relative;
+  left: 268px;
+  top: 5px;
+}
+#wrapper div#content {
+  color: #333333;
+  padding: 7px 0;
+}
+#wrapper div#content h1 {
+  font-size: 24px;
+  padding: 6px 0;
+}
+#wrapper div#content article {
+  padding: 10px 0;
+}
+#wrapper div#content article p {
+  padding-bottom: 14px;
+  text-align: justify;
+  word-spacing: 1px;
+}
+/*# sourceMappingURL=style.css.map */

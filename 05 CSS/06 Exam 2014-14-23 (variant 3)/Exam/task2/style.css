@@ -1,0 +1,91 @@
+﻿body,
+header,
+section,
+footer,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+label,
+p,
+fieldset,
+nav,
+ul,
+li,
+a,
+span,
+strong,
+em {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+  font-size: 16px;
+}
+body #wrapper {
+  width: 960px;
+  padding: 5px;
+}
+body #wrapper ul.menu > li {
+  width: 120px;
+  margin-bottom: 10px;
+  background: #B6FF00;
+  border-radius: 15px;
+  padding: 10px 25px;
+  text-align: center;
+  position: relative;
+}
+body #wrapper ul.menu > li a {
+  color: black;
+}
+body #wrapper ul.menu > li:hover > a {
+  text-decoration: underline;
+}
+body #wrapper ul.menu > li:hover div.content {
+  display: block;
+}
+body #wrapper ul.menu > li div.content {
+  display: none;
+  position: absolute;
+  left: 170px;
+  top: 0;
+}
+body #wrapper ul.menu > li div.content ul.sub-menu li {
+  width: 500px;
+  display: block;
+  background: #008000;
+  border-radius: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+body #wrapper ul.menu > li div.content ul.sub-menu li a {
+  color: white;
+}
+body #wrapper ul.menu > li div.content ul.sub-menu li a:hover {
+  text-decoration: underline;
+}
+body #wrapper ul.menu > li div.content ul.sub-menu li a:hover + img {
+  display: block;
+}
+body #wrapper ul.menu > li div.content ul.sub-menu li img {
+  display: none;
+  width: 500px;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */
