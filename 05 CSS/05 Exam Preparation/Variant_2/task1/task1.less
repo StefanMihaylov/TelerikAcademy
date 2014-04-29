@@ -1,0 +1,122 @@
+﻿body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix() {
+    zoom: 1;
+
+    &:after {
+        display: block;
+        content: "";
+        height: 0;
+        clear: both;
+    }
+}
+
+.gradient-vertical(@start, @end, @start_position:0%, @end_position:100% ) {
+    background: @start;
+    background: -moz-linear-gradient(top, @start @start_position, @end @end_position);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@start_position,@start), color-stop(@end_position,@end));
+    background: -webkit-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -o-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -ms-linear-gradient(top, @start @start_position,@end @end_position);
+    background: linear-gradient(to bottom, @start @start_position,@end @end_position);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@start', endColorstr='@end',GradientType=0 );
+}
+
+@font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+@font-size: 18px;
+
+body {
+    font-family: @font-family;
+    font-size: @font-size;
+
+    #wrapper {
+        width: 960px;
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul.accordion {
+            margin-left: 50px;
+            margin-top: 50px;
+            border: 1px solid black;
+            width: 400px;
+
+
+            & > li {
+                text-align: center;
+                border-bottom: 2px solid black;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                &.current div {
+                    display: block;
+                }
+
+                & > a {
+                    color: #444444;
+                    font-size: 1.3em;
+                    font-weight: bold;
+                    display: block;
+                    border: 1px solid black;
+                    .gradient-vertical(#EEEEEE,#AAAAAA,25%,75%);
+                }
+
+                div {
+                    display: none;
+                    padding: 5px 15px;
+                    text-align: left;
+                    color: #444444;
+                    background-color: #AAAAAA;
+
+                    h1 {
+                        font-size: 1.6em;
+                        text-align: center;
+                        color: #5E5E5E;
+                        padding: 5px 0;
+                    }
+
+                    p {
+                        color: #444444;
+                        text-align: justify;
+                    }
+
+                    table {
+                        margin: 15px auto;
+                    }
+
+                    table, th, td {
+                        border: 1px solid black;
+                        border-collapse: collapse;
+                        padding: 5px;
+                    }
+
+                    td {
+                        color: white;
+                    }
+
+                    th {
+                        .gradient-vertical-short(#ECECEC,#898989);
+                    }
+
+                    tr:nth-of-type(2n+1) {
+                        .gradient-vertical-short(#CBCBCB,#898989);
+                    }
+
+                    tr:nth-of-type(2n+2) {
+                        .gradient-vertical-short(#898989,#CBCBCB);
+                    }
+                }
+            }
+        }
+    }
+}

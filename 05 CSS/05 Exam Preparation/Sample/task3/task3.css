@@ -1,0 +1,113 @@
+﻿body,
+header,
+section,
+footer,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+label,
+p,
+fieldset,
+nav,
+ul,
+li,
+a,
+span,
+strong,
+em {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-size: 16px;
+  color: #333333;
+}
+body #wrapper {
+  width: 960px;
+  padding: 15px;
+}
+body #wrapper ul {
+  width: 110px;
+}
+body #wrapper ul li {
+  padding: 5px;
+  border-top: 1px solid black;
+  position: relative;
+}
+body #wrapper ul li:last-of-type {
+  border-bottom: 1px solid black;
+}
+body #wrapper ul li.current span {
+  font-weight: bold;
+}
+body #wrapper ul li a span {
+  color: black;
+}
+body #wrapper ul li a img {
+  width: 25px;
+  height: auto;
+}
+body #wrapper ul li div.popup-content {
+  display: block;
+  position: absolute;
+  left: 120px;
+  top: 0;
+  width: 200px;
+}
+body #wrapper ul li div.popup-content.invisible {
+  display: none;
+}
+body #wrapper ul li div.popup-content a.btn-popup-close {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0 5px;
+  left: 175px;
+  top: 15px;
+  color: #333;
+}
+body #wrapper ul li div.popup-content a.btn-popup-close:hover {
+  text-decoration: underline;
+}
+body #wrapper ul li div.popup-content fieldset {
+  padding: 15px;
+  padding-top: 10px;
+  border: 1px solid black;
+}
+body #wrapper ul li div.popup-content fieldset legend {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+body #wrapper ul li div.popup-content fieldset textarea {
+  width: 180px;
+}
+body #wrapper ul li div.popup-content fieldset button {
+  border: none;
+  border-radius: 20px;
+  background: #cacaca;
+  background: -moz-linear-gradient(top, #cacaca 0%, #686868 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cacaca), color-stop(100%, #686868));
+  background: -webkit-linear-gradient(top, #cacaca 0%, #686868 100%);
+  background: -o-linear-gradient(top, #cacaca 0%, #686868 100%);
+  background: -ms-linear-gradient(top, #cacaca 0%, #686868 100%);
+  background: linear-gradient(to bottom, #cacaca 0%, #686868 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@end', GradientType=0);
+  padding: 5px 10px;
+  color: #333;
+}
+body #wrapper ul li div.popup-content fieldset button:hover {
+  background: #CCCCCC;
+}
+/*# sourceMappingURL=task3.css.map */

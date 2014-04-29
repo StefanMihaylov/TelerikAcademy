@@ -1,0 +1,107 @@
+﻿body,
+header,
+section,
+footer,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+label,
+p,
+fieldset,
+nav,
+ul,
+li,
+a,
+span,
+strong,
+em {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+  font-size: 16px;
+}
+body #wrapper {
+  width: 960px;
+  padding: 20px;
+}
+body #wrapper > div {
+  width: 142px;
+  display: inline-block;
+  border: 2px solid #D3D7DA;
+  vertical-align: top;
+  margin-right: -6px;
+  padding: 10px 4px 0px 4px;
+}
+body #wrapper > div hgroup {
+  display: table-cell;
+  padding-left: 40px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  height: 40px;
+  background-position: left bottom;
+  vertical-align: bottom;
+}
+body #wrapper > div hgroup h2,
+body #wrapper > div hgroup h3 {
+  font-size: 1em;
+  vertical-align: bottom;
+}
+body #wrapper > div div {
+  margin-top: 5px;
+}
+body #wrapper > div div a {
+  text-decoration: none;
+  color: #C72D2F;
+  display: block;
+}
+body #wrapper > div div span {
+  text-transform: uppercase;
+}
+body #wrapper > div div.yellowBox {
+  border: 1px solid #FFFF00;
+  background: #FFFFDD;
+}
+body #wrapper > div div.yellowBox a {
+  display: inline;
+}
+body #wrapper > div:nth-of-type(2n+0) {
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #f1f2f3 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #f1f2f3));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f1f2f3 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #f1f2f3 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #f1f2f3 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #f1f2f3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@end', GradientType=0);
+  height: 270px;
+}
+body #wrapper > div:nth-of-type(2n+1) {
+  height: 250px;
+}
+body #wrapper > div:nth-of-type(1) hgroup {
+  background: url(imgs/install.png) no-repeat;
+}
+body #wrapper > div:nth-of-type(2) hgroup {
+  background: url(imgs/tuneUp.png) no-repeat;
+}
+body #wrapper > div:nth-of-type(3) hgroup {
+  background: url(imgs/manage.png) no-repeat;
+}
+body #wrapper > div:nth-of-type(4) hgroup {
+  background: url(imgs/openSource.png) no-repeat;
+}
+body #wrapper > div:nth-of-type(5) hgroup {
+  background: url(imgs/twitter.png) no-repeat;
+}
+body #wrapper > div:nth-of-type(6) hgroup {
+  background: url(imgs/about.png) no-repeat;
+}
+/*# sourceMappingURL=task3.css.map */

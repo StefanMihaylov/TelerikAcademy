@@ -1,0 +1,141 @@
+﻿body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix() {
+    zoom: 1;
+
+    &:after {
+        display: block;
+        content: "";
+        height: 0;
+        clear: both;
+    }
+}
+
+.gradient-vertical(@start, @end, @start_position: 0%, @end_position: 100% ) {
+    background: @start;
+    background: -moz-linear-gradient(top, @start @start_position, @end @end_position);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@start_position,@start), color-stop(@end_position,@end));
+    background: -webkit-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -o-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -ms-linear-gradient(top, @start @start_position,@end @end_position);
+    background: linear-gradient(to bottom, @start @start_position,@end @end_position);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@start', endColorstr='@end',GradientType=0 );
+}
+
+.gradient-horizontal(@start, @end, @start_position: 0%, @end_position: 100% ) {
+    background: @start;
+    background: -moz-linear-gradient(left, @start @start_position, @end @end_position);
+    background: -webkit-gradient(linear, left top, right top, color-stop(@start_position,@start), color-stop(@end_position,@end));
+    background: -webkit-linear-gradient(left, @start @start_position,@end @end_position);
+    background: -o-linear-gradient(left, @start @start_position,@end @end_position);
+    background: -ms-linear-gradient(left, @start @start_position,@end @end_position);
+    background: linear-gradient(to right, @start @start_position,@end @end_position);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@start', endColorstr='@end',GradientType=1 );
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-size: 16px;
+
+body {
+    font-size: @font-size;
+    color: #333333;
+
+    #wrapper {
+        width: 960px;
+        padding: 15px;
+
+        ul {
+            width: 110px;
+
+            li {
+                padding: 5px;
+                border-top: 1px solid black;
+                position: relative;
+
+                &:last-of-type {
+                    border-bottom: 1px solid black;
+                }
+
+                &.current {
+                    span {
+                        font-weight: bold;
+                    }
+                }
+
+                a {
+                    span {
+                        color: black;
+                    }
+
+                    img {
+                        width: 25px;
+                        height: auto;
+                    }
+                }
+
+                div.popup-content {
+                    &.invisible {
+                        display: none;
+                    }
+
+                    display: block;
+                    position: absolute;
+                    left: 120px;
+                    top: 0;
+                     width: 200px;
+
+                    a.btn-popup-close {
+                        position: absolute;
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        padding: 0 5px;
+                        left: 175px;
+                        top: 15px;
+                        color: #333;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    fieldset {
+                        padding: 15px;
+                        padding-top: 10px;
+                        border: 1px solid black;
+
+                        legend {
+                            font-size: 1.2em;
+                            font-weight: bold;
+                        }
+
+                        textarea{
+                            width:180px;
+                        }
+
+                        button {
+                            border: none;
+                            border-radius: 20px;
+                            .gradient-vertical(#CACACA,#686868);
+                            padding: 5px 10px;
+                            color: #333;
+
+                            &:hover {
+                                background: #CCCCCC;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

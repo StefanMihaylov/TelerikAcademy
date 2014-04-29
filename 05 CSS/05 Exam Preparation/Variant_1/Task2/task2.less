@@ -1,0 +1,111 @@
+﻿body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    margin: 0;
+    padding: 0;
+}
+
+.gradient2(@start, @start_position, @end, @end_position ) {
+    background: @start;
+    background: -moz-linear-gradient(top, @start @start_position, @end @end_position);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@start_position,@start), color-stop(@end_position,@end));
+    background: -webkit-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -o-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -ms-linear-gradient(top, @start @start_position,@end @end_position);
+    background: linear-gradient(to bottom, @start @start_position,@end @end_position);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@start', endColorstr='@end',GradientType=0 );
+}
+
+body {
+    font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+    font-size: 16px;
+
+    #wrapper {
+        width: 960px;
+
+        ul.tab-strip {
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 15px;
+            width: 340px;
+            height: 230px;
+
+            & > li {
+                display: inline-block;
+                padding: 5px 15px;
+                .gradient2(#EDEDED,0%,#ABABAB,100%);
+                border-bottom: 1px solid black;
+                border-right: 1px solid black;
+                border-radius: 5px;
+
+                &:last-of-type {
+                    border-right: none;
+                }
+
+                &.current {
+                    background: none;
+                    border-bottom: none;
+                    border-radius: 0;
+
+                    a {
+                        font-weight: bold;
+                    }
+
+                    div.tab-content {
+                        display: block;
+                    }
+                }
+
+                a {
+                    font-size: 1.4em;
+                    text-decoration: none;
+                    color: black;
+                }
+
+                &:hover {
+                    background: #EEEEEE;
+                }
+
+                div.tab-content {
+                    display: none;
+                    position: absolute;
+                    left: 20px;
+                    margin: 19px 16px;
+
+                    ul {
+                        list-style-type: disc;
+
+                        ul {
+                            list-style-type: lower-alpha;
+                            margin-left: 25px;
+                        }
+                    }
+
+                    table {
+                        border: 1px solid black;
+                        border-collapse: collapse;
+
+                        thead {
+                            .gradient2(#ABABAB,0%,#EEEEEE,100%);
+
+                            th {
+                                padding: 5px 15px;
+                                border: 1px solid black;
+                                border-collapse: collapse;
+                            }
+                        }
+
+                        tbody {
+                            background-color: #EEEEEE;
+
+                            td {
+                                border: 1px solid black;
+                                border-collapse: collapse;
+                                padding: 5px;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+﻿body,
+header,
+section,
+footer,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+label,
+p,
+fieldset,
+nav,
+ul,
+li,
+a,
+span,
+strong,
+em {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+  font-size: 16px;
+}
+body #wrapper {
+  width: 960px;
+}
+body #wrapper ul.tab-strip {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 15px;
+  width: 340px;
+  height: 230px;
+}
+body #wrapper ul.tab-strip > li {
+  display: inline-block;
+  padding: 5px 15px;
+  background: #ededed;
+  background: -moz-linear-gradient(top, #ededed 0%, #ababab 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ededed), color-stop(100%, #ababab));
+  background: -webkit-linear-gradient(top, #ededed 0%, #ababab 100%);
+  background: -o-linear-gradient(top, #ededed 0%, #ababab 100%);
+  background: -ms-linear-gradient(top, #ededed 0%, #ababab 100%);
+  background: linear-gradient(to bottom, #ededed 0%, #ababab 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@end', GradientType=0);
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 5px;
+}
+body #wrapper ul.tab-strip > li:last-of-type {
+  border-right: none;
+}
+body #wrapper ul.tab-strip > li.current {
+  background: none;
+  border-bottom: none;
+  border-radius: 0;
+}
+body #wrapper ul.tab-strip > li.current a {
+  font-weight: bold;
+}
+body #wrapper ul.tab-strip > li.current div.tab-content {
+  display: block;
+}
+body #wrapper ul.tab-strip > li a {
+  font-size: 1.4em;
+  text-decoration: none;
+  color: black;
+}
+body #wrapper ul.tab-strip > li:hover {
+  background: #EEEEEE;
+}
+body #wrapper ul.tab-strip > li div.tab-content {
+  display: none;
+  position: absolute;
+  left: 20px;
+  margin: 19px 16px;
+}
+body #wrapper ul.tab-strip > li div.tab-content ul {
+  list-style-type: disc;
+}
+body #wrapper ul.tab-strip > li div.tab-content ul ul {
+  list-style-type: lower-alpha;
+  margin-left: 25px;
+}
+body #wrapper ul.tab-strip > li div.tab-content table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+body #wrapper ul.tab-strip > li div.tab-content table thead {
+  background: #ababab;
+  background: -moz-linear-gradient(top, #ababab 0%, #eeeeee 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ababab), color-stop(100%, #eeeeee));
+  background: -webkit-linear-gradient(top, #ababab 0%, #eeeeee 100%);
+  background: -o-linear-gradient(top, #ababab 0%, #eeeeee 100%);
+  background: -ms-linear-gradient(top, #ababab 0%, #eeeeee 100%);
+  background: linear-gradient(to bottom, #ababab 0%, #eeeeee 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@end', GradientType=0);
+}
+body #wrapper ul.tab-strip > li div.tab-content table thead th {
+  padding: 5px 15px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+body #wrapper ul.tab-strip > li div.tab-content table tbody {
+  background-color: #EEEEEE;
+}
+body #wrapper ul.tab-strip > li div.tab-content table tbody td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: left;
+}
+/*# sourceMappingURL=task2.css.map */

@@ -1,0 +1,75 @@
+﻿body,
+header,
+section,
+footer,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+label,
+p,
+fieldset,
+nav,
+ul,
+li,
+a,
+span,
+strong,
+em {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+  font-size: 16px;
+}
+body #wrapper {
+  width: 960px;
+}
+body #wrapper div {
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-left: 25px;
+  margin-top: 25px;
+  background: #de28ff;
+  background: -moz-linear-gradient(top, #de28ff 15%, #f9dbff 75%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #de28ff), color-stop(75%, #f9dbff));
+  background: -webkit-linear-gradient(top, #de28ff 15%, #f9dbff 75%);
+  background: -o-linear-gradient(top, #de28ff 15%, #f9dbff 75%);
+  background: -ms-linear-gradient(top, #de28ff 15%, #f9dbff 75%);
+  background: linear-gradient(to bottom, #de28ff 15%, #f9dbff 75%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@end', GradientType=0);
+  padding: 15px 35px;
+  position: relative;
+}
+body #wrapper div h1 {
+  font-size: 1.8em;
+}
+body #wrapper div img {
+  position: absolute;
+  top: 40%;
+  border: none;
+}
+body #wrapper div img.left-arrow {
+  left: 0;
+}
+body #wrapper div img.right-arrow {
+  right: 0;
+}
+body #wrapper div p.postedby {
+  display: inline-block;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 5px 15px;
+  padding: 5px 15px;
+}
+body #wrapper div p.info {
+  text-align: justify;
+  margin: 15px 0;
+}
+/*# sourceMappingURL=task1.css.map */

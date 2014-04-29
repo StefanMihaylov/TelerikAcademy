@@ -1,0 +1,81 @@
+﻿body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix() {
+    zoom: 1;
+
+    &:after {
+        display: block;
+        content: "";
+        height: 0;
+        clear: both;
+    }
+}
+
+.gradient-vertical(@start, @end, @start_position: 0%, @end_position: 100% ) {
+    background: @start;
+    background: -moz-linear-gradient(top, @start @start_position, @end @end_position);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@start_position,@start), color-stop(@end_position,@end));
+    background: -webkit-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -o-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -ms-linear-gradient(top, @start @start_position,@end @end_position);
+    background: linear-gradient(to bottom, @start @start_position,@end @end_position);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@start', endColorstr='@end',GradientType=0 );
+}
+
+@font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+@font-size: 16px;
+
+body {
+    font-family: @font-family;
+    font-size: @font-size;
+
+    #wrapper {
+        width: 960px;
+
+        div {
+            border: 1px solid black;
+            border-radius: 15px;
+            margin-left: 25px;
+            margin-top: 25px;
+            .gradient-vertical(#DE28FF,#F9DBFF, 15%, 75%);
+            padding: 15px 35px;
+            position: relative;
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            img {
+                position: absolute;
+                top: 40%;
+                border: none;
+
+                &.left-arrow {
+                    left: 0;
+                }
+
+                &.right-arrow {
+                    right: 0;
+                }
+            }
+
+            p {
+                &.postedby {
+                    display: inline-block;
+                    border-top: 1px solid black;
+                    border-bottom: 1px solid black;
+                    margin: 5px 15px;
+                    padding: 5px 15px;
+                }
+
+                &.info {
+                    text-align: justify;
+                    margin: 15px 0;
+                }
+            }
+        }
+    }
+}

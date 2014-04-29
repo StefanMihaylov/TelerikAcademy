@@ -1,0 +1,121 @@
+﻿body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix() {
+    zoom: 1;
+
+    &:after {
+        display: block;
+        content: "";
+        height: 0;
+        clear: both;
+    }
+}
+
+.gradient-vertical(@start, @start_position, @end, @end_position ) {
+    background: @start;
+    background: -moz-linear-gradient(top, @start @start_position, @end @end_position);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@start_position,@start), color-stop(@end_position,@end));
+    background: -webkit-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -o-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -ms-linear-gradient(top, @start @start_position,@end @end_position);
+    background: linear-gradient(to bottom, @start @start_position,@end @end_position);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@start', endColorstr='@end',GradientType=0 );
+}
+
+.gradient-vertical-short(@start,@end) {
+    .gradient-vertical(@start, 0%, @end, 100% );
+}
+
+@font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;
+@font-size: 16px;
+
+body {
+    font-family: @font-family;
+    font-size: @font-size;
+
+    #wrapper {
+        width: 960px;
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul.notification-list {
+            margin: 25px;
+            border: 1px solid black;
+            border-radius: 15px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: none;
+            width: 470px;
+            .gradient-vertical-short(#ABABAB,#DDDDDD);
+
+            & > li {
+                display: inline-block;
+                padding: 5px 15px;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+
+                &:hover {
+                    border-bottom: none;
+
+                    & div.content {
+                        display: block;
+                    }
+                }
+
+                &:last-of-type {
+                    border-right: none;
+                }
+
+                img {
+                    width: 15px;
+                    height: auto;
+                }
+
+                & > a {
+                    color: #777777;
+                    font-size: 1.2em;
+                }
+
+                div.content {
+                    display: none;
+                    position: absolute;
+                    left: 25px;
+                    margin-top: 5px;
+                    border: 1px solid black;
+                    border-top: none;
+                    background-color: #DDDDDD;
+                    width: 450px;
+
+                    li {
+                        padding: 5px 15px;
+
+                        a {
+                            color: #777777;
+
+                            &:hover{
+                                text-decoration:underline;
+                            }
+
+                            strong {
+                                color:#5E5E5E;
+                            }
+
+                            img {
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

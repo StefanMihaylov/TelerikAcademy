@@ -1,0 +1,141 @@
+﻿body,
+header,
+section,
+footer,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+label,
+p,
+fieldset,
+nav,
+ul,
+li,
+a,
+span,
+strong,
+em {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+  font-size: 16px;
+}
+body #wrapper {
+  width: 960px;
+}
+body #wrapper div {
+  margin: 30px;
+  width: 350px;
+  background: #eeeeee;
+  background: -moz-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #aaaaaa));
+  background: -webkit-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+  background: -o-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+  background: -ms-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+  background: linear-gradient(to bottom, #eeeeee 0%, #aaaaaa 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@end', GradientType=0);
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 5px 15px;
+}
+body #wrapper div h1 {
+  color: #555555;
+  font-size: 1.8em;
+  text-align: center;
+  margin: 10px auto;
+}
+body #wrapper div ul {
+  list-style-type: none;
+  zoom: 1;
+}
+body #wrapper div ul:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+body #wrapper div ul li {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  color: #555555;
+}
+body #wrapper div ul li.me-item {
+  background: #29edff;
+  background: -moz-linear-gradient(top, #29edff 0%, #c0faff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #29edff), color-stop(100%, #c0faff));
+  background: -webkit-linear-gradient(top, #29edff 0%, #c0faff 100%);
+  background: -o-linear-gradient(top, #29edff 0%, #c0faff 100%);
+  background: -ms-linear-gradient(top, #29edff 0%, #c0faff 100%);
+  background: linear-gradient(to bottom, #29edff 0%, #c0faff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@end', GradientType=0);
+  float: right;
+  text-align: left;
+}
+body #wrapper div ul li.me-item span.date {
+  text-align: right;
+}
+body #wrapper div ul li.toshko-item {
+  background: #dfffd2;
+  background: -moz-linear-gradient(top, #dfffd2 0%, #6fff3b 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dfffd2), color-stop(100%, #6fff3b));
+  background: -webkit-linear-gradient(top, #dfffd2 0%, #6fff3b 100%);
+  background: -o-linear-gradient(top, #dfffd2 0%, #6fff3b 100%);
+  background: -ms-linear-gradient(top, #dfffd2 0%, #6fff3b 100%);
+  background: linear-gradient(to bottom, #dfffd2 0%, #6fff3b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@end', GradientType=0);
+  float: left;
+  text-align: right;
+}
+body #wrapper div ul li.toshko-item span.date {
+  text-align: left;
+}
+body #wrapper div ul li span {
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+body #wrapper div ul li span.date {
+  font-family: Consolas;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+body #wrapper div ul li p {
+  text-align: justify;
+}
+body #wrapper div input {
+  background-color: #EEEEEE;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #555555;
+  width: 70%;
+}
+body #wrapper div button {
+  border: none;
+  padding: 5px 15px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  background: #eeeeee;
+  background: -moz-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #aaaaaa));
+  background: -webkit-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+  background: -o-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+  background: -ms-linear-gradient(top, #eeeeee 0%, #aaaaaa 100%);
+  background: linear-gradient(to bottom, #eeeeee 0%, #aaaaaa 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@end', GradientType=0);
+}
+body #wrapper div button:hover {
+  background: #eeeeee;
+}
+/*# sourceMappingURL=Task3.css.map */

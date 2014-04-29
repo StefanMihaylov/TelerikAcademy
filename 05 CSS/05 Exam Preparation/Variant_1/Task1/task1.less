@@ -1,0 +1,89 @@
+﻿body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    margin: 0;
+    padding: 0;
+}
+
+.gradient2(@start, @start_position, @end, @end_position ) {
+    background: @start;
+    background: -moz-linear-gradient(top, @start @start_position, @end @end_position);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@start_position,@start), color-stop(@end_position,@end));
+    background: -webkit-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -o-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -ms-linear-gradient(top, @start @start_position,@end @end_position);
+    background: linear-gradient(to bottom, @start @start_position,@end @end_position);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@start', endColorstr='@end',GradientType=0 );
+}
+
+#wrapper {
+    width: 960px;
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+
+
+
+
+    aside {
+        margin-left: 20px;
+        margin-top: 10px;
+        display: inline-block;
+        border-radius: 10px;
+        .gradient2(#D29BFF,0%,#8977FF,100%);
+        padding: 5px 15px;
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul.sidebar {
+            padding: 5px;
+
+            & > li {
+                font-size: 1.4em;
+            }
+
+            li {
+                position: relative;
+                padding: 5px 15px;
+                border-bottom: 1px solid #9D00FF;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                &:hover {
+                    border: 1px solid #9D00FF;
+                    border-radius: 5px;
+
+                    & ul {
+                        display: block;
+                    }
+                }
+
+                ul {
+                    display: none;
+                    position: absolute;
+                    border-radius: 10px;
+                    background-color: #B5AAFF;
+                    left: 190px;
+                    top: -5px;
+                    background-image: url(imgs/arrow.png);
+                    background-repeat: no-repeat;
+                    background-position: 5px 15px;
+                    padding: 5px;
+                    padding-left: 20px;
+                    text-align: center;
+
+                    li {
+                        font-size: 0.8em;
+                        width: 180px;
+                    }
+                }
+            }
+        }
+    }
+}

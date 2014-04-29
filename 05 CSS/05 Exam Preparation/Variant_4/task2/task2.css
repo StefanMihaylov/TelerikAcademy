@@ -1,0 +1,80 @@
+﻿body,
+header,
+section,
+footer,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+label,
+p,
+fieldset,
+nav,
+ul,
+li,
+a,
+span,
+strong,
+em {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+  font-size: 16px;
+}
+body #wrapper {
+  width: 960px;
+}
+body #wrapper > div {
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #CCCCCC;
+  width: 680px;
+}
+body #wrapper > div div {
+  display: inline-block;
+}
+body #wrapper > div div.holder img {
+  display: inline-block;
+  border-radius: 5px;
+  width: 550px;
+  height: auto;
+}
+body #wrapper > div div.playlist {
+  display: inline-block;
+}
+body #wrapper > div div.playlist ul {
+  list-style-type: none;
+  position: relative;
+  top: -20px;
+  left: 5px;
+}
+body #wrapper > div div.playlist ul li {
+  border-bottom: 1px solid black;
+  padding: 5px;
+  margin-left: 5px;
+}
+body #wrapper > div div.playlist ul li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+}
+body #wrapper > div div.playlist ul li a:hover {
+  text-decoration: underline;
+}
+body #wrapper > div div.playlist ul li a img {
+  display: block;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=task2.css.map */

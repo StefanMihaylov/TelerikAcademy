@@ -1,0 +1,93 @@
+﻿body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix() {
+    zoom: 1;
+
+    &:after {
+        display: block;
+        content: "";
+        height: 0;
+        clear: both;
+    }
+}
+
+.gradient-vertical(@start, @end, @start_position: 0%, @end_position: 100% ) {
+    background: @start;
+    background: -moz-linear-gradient(top, @start @start_position, @end @end_position);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@start_position,@start), color-stop(@end_position,@end));
+    background: -webkit-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -o-linear-gradient(top, @start @start_position,@end @end_position);
+    background: -ms-linear-gradient(top, @start @start_position,@end @end_position);
+    background: linear-gradient(to bottom, @start @start_position,@end @end_position);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@start', endColorstr='@end',GradientType=0 );
+}
+
+@font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+@font-size: 16px;
+
+body {
+    font-family: @font-family;
+    font-size: @font-size;
+
+    #wrapper {
+        width: 960px;
+
+        & > div {
+            margin-top: 15px;
+            margin-left: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            background: #CCCCCC;
+            width: 680px;
+
+            div {
+                display: inline-block;
+
+                &.holder img {
+                    display: inline-block;
+                    border-radius: 5px;
+                    width: 550px;
+                    height: auto;
+                }
+
+                &.playlist {
+                    display: inline-block;
+
+                    ul {
+                        list-style-type: none;
+                        position: relative;
+                        top: -20px;
+                        left: 5px;
+
+                        li {
+                            border-bottom: 1px solid black;
+                            padding: 5px;
+                            margin-left: 5px;
+
+                            a {
+                                text-decoration: none;
+                                color: black;
+                                display: block;
+                                font-size: 1em;
+                                font-weight: bold;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+
+                                img {
+                                    display: block;
+                                    border-radius: 10px;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
