@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 1</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <h1>Functions homework - Task 1</h1>
+        <h2>
+            Write a function that returns the last digit of given integer as an English word. <br />
+            Examples: 512 -> "two", 1024 -> "four", 12309 -> "nine".
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="number">Enter number:</label>
+            <input type="number" id="number" placeholder="123" />
+        </div>
+        <button id="calculate" onclick="lastDigit()">Find</button>
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+        // the script is small so I decided not to use an external file
+        function lastDigit() {
+            function convertLastDigit(number) {
+                var digit = Math.abs(number % 10);
+
+                switch (digit) {
+                    case 0: return "Zero";
+                    case 1: return "One";
+                    case 2: return "Two";
+                    case 3: return "Three";
+                    case 4: return "Four";
+                    case 5: return "Five";
+                    case 6: return "Six";
+                    case 7: return "Seven";
+                    case 8: return "Eight";
+                    case 9: return "Nine";
+                }
+            }
+
+            var number = jsConsole.readInteger("#number"),
+                result;
+
+            if (isNaN(number) || number === null || number === "") {
+                jsConsole.writeLine("The entered value is not a number!");
+                return;
+            }
+            
+            result = convertLastDigit(number);
+
+            jsConsole.writeLine("The last digit of " + number + " is " + result);
+        }
+    </script>
+</body>
+</html>

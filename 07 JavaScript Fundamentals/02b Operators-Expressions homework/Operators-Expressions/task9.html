@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 9</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Task 9</h1>
+        <h2>Write an expression that checks for given point (x, y) if it is within the circle K( (1,1), 3) and out of the rectangle R(top=1, left=-1, width=6, height=2).</h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="x">Enter X coordinate:</label>
+            <input type="number" id="x" placeholder="123" />
+        </div>
+        <div>
+            <label for="y">Enter Y coordinate:</label>
+            <input type="number" id="y" placeholder="123" />
+        </div>
+        <button id="calculate" onclick="IsInCircleAndRectangule()">Calculate</button>
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script src="script9.js"></script>
+
+</body>
+</html>

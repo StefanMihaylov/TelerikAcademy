@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 5</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <h1>Functions homework - Task 5</h1>
+        <h2>Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly.</h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="text">Enter sequence:</label>
+            <input type="text" id="text" placeholder="1, 2, 3" value="1, 2, 3, 3, 5, 2, 3, 4, 2, 3, 4, 5"/>
+        </div>
+        <div>
+            <label for="number">Enter required number:</label>
+            <input type="number" id="number" placeholder="123" value="2" />
+        </div>
+        <button id="calculate" onclick="textNumberCounter()">Find</button>
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script src="textNumberCounter.js"></script>
+</body>
+</html>

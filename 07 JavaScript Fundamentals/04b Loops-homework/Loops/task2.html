@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 2</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <h1>Loops homework - Task 2</h1>
+        <h2>Write a script that prints all the numbers from 1 to N, that are not divisible by 3 and 7 at the same time</h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="number">Enter number:</label>
+            <input type="number" id="number" placeholder="123" />
+        </div>
+        <button id="calculate" onclick="printNumbersNotDividedBy21()">Print</button>
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+        // the scrtipt is small so I decided not to use an external file
+        function printNumbersNotDividedBy21() {
+            var num = parseFloat(jsConsole.read("#number"));
+            if (isNaN(num) || num === null || num === "") {
+                jsConsole.writeLine("The entered value is not a number!");
+                return;
+            }
+            if (num < 1) {
+                jsConsole.writeLine("Please enter number greater than 1");
+            }
+            else {
+                for (var i = 1; i <= num; i++) {
+                    if (i % 21 !== 0) {
+                        jsConsole.write(i + ' ');
+                    }
+                }
+                jsConsole.writeLine(' ');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 1</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <h1>Arrays homework - Task 1</h1>
+        <h2>Write a script that allocates array of 20 integers and initializes each element by its index multiplied by 5. Print the obtained array on the console.</h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+        // the scrtipt is small so I decided not to use an external file
+        (function printNumbers() {
+            var i,
+                numbers = new Array(20),
+                result;
+
+            for (i = 0; i < numbers.length; i++) {
+                numbers[i] = i * 5;
+            }
+
+            result = ' Numbers: ' + numbers.join(' ');
+
+            jsConsole.writeLine(result);
+            console.log(result);
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 7</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <h1>Arrays homework - Task 7</h1>
+        <h2>Write a program that finds the index of given element in a sorted array of integers by using the binary search algorithm (find it in Wikipedia).</h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="text">Enter sequence:</label>
+            <input type="text" id="text" placeholder="1, 2, 3" />
+        </div>
+        <div>
+            <label for="number">Enter number for searching:</label>
+            <input type="number" id="number" placeholder="123" />
+        </div>
+        <p>*if no sequence is entered, random array will be used</p>
+        <button id="calculate" onclick="binarySearch()">Find</button>       
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script src="binarySearch.js"></script>
+</body>
+</html>

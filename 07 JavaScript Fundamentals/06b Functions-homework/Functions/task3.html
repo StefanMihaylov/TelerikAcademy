@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 3</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <h1>Functions homework - Task 3</h1>
+        <h2>
+            Write a function that finds all the occurrences of word in a text. The search can case sensitive or case insensitive
+            Use function overloading
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="text">Enter Text:</label>
+            <textarea id="text" rows="10" style="width:300px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur augue eget sodales tempus. Praesent eget nisl in nisi auctor condimentum ut sit amet metus. Ut elit felis, tincidunt in malesuada eu, lacinia ut nisi. Suspendisse posuere a sapien vitae varius. Duis dignissim et est ut feugiat. Aliquam interdum justo urna, sit amet laoreet urna semper posuere. Nunc ornare et eros eu rutrum. Duis lobortis blandit pharetra. Duis convallis velit quis ipsum egestas imperdiet. Curabitur varius blandit magna, quis volutpat nulla posuere vel. Cras pulvinar suscipit fringilla. Praesent dignissim lectus est, eu egestas ligula pretium nec. Nulla ultrices mollis ipsum a consequat. Maecenas fringilla odio vitae lacus mollis lacinia. Curabitur a mi et sapien malesuada placerat. Phasellus leo leo, sollicitudin id nulla iaculis, molestie viverra turpis. Sed eu ornare dolor, non egestas nunc. Morbi semper auctor adipiscing. Vivamus auctor velit mi, et rutrum felis porttitor ut. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Etiam eget pellentesque sapien, sed semper libero. Vestibulum quis eleifend odio. Ut quis elit id dui euismod euismod a ut nulla. Aenean elementum a metus ac auctor. Phasellus dictum nisl nec magna tincidunt, sed fringilla nulla tempor. Pellentesque tincidunt bibendum fringilla. In vel velit id mi dictum porta at blandit augue. Quisque porttitor pretium ante sed auctor. Curabitur fringilla arcu ac leo sagittis posuere. Aliquam in metus pretium, gravida arcu et, sodales nisl. Sed consequat tincidunt vehicula. Suspendisse varius feugiat nisl vitae pretium. Aliquam nec nisi fringilla, bibendum est eu, vehicula risus. Vivamus sagittis nunc aliquet diam tempor, sed suscipit erat aliquet. Phasellus accumsan turpis porttitor euismod aliquet. Proin faucibus convallis viverra. Sed lobortis nulla luctus mauris viverra, sit amet egestas lectus dapibus. Nullam vehicula tempus odio, eu vestibulum nisl gravida eget. Nullam sollicitudin, nibh commodo tincidunt rhoncus, turpis augue imperdiet mi, et ultricies purus dolor eu nisl. Morbi quis quam ac mauris egestas molestie. Cras eget convallis elit. Cras ultrices rutrum est. Praesent adipiscing tellus orci, non tristique lectus blandit luctus. Nulla massa lacus, blandit sit amet libero eget, volutpat tincidunt sem. Cras non blandit lectus. Integer nec orci et diam fermentum aliquam ac vitae tortor. Integer feugiat erat nisl, posuere tincidunt massa ornare non. Fusce a purus eget risus euismod pulvinar.
+            </textarea>
+        </div>
+        <div>
+            <label for="word">Enter word: </label>
+            <input type="text" id="word" value="sit" />
+        </div>
+        <div>           
+            <input type="checkbox" id="case"/>
+            <label for="case">case sensitive</label>
+        </div>
+        <button id="calculate" onclick="testWordCounter()">Find</button>
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script src="testWordCounter.js"></script>
+</body>
+</html>

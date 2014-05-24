@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 2</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <h1>Arrays homework - Task 2</h1>
+        <h2>Write a script that compares two char arrays lexicographically (letter by letter).</h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="text1">Enter text 1:</label>
+            <input type="text" id="text1" placeholder="abc" />
+        </div>
+        <div>
+            <label for="text2">Enter text 2:</label>
+            <input type="text" id="text2" placeholder="abc" />
+        </div>
+        <button id="calculate" onclick="compareArrays()">Compare</button>
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+        // the scrtipt is small so I decided not to use an external file
+        function compareArrays() {
+            var i,
+                text1 = jsConsole.read("#text1"),
+                text2 = jsConsole.read("#text2"),
+                resultSign = "==",
+                result,
+                minLenght;
+
+            if (text1 === undefined || text1 === null || text1 === "" ||
+                text2 === undefined || text2 === null || text2 === "") {
+                jsConsole.writeLine("The entered value is not a text!");
+                return;
+            }
+
+            minLenght = Math.min(text1.length, text2.length);
+
+            for (i = 0; i < minLenght; i++) {
+                if (text1[i] > text2[i]) {
+                    resultSign = ">";
+                    break;
+                }
+                else if (text1[i] < text2[i]) {
+                    resultSign = "<";
+                    break;
+                }
+            }
+
+            if (resultSign === "==") {
+                if (text1.length > text2.length) {
+                    resultSign = ">";
+                }
+                else if (text1.length < text2.length) {
+                    resultSign = "<";
+                }
+            }
+
+            result = text1 + " " + resultSign + " " + text2;
+            jsConsole.writeLine(result);
+            console.log(result);
+        };
+    </script>
+</body>
+</html>

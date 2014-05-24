@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 6 & 7</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Functions homework - Task 6 & 7 </h1>
+        <h2>
+            Task 6 - Write a function that checks if the element at given position in given array of integers is bigger than its two neighbors (when such exist).<br />
+            Task 7 - Write a function that returns the index of the first element in array that is bigger than its neighbors, or -1, if there’s no such element. (Use the function from the previous exercise.)            
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="text">Enter sequence:</label>
+            <input type="text" id="text" placeholder="1, 2, 3" value="1, 2, 3, 3, 5, 2, 3, 4, 2, 3, 4, 5"/>
+        </div>
+        <button id="calculate" onclick="testBiggerThanNeighbours()">Find</button>
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script src="testBiggerThanNeighbours.js"></script>
+</body>
+</html>
