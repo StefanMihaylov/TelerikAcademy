@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 4</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <h1>Using Objects homework - Task 4</h1>
+        <h2>Write a function that checks if a given object contains a given property</h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script src="common-script.js"></script>
+    <script>
+        function hasProperty(obj, property) {
+            var index;
+
+            if (obj === undefined || obj === null ||
+                    property === undefined || property === null) {
+                return null;
+            }
+
+            for (index in obj) {
+                if (index === property) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+
+        (function () {
+            var person = buildPerson("Pesho", "Ivanov", "22");
+
+            jsConsole.writeLine("Does 'Person' contain property 'age': " +
+                (hasProperty(person, 'age') ? "Yes" : "No"));
+            jsConsole.writeLine("Does 'Person' contain property 'appName': " +
+                (hasProperty(person, 'appName') ? "Yes" : "No"));
+            jsConsole.writeLine("Does 'navigator' contain property 'age': " +
+                (hasProperty(navigator, 'age') ? "Yes" : "No"));
+            jsConsole.writeLine("Does 'navigator' contain property 'appName': " +
+                (hasProperty(navigator, 'appName') ? "Yes" : "No"));
+        })();
+    </script>
+</body>
+</html>

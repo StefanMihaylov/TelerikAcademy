@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 11</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+    <script src="common-script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Strings homework - Task 11</h1>
+        <h2>
+            Write a function that formats a string using placeholders
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            string.Format(
+            <input type="text" id="text" style="width:350px;"
+                   value="Value of {0} is {1} times greater than {2}? -> {3}, Pesho, 2.2, 2, true" />);
+        </div>
+        <button id="calculate" onclick="stringFormat()">Print</button>
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+
+        function stringFormat() {
+            var text = readString('text');
+            var errorMessage = 'Invalid format string';
+
+            if (text === null) {
+                return;
+            }
+
+            var params = text.split(',');
+            if (params.length <= 2) {
+                jsConsole.writeLine(errorMessage);
+                return;
+            }
+
+            var result = '';
+            var formatText = params[0];
+            var len = formatText.length;
+            var inPlaceholder = false;
+            var digits = '';
+            for (var i = 0; i < len; i++) {
+                if (formatText[i] === '{') {
+                    digits = '';
+                    inPlaceholder = true;
+                    continue;
+                }
+
+                if (formatText[i] === '}') {
+                    inPlaceholder = false;
+                    if (digits.length > 0) {
+                        var index = parseInt(digits);
+                        index++;
+                        if (index >= params.length) {
+                            jsConsole.writeLine(errorMessage);
+                            return;
+                        }
+                        var placedValue = params[index].trim();
+                        if (placedValue === 'true') {
+                            // just test if boolean variable is printed correctly
+                            result += true; 
+                        }
+                        else {
+                            result += placedValue;
+                        }
+                        
+                    } else {
+                        jsConsole.writeLine(errorMessage);
+                        return;
+                    }
+                    continue;
+                }
+
+                if (!inPlaceholder) {
+                    result += formatText[i];
+                } else {
+                    digits += formatText[i];
+                }
+            }
+
+            jsConsole.writeLine(result);
+        }
+
+    </script>
+</body>
+</html>

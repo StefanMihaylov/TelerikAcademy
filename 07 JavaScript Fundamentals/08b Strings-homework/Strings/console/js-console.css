@@ -1,0 +1,64 @@
+﻿header,
+h1,
+div,
+.js-console {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 14px;
+  font-family: Verdana;
+}
+body header h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+body header h2 {
+  text-align: center;
+  font-size: 1em;
+}
+body .frame {
+  width: 500px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: gray;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+}
+body .frame h1 {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 5px;
+}
+body .frame div {
+  padding: 5px;
+}
+body .frame .js-console {
+  height: 200px;
+  margin: 0;
+  padding: 5px 10px;
+  background-color: black;
+  font-family: Consolas;
+  font-size: 1.1em;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: left;
+  word-break: break-all;
+}
+body .frame .js-console > p {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+}
+body .frame .js-console > p > span {
+  margin: 0;
+  padding: 0;
+}
+body .frame .js-console > p > br {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+/*# sourceMappingURL=js-console.css.map */

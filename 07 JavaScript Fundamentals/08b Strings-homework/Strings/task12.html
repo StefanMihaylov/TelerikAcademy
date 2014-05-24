@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 12</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+    <script src="common-script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Strings homework - Task 12</h1>
+        <h2>
+            Write a function that creates a HTML UL using a template for every HTML LI. <br />The source of the list should an array of elements. <br /> Replace all placeholders marked with –{…}– with the value of the corresponding property of the object.
+        </h2>
+    </header>
+
+    <section class="frame">
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+
+        (function () {
+            // Sorry, I have no time to develop a user-friendly interface and to make better variable validation
+            var template = '<strong>-{name}-</strong> - <span>-{age}-</span> years old';
+            var people = [
+                { name: 'Peter', age: 14 },
+                { name: 'Ferhodne', age: 40 },
+                { name: 'Leonardo', age: 35 },
+                { name: 'Gandalf', age: 177 },
+                { name: 'Kiro', age: 22 },
+                { name: 'Radina', age: 1 }
+            ];
+
+            var peopleList = generateList(people, template);
+            jsConsole.writeLine(peopleList);
+            console.log(peopleList);
+
+
+            function generateList(people, template) {
+                var result = '<ul>';
+                for (var i = 0; i < people.length; i++) {
+                    result += '<li>';
+                    result += format(template, people[i]);
+                    result += '</li>';
+                }
+                return result + '</ul>';
+            }
+
+            function format(template, person) {
+                var result = '';
+                var len = template.length;
+                var inPlaceholder = false;
+                var property = '';
+
+                for (var i = 0; i < len; i++) {
+                    if (template[i] === '-' && template[i+1] === '{') {
+                        property = '';
+                        inPlaceholder = true;
+                        i++;
+                        continue;
+                    }
+
+                    if (template[i] === '}' && template[i + 1] === '-') {
+                        inPlaceholder = false;
+                        if (property.length > 0) {
+                            if (person[property] !== undefined) {
+                                result += person[property];
+                            }
+                            else {
+                                jsConsole.writeLine('Invalid property name');
+                                return;
+                            }
+
+                        } else {
+                            jsConsole.writeLine('Invalid property');
+                            return;
+                        }
+                        i++;
+                        continue;
+                    }
+
+                    if (!inPlaceholder) {
+                        result += template[i];
+                    } else {
+                        property += template[i];
+                    }
+                }
+
+                return result;
+            }
+            
+        })();
+
+    </script>
+</body>
+</html>

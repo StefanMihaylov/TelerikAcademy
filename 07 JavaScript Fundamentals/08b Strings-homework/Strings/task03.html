@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 3</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+    <script src="common-script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Strings homework - Task 3</h1>
+        <h2>
+            Write a JavaScript function that finds how many times a substring is contained in a given text
+            (perform case insensitive search).
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="text">Enter text:</label>
+            <textarea id="text" style="width:300px; height:100px"> We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.</textarea>
+        </div>
+        <div>
+            <label for="substring">Enter text:</label>
+            <input type="text" id="substring" value="in" placeholder="Enter text" />
+        </div>
+        <button id="calculate" onclick="FindSubstring()">Check</button>
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+
+        function FindSubstring() {
+            var i,
+                text = readString('text').toLowerCase(),
+                searched = readString('substring'),
+                result = 0,
+                startIndex = 0;
+
+            if (text !== null && searched !== null) {
+                while (startIndex >= 0) {
+                    startIndex = text.indexOf(searched, startIndex + 1);
+
+                    if (startIndex >= 0) {
+                        result++;
+                    }
+                }
+
+                jsConsole.writeLine('The phrase "' + searched + '" is found ' + result + ' times in the given text');
+            }
+        }
+    </script>
+</body>
+</html>

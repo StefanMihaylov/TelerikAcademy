@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 7</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+    <script src="common-script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Strings homework - Task 7</h1>
+        <h2>
+            Write a script that parses an URL address given in the format: <br />
+            and extracts from it the [protocol], [server] and [resource] elements. Return the elements in a JSON object
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="text">Enter text:</label>
+            <input type="text" id="text" style="width:300px;" value="http://www.devbg.org/forum/index.php" />
+        </div>
+        <div>Veiw the JSON obect on browser console</div>
+        <button id="calculate" onclick="parser()">Extract</button>
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+        function parser() {
+            var i,
+                text = new String(readString('text')),
+                startIndex,
+                endIndex,
+                protocol,
+                server,
+                resource,
+                result;
+
+            if (text !== null) {
+                startIndex = 0;
+                endIndex = text.indexOf(':');
+                protocol = text.substring(startIndex, endIndex);
+                jsConsole.writeLine("protocol: " + protocol);
+
+                startIndex = text.indexOf('://');
+                endIndex = text.indexOf('/', startIndex + 3);
+                server = text.substring(startIndex + 3, endIndex);
+                jsConsole.writeLine("server: " + server);
+
+                resource = text.substr(endIndex);
+                jsConsole.writeLine("resource: " + resource);
+
+                result = {
+                    protocol: protocol,
+                    server: server,
+                    resource: resource
+                };
+            }
+            console.log(result);
+        }
+
+    </script>
+</body>
+</html>

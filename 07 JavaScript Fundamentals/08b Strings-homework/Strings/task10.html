@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 10</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+    <script src="common-script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Strings homework - Task 10</h1>
+        <h2>
+            Write a program that extracts from a given text all palindromes, e.g. "ABBA", "lamal", "exe".
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>(Sentence with no meaning with palindromes placed randomly)</div>
+        <div id="text">In the automata exe, a set of all Bob in a given lamal alphabet is ABBA a typical example of a language that is context-free kayak, but not SOS regular.</div>
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+        (function () {
+            var text = readString('text'),
+                separators = [' ', ',', ';', ':', '!', '.', '?', '-'],
+                regex = new RegExp('[' + separators.join('') + ']', 'g'),
+                tokens = text.split(regex),
+                currentWord,
+                isPalidrom;
+
+            for (var i in tokens) {
+                currentWord = tokens[i].toLowerCase();
+                if (currentWord.length > 1) {
+                    isPalidrom = true;
+                    var len = currentWord.length;
+                    for (var index = 0; index < len; index++) {
+                        if (currentWord[index] !== currentWord[len - 1 - index]) {
+                            isPalidrom = false;
+                            break;
+                        }
+                    }
+                    if (isPalidrom) {
+                        jsConsole.writeLine(tokens[i]);
+                    }
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

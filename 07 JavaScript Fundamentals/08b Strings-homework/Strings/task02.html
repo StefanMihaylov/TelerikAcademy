@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 2</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+    <script src="common-script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Strings homework - Task 2</h1>
+        <h2>
+            Write a JavaScript function to check if in a given expression the brackets are put correctly. <br />
+            Example of correct expression: ((a+b)/5-d).
+            Example of incorrect expression: )(a+b)).
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="text">Enter text:</label>
+            <input type="text" id="text" value="((a+b)/5-d)" placeholder="Enter text" />
+        </div>
+        <button id="calculate" onclick="bracketsChecker()">Check</button>
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+        function IsBracketsCorrect(expression) {
+            var i,
+                openBracketCounter = 0,
+                closedBracketCounter = 0,
+                len;
+
+            len = expression.length;
+            for (i = 0; i < len; i++) {
+                if (expression[i] === '(') {
+                    openBracketCounter++;
+                }
+                else if (expression[i] === ')') {
+                    closedBracketCounter++;
+                }
+                if (closedBracketCounter > openBracketCounter) {
+                    return false;
+                }
+            }
+
+            if (closedBracketCounter === openBracketCounter) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        function bracketsChecker() {
+            var i,
+                text = readString('text'),
+                result;
+
+            if (text !== null) {
+                
+                result = IsBracketsCorrect(text)? "" : "in";
+                jsConsole.writeLine(' Expression "' + text + '" is ' + result + 'correct');
+            }
+        }
+    </script>
+</body>
+</html>

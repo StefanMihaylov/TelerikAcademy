@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 8</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+    <script src="common-script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Strings homework - Task 8</h1>
+        <h2>
+            Write a JavaScript function that replaces in a HTML document given as <br />
+            string all the tags &lt;a href="…">…&lt;/a> with corresponding tags [URL=…]…[/URL]
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+        (function () {
+            var text = '"<p>Please visit <a href="http://academy.telerik.com">our site</a> to choose a training course. Also visit <a href="www.devbg.org">our forum</a> to discuss the courses.</p>"',
+                result;
+
+            result = text.replace(/<a href="/gi, "[URL=").replace(/">/gi, "]").replace(/<\/a>/gi, "[/URL]");
+            jsConsole.writeLine(result);
+            console.log(result);
+
+        })();
+    </script>
+</body>
+</html>

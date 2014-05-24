@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 1</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+    <style>
+        section > div > input {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Using Objects homework - Task 1</h1>
+        <h2>
+            Write functions for working with shapes in  standard Planar coordinate system: <br />
+            - Points are represented by coordinates P(X, Y) <br />
+            - Lines are represented by two points, marking their beginning and ending L(P1(X1,Y1), P2(X2,Y2)) <br />
+            - Calculate the distance between two points <br />
+            - Check if three segment lines can form a triangle
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="line1X1">Enter line 1 -> X1</label>
+            <input type="number" id="line1X1" placeholder="123" />
+            <label for="line1Y1">Y1:</label>
+            <input type="number" id="line1Y1" placeholder="123" />
+            <label for="line1X2">X2:</label>
+            <input type="number" id="line1X2" placeholder="123" />
+            <label for="line1Y2">Y2:</label>
+            <input type="number" id="line1Y2" placeholder="123" />
+        </div>
+        <div>
+            <label for="line2X1">Enter line 2 -> X1</label>
+            <input type="number" id="line2X1" placeholder="123" />
+            <label for="line2Y1">Y1:</label>
+            <input type="number" id="line2Y1" placeholder="123" />
+            <label for="line2X2">X2:</label>
+            <input type="number" id="line2X2" placeholder="123" />
+            <label for="line2Y2">Y2:</label>
+            <input type="number" id="line2Y2" placeholder="123" />
+        </div>
+        <div>
+            <label for="line3X1">Enter line 3 -> X1</label>
+            <input type="number" id="line3X1" placeholder="123" />
+            <label for="line3Y1">Y1:</label>
+            <input type="number" id="line3Y1" placeholder="123" />
+            <label for="line3X2">X2:</label>
+            <input type="number" id="line3X2" placeholder="123" />
+            <label for="line3Y2">Y2:</label>
+            <input type="number" id="line3Y2" placeholder="123" />
+        </div>
+        <button id="calculate" onclick="testFormTriangle()">Form a triangle?</button>
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script src="common-script.js"></script>
+    <script src="geometry-script.js"></script>
+</body>
+</html>

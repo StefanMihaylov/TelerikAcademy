@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 6</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <h1>Using Objects homework - Task 6</h1>
+        <h2>
+            Write a function that groups an array of persons by age, first or last name.<br />
+            The function must return an associative array, with keys - the groups, and values -arrays with persons in this groups <br />
+            Use function overloading (i.e. just one function)
+
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script src="common-script.js"></script>
+    <script>
+        function group(array, key) {
+            var i,
+                property,
+                result = {},
+                person,
+                keyValue;
+
+            if (array.length === 0) {
+                return null;
+            }
+
+            person = array[0];
+            for (property in person) {
+                if (property === key) {
+                    for (i = 0; i < array.length; i++) {
+                        keyValue = array[i][property];
+                        if (!result[keyValue]) {
+                            result[keyValue] = [];
+                        }
+                        result[keyValue].push(array[i]);
+                    }
+                }
+            }
+            return result;
+        }
+
+        function print(array, key) {
+            var i,
+                index,
+                element;
+
+            for (index in array) {
+                element = array[index];
+                jsConsole.writeLine("- " + key + " -> " + index + ": ");
+                for (i = 0; i < element.length; i++) {
+                    jsConsole.write(element[i].toString() + " - " + element[i].age + "; ");
+                }
+                jsConsole.writeLine(" ");
+            }
+
+        }
+
+        (function () {
+            var people = [
+                    buildPerson("Pesho", "Ivanov", "22"),
+                    buildPerson("Pesho", "Georgiev", "25"),
+                    buildPerson("Ali Raza", "Tekin", "84"),
+                    buildPerson("Ali Raza", "Tekin", "55"),
+                    buildPerson("Justin", "Bieber", "20"),
+                    buildPerson("Justin", "Bieber", "25"),
+                    buildPerson("Ferhonde", "Guven", "35"),
+                    buildPerson("Ferhonde", "Tekin", "84"),
+                    buildPerson("Ivaylo", "Georgiev", "55"),
+                    buildPerson("Ivaylo", "Georgiev", "35"),
+                    buildPerson("Barak", "Guven", "22"),
+                    buildPerson("Barak", "Obama", "48"),
+                    buildPerson("Antonio", "Banderas", "55"),
+                    buildPerson("Antonio", "Ivanov", "48")
+            ],
+                groupedByFname,
+                groupedByLname,
+                groupedByAge;
+
+            groupedByFname = group(people, 'fname');
+            groupedByLname = group(people, 'lname');
+            groupedByAge = group(people, 'age');
+
+            print(groupedByFname, 'fname');
+            print(groupedByLname, 'lname');
+            print(groupedByAge, 'age');
+
+        })();
+    </script>
+</body>
+</html>

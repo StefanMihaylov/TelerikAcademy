@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 1</title>
+    <link href="console/js-console.css" rel="stylesheet" />    
+    <script src="common-script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Strings homework - Task 1</h1>
+        <h2>Write a JavaScript function reverses string and returns it. Example: "sample" -> "elpmas".
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="text">Enter text:</label>
+            <input type="text" id="text" value="sample" placeholder="Enter text"/>
+        </div>
+        <button id="calculate" onclick="testReverseText()">Reverse</button>
+
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+    
+    <script src="console/js-console.js"></script>
+    <script>
+        function testReverseText() {
+            var i,
+                text = readString('text'),
+                result = '',
+                len;
+
+            if (text !== null) {
+                len = text.length;
+                for (i = 0; i < len; i++) {
+                    result += text[len - 1 - i];
+                }
+                jsConsole.writeLine(text + " --> " + result);
+            }
+        }
+    </script>
+</body>
+</html>

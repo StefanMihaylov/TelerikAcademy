@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 5</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header>
+        <h1>Using Objects homework - Task 5</h1>
+        <h2>
+            Write a function that finds the youngest person in a given array of persons and prints his/hers full name<br />
+            Each person have properties firstname, lastname and age
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script src="common-script.js"></script>
+    <script>
+        function findYoungest(array) {
+            var i,
+                minAge,
+                index;
+
+            if (array.length === 0) {
+                return null;
+            }
+
+            minAge = array[0].age;
+            index = 0;
+            for (i = 0; i < array.length; i++) {
+                if (array[i].age < minAge) {
+                    minAge = array[i].age;
+                    index = i;
+                }
+            }
+
+            return array[index];
+        }
+
+        (function () {
+            var result,
+                i,
+                people = [
+                    buildPerson("Pesho", "Ivanov", "22"),
+                    buildPerson("Ali Raza", "Tekin", "84"),
+                    buildPerson("Justin", "Bieber", "20"),
+                    buildPerson("Ferhonde", "Guven", "35"),
+                    buildPerson("Ivaylo", "Kenov", "25"),
+                    buildPerson("Barak", "Obama", "48"),
+                    buildPerson("Antonio", "Banderas", "55")
+                ];
+
+            for (i = 0; i < people.length; i++) {
+                jsConsole.writeLine(people[i].toString() + " - " + people[i].age);
+            }
+            result = findYoungest(people);
+            jsConsole.writeLine(" ");
+            jsConsole.writeLine("Youngest person from the above list: " + result.toString());
+
+        })();
+    </script>
+</body>
+</html>

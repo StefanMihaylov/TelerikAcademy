@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 4</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+    <script src="common-script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Strings homework - Task 4</h1>
+        <h2>
+            You are given a text. Write a function that changes the text in all regions: <br />
+            - &lt;upcase>text&lt;/upcase> to uppercase.<br />
+            - &lt;lowcase>text&lt;/lowcase> to lowercase.<br />
+            - &lt;mixcase>text&lt;/mixcase> to mix casing(random).<br />
+
+        </h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            We are  &lt;mixcase>living &lt;/mixcase> in a  &lt;upcase>yellow submarine &lt;/upcase>. We  &lt;mixcase>don't &lt;/mixcase> have  &lt;lowcase>anything &lt;/lowcase> else.
+        </div>
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+        (function () {
+
+            // this function works fine if tags aren't nested. If the tags are nested part of the algorithm have to be modified.
+            //  I have no time to do this now. Let's solve some problems for exam. :)
+            var upperTag = 'upcase';
+            var lowerTag = 'lowcase';
+            var randomTag = 'mixcase';
+            var text = "We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. We <mixcase>don't</mixcase> have <lowcase>anything</lowcase> else.";
+
+            var index = 0,
+                startIndex,
+                endIndex,
+                result = '',
+                tagStack = [],
+                textStack = [];
+
+            while (true) {
+                startIndex = text.indexOf('<', index);
+                if (startIndex === -1) {
+                    result += text.substring(index);
+                    break;
+                }
+                endIndex = text.indexOf('>', startIndex);
+
+                var subText = text.substring(index, startIndex);
+                index = endIndex + 1;
+
+                if (tagStack.length === 0) {
+                    result += subText;
+                }
+                else {
+                    textStack.push(subText);
+                }
+
+                var tag = text.substring(startIndex + 1, endIndex);
+                if (tag[0] !== '/') {
+                    tagStack.push(tag);
+                }
+                else {
+                    var endTag = tag.substr(1);
+                    var lastTag = tagStack[tagStack.length - 1];
+
+                    if (tagStack[tagStack.length - 1] === endTag) {
+                        lastTag = tagStack.pop();
+                        if (lastTag === upperTag) {
+                            result += textStack.pop().toUpperCase();
+                        }
+                        else if (lastTag === lowerTag) {
+                            result += textStack.pop().toLowerCase();
+                        }
+                        else if (lastTag === randomTag) {
+                            result += toRandomCase(textStack.pop());
+                        }
+                        else {
+                            jsConsole.writeLine('Invalid tag');
+                            break;
+                        }
+
+                    }
+                    else {
+                        jsConsole.writeLine('Invalid tag nesting');
+                        break;
+                    }
+                }
+            }
+
+            jsConsole.writeLine(result);
+
+
+            function toRandomCase(text) {
+                var number,
+                    result = '';
+                for (var i = 0; i < text.length; i++) {
+                    number = parseInt(Math.random() * 2); // two values: 0 and 1
+                    if (number === 0) {
+                        result += text[i].toUpperCase();
+                    }
+                    else {
+                        result += text[i].toLowerCase();
+                    }
+                }
+
+                return result;
+            }
+
+        })();
+    </script>
+</body>
+</html>

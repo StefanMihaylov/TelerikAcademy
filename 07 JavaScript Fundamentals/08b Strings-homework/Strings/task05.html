@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 5</title>
+    <link href="console/js-console.css" rel="stylesheet" />
+    <script src="common-script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Strings homework - Task 5</h1>
+        <h2> Write a function that replaces non breaking white-spaces in a text with "&amp;nbsp;"</h2>
+    </header>
+
+    <section class="frame">
+        <div>
+            <label for="text">Enter text:</label>
+            <input type="text" id="text" style="width:300px;" value="We are   living in    an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are     drinking all the day. We will move out of it in 5 days. " />
+        </div>
+        <button id="calculate" onclick="replaceWhiteSpace()">Convert</button>
+        <div>View the result on the browser console too.</div>
+        <div>
+            <h1>Result</h1>
+            <div id="js-console"></div>
+        </div>
+    </section>
+
+    <script src="console/js-console.js"></script>
+    <script>
+
+        function replaceWhiteSpace() {
+            var i,
+                text = readString('text');
+
+            if (text !== null) {
+                while (true) {
+                    if (!contains(text, ' ')) {
+                        break;
+                    }
+                    text = text.replace(' ', '&nbsp;');
+
+                }
+
+                jsConsole.writeLine(text);
+                console.log(text);
+            }
+
+            function contains(text, char) {
+                for (var i = 0; i < text.length; i++) {
+                    if (text[i] === char) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
