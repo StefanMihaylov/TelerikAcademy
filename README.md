@@ -53,3 +53,11 @@ This repository contains all homeworks and projects written during attending the
 <b>04</b> Preprocessors: LESS;
 <b>05</b> Exam Preparation;
 <b>06</b> Exam (2014-04-23)
+
+<strong>High-Quality Code</strong><br/>
+<b>01</b>Code Formatting;
+
+
+<strong>JavaScript-Fundamentals</strong><br/>
+<b>01</b>Data-Types-and-Variables;
+
