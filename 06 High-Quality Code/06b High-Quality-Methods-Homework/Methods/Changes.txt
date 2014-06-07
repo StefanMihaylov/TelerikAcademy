@@ -1,0 +1,23 @@
+﻿Основни промени в кода:
+
+Methods.cs
+- методът Main() изнесен в клас Test.cs
+- добавено public на класа и на всички методи
+- преименуване на CalcTriangleArea на CalculateTriangleArea
+- преименуване на CalcDistance на CalculateDistance
+- преименуване на NumberToDigit на ConvertDigitToWord
+- CalculateTriangleArea - добавена проверка дали това е триъгълник, добовени exception-и
+- ConvertDigitToWord - добавен exception
+- FindMax() - добавен exception, корекция в алгоритъма (добавена променлива result)
+- PrintAsNumber() - заменени if операторите със switch, добавен exception при неизвестен форматиращ стринг
+- CalculateDistance() - добавена структура Point, добавени две променливи, логиката за проверка на хоризонтална и вертокална линия изнесени в отделни методи 
+
+Student.cs
+- пропърти OtherInfo разделено на BirthDate, Sex, Hobby и City, не е ясно какво друго може да се съдържа в OtherInfo
+- добавена енумерация SexEnum
+- промяна в метода IsOlderThan. Той е безсмислен и може да се промени на CоmpareAge
+- имената и датата на раждане променени на private, добавен конструктор
+- може да се добави валидацция на пропъртитата
+
+Test.cs
+- добавени пояснителни текстове
