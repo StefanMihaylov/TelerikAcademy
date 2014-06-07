@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TODO list</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>JavaScript-Event-Model homework</h1>
+    <h2>
+        Create a TODO list with the following UI controls: <br />
+        Form input for new Item, Button for adding the new Item, Button for deleting some item, Show and Hide Button<br />
+    </h2>
+    <div id="wrapper">
+
+        <label for="new-item">New item:</label>
+        <input type="text" name="new-item" id="new-item" placeholder="Enter new item here" />
+        <button id="add-button">Add item</button>
+        <div>
+            <button id="delete-button">Delete Selected Items</button>
+            <button id="show-button">Show List</button>
+            <button id="hide-button">Hide List</button>
+        </div>
+        <p>TODO list</p>
+        <ul id="list"></ul>
+    </div>
+
+    <script src="todo-list.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM-Operations homework</title>
+    <style>
+        #wrapper {
+            position: relative;
+            margin: auto;
+            height: 500px;
+            text-align: center;
+        }
+
+        textarea {
+            width: 500px;
+            height: 100px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>DOM-Operations homework</h1>
+    <h2>
+        Create a text area and two inputs with type="color".<br />
+        Make the font color of the text area as the value of the first color input, <br />
+        Make the background color of the text area as the value of the second input
+    </h2>
+
+    <div id="wrapper">
+        <textarea id="text-area"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a mi ac ante mollis faucibus vel vel dui. Vestibulum vestibulum condimentum euismod. Maecenas accumsan lectus consectetur lorem mollis, lobortis iaculis enim molestie. Maecenas id nisi eget urna venenatis faucibus.        </textarea>
+        <br />
+        <label for="text-colour">Text colour:</label>
+        <input type="color" name="text-colour" id="text-colour" value="#000000" />
+        <label for="background-colour">Background colour:</label>
+        <input type="color" name="background-colour" id="background-colour" value="#FFFFFF" />
+    </div>
+
+    <script>
+        var textArea = document.querySelector('#text-area');
+        var textColour = document.querySelector('#text-colour');
+        var backgroundColour = document.querySelector('#background-colour');
+
+        textColour.addEventListener('change', function () {
+            textArea.style.color = textColour.value;
+        });
+
+        backgroundColour.addEventListener('change', function () {
+            textArea.style.backgroundColor = backgroundColour.value;
+        });
+
+    </script>
+</body>
+</html>

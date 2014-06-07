@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM Homework - Task 1</title>
+    <style>
+        div > div {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Homework - Task 1</h1>
+    <h2>Write a script that selects all the div nodes that are directly inside other div elements</h2>
+    <p>Required elements are highlighted in red. See the result on the console</p>
+
+    <div>Div</div>
+    <div>
+        <div>Nested Div1</div>
+        <section>
+            <div>Div in section element</div>
+        </section>
+        <div>Nested Div2</div>
+    </div>
+    <div>Div</div>
+
+    <script>
+        (function selectNestedDivsByQuery() {
+            console.log("Using querySelectorAll:");
+            var nestedDiv = document.querySelectorAll("div > div");
+            for (var i = 0, len = nestedDiv.length; i < len; i++) {
+                var divText = nestedDiv[i].outerHTML;
+                console.log("Selected div # " + (i+1) + " : " + divText);
+            }
+        })();
+
+        (function selectNestedDivsByGetElements() {
+            console.log("Using getElementsByTagName:");
+            var divs = document.getElementsByTagName("div");
+            var counter = 1;
+            for (var i = 0, len = divs.length; i < len; i++) {
+                var divParent = divs[i].parentElement.nodeName;
+                if (divParent === "DIV") {
+                    var divText = divs[i].outerHTML;
+                    console.log("Selected div # " + counter + " : " + divText);
+                    counter++;
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

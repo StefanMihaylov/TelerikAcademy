@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM-Operations homework</title>
+    <style>
+        #wrapper {
+            position: relative;
+            margin: auto;
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        button, textarea {
+            display: block;
+            margin: auto;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+
+        textarea {
+            width: 500px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM-Operations homework</h1>
+    <h2>
+        Create a tag cloud: Visualize a string of tags (strings) in a given container <br />
+        By given minFontSize and maxFontSize, generate the tags with different font-size, depending on the number of occurrences
+    </h2>
+    <textarea id="tags">cms, javascript, js, ASP.NET MVC, .net, .net, css, wordpress, xaml, javascript, http, web, asp.net, asp.net MVC, ASP.NET MVC, wp, javascript, js, cms, html, javascript, http, http, CMS</textarea>
+    <button id="generate">Generate</button>
+    <div id="wrapper"></div>
+
+    <script src="tag-cloud.js"></script>
+</body>
+</html>

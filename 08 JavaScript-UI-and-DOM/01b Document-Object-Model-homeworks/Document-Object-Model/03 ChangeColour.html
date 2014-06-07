@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM Homework - Task 2</title>
+</head>
+<body>
+    <h1>DOM Homework - Task 2</h1>
+    <h2>Crеate a function that gets the value of &lt;input type="color"> and sets the background of the body to this value</h2>
+    
+    <label for="colour-input">Background colour in RGB format</label>
+    <input type="text" id="colour-input" name="colour" value="AAFF22" />
+    <button onclick="readColourInput()">Change colour</button>
+
+    <script>
+        function readColourInput() {
+            var inputElement = document.getElementById("colour-input");
+            var colour = inputElement.value;
+            var bodyElement = document.body;
+            bodyElement.style.background = "#" + colour;
+        }
+    </script>
+</body>
+</html>

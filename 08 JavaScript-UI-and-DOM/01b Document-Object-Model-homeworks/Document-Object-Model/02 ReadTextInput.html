@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM Homework - Task 2</title>
+</head>
+<body>
+    <h1>DOM Homework - Task 3</h1>    
+    <h2>Create a function that gets the value of &lt;input type="text"> ands prints its value to the console</h2>
+    <p>See the result on the console</p>
+
+    <label for="text-input">Text</label>
+    <input type="text" id="text-input" name="name" value="Lorem ipsum" />
+    <button onclick="readTextInput()">Get text</button>
+
+    <script>
+        function readTextInput() {
+            var inputElement = document.getElementById("text-input");
+            var text = inputElement.value;
+            console.log("Text: " + text);
+        }
+    </script>
+</body>
+</html>
