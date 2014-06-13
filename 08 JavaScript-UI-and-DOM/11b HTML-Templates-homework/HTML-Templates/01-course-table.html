@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Course table</title>
+    <style>
+        h1, h2 {
+            text-align: center;
+        }
+
+        table.course-table {
+            border-collapse: collapse;
+        }
+
+            table.course-table td, table.course-table th {
+                padding: 5px;
+                border: 1px solid black;
+            }
+
+            table.course-table thead {
+                background: #AAA;
+            }
+
+            table.course-table tbody tr:nth-of-type(2n) {
+                background: #ddd;
+            }
+
+            table.course-table td:first-of-type {
+                text-align: center;
+            }
+    </style>
+</head>
+<body>
+    <div id="wrapper"></div>
+
+    <script src="libs/handlebars-v1.3.0.js"></script>
+    <script src="table-data.js"></script>
+    <script id="table-template" type="text/x-handlebars-template">
+        <table class="course-table">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Title</th>
+                    <th>Date #1</th>
+                    <th>Date #2</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each table}}
+                <tr>
+                    <td>{{@index}}</td>
+                    <td>{{title}}</td>
+                    <td>{{firstDate}}</td>
+                    <td>{{secondDate}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </script>
+</body>
+</html>
