@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Insert elments</title>
+</head>
+<body>
+    <h1>Using jQuery implement functionality to insert a DOM element before or after another element</h1>
+
+    <div id="center">Main text</div>
+
+    <script type="text/javascript" src="libs/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var $main = $('#center');
+            $('<div/>').text('After main text').insertAfter($main);
+            $('<div/>').text('Before main text').insertBefore($main);
+        });
+    </script>
+</body>
+</html>

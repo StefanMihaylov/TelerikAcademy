@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Slider Control</title>
+    <style>
+        body, div, button, img {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper {
+            text-align: center;
+            margin: 10px;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 20px;
+            vertical-align: central;
+        }
+
+            button.selected {
+                background-color: green;
+            }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="navigation">
+            <button id="prev-btn">Previous</button>
+            <button id="slideshow-btn">Slideshow</button>
+            <button id="next-btn">Next</button>
+        </div>
+        <div id="slider"></div>
+        <footer>Copyright&copy; All rights reserved. All photos are property of the author of this page!</footer>
+    </div>
+
+    <script src="libs/jquery-2.1.1.min.js"></script>
+    <script src="scripts/slider-control.js"></script>
+</body>
+</html>

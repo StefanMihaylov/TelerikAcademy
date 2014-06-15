@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Background colour</title>
+</head>
+<body>
+    <h1>Implement functionality to change the background color of a web page</h1>
+    <label for="background">Set background colour:</label>
+    <input type="color" id="background" value="#ffffff" />
+
+    <script type="text/javascript" src="libs/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#background').on('change', function () {
+                var colour = $(this).val();
+                $('body').css('background-color', colour);
+            });
+        });
+    </script>
+</body>
+</html>
