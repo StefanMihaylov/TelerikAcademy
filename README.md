@@ -55,9 +55,48 @@ This repository contains all homeworks and projects written during attending the
 <b>06</b> Exam (2014-04-23)
 
 <strong>High-Quality Code</strong><br/>
-<b>01</b>Code Formatting;
-
+<b>01</b> Code Formatting;
+<b>02</b> Naming Identifiers;
+<b>03</b> Code Documentation and Comments;
+<b>04</b> Using Variables, Data, Expressions and Constants;
+<b>05</b> Using Control Structures, Conditional Statements and Loops;
+<b>06</b> High-Quality Methods;
+<b>07</b> High-Quality Classes;
+<b>08</b> Defensive Programming and Exceptions;
+<b>09</b> Code Tuning and Optimization;
+<b>10</b> Unit-Testing;
+<b>11</b> Test-Driven-Development;
+<b>12</b> Refactoring;
+<b>13</b> Development Tools;
+<b>14</b> 
+<b>15</b> 
+<b>16</b> 
+<b>17</b> 
 
 <strong>JavaScript-Fundamentals</strong><br/>
-<b>01</b>Data-Types-and-Variables;
+<b>01</b> Data-Types-and-Variables;
+<b>02</b> Operators-Expressions;
+<b>03</b> Conditional-Statements;
+<b>04</b> Loops;
+<b>05</b> Arrays;
+<b>06</b> Functions;
+<b>07</b> Using-Objects;
+<b>08</b> Strings;
+<b>09</b> Exam Preparation;
+<b>10</b> Exam 2014.05.20
 
+<strong>JavaScript-UI-and-DOM</strong><br/>
+<b>01</b> Document-Object-Model;
+<b>02</b> Canvas;
+<b>03</b> KineticJS-Overview;
+<b>04</b> SVG;
+<b>05</b> Raphael JS for SVG;
+<b>06</b> Canvas-Animations;
+<b>07</b> DOM-Operations;
+<b>08</b> JavaScript-Event-Model;
+<b>09</b> jQuery-Overview;
+<b>10</b> jQuery-Plugins;
+<b>11</b> HTML-Templates;
+<b>12</b> Exam-preparation;
+<b>13</b> Team project - Hornbuckle Team: Minesweeper;
+<b>14</b> Exam 2014.06.17
