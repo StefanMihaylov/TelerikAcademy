@@ -3,18 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopmentTools", "DevelopmentTools\DevelopmentTools.csproj", "{2E9F5E85-D2B2-400B-B235-DA71ED2AD0F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-DevelopmentTools", "DevelopmentTools\2-DevelopmentTools.csproj", "{2E9F5E85-D2B2-400B-B235-DA71ED2AD0F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "logging\Logging.csproj", "{65FA95F7-1CA8-4973-960E-3764AB407748}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-Logging", "logging\1-Logging.csproj", "{65FA95F7-1CA8-4973-960E-3764AB407748}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F4D33E9-DBA8-44BD-9555-735896CDA0B0}"
 	ProjectSection(SolutionItems) = preProject
-		DevelopmentTools\Screenshots\Github - TortoiseGit.png = DevelopmentTools\Screenshots\Github - TortoiseGit.png
-		DevelopmentTools\Screenshots\JustCode.png = DevelopmentTools\Screenshots\JustCode.png
-		DevelopmentTools\Screenshots\JustDecompile.png = DevelopmentTools\Screenshots\JustDecompile.png
-		DevelopmentTools\Screenshots\Obfuscation.png = DevelopmentTools\Screenshots\Obfuscation.png
-		Repository link.txt = Repository link.txt
-		DevelopmentTools\Screenshots\Sandcastle.png = DevelopmentTools\Screenshots\Sandcastle.png
+		DevelopmentTools\Screenshots\1-Github - TortoiseGit.png = DevelopmentTools\Screenshots\1-Github - TortoiseGit.png
+		DevelopmentTools\Screenshots\1-JustCode.png = DevelopmentTools\Screenshots\1-JustCode.png
+		DevelopmentTools\Screenshots\1-JustDecompile.png = DevelopmentTools\Screenshots\1-JustDecompile.png
+		DevelopmentTools\Screenshots\1-Obfuscation.png = DevelopmentTools\Screenshots\1-Obfuscation.png
+		DevelopmentTools\Screenshots\1-Sandcastle.png = DevelopmentTools\Screenshots\1-Sandcastle.png
+		DevelopmentTools\Screenshots\3-GitHub Repository.png = DevelopmentTools\Screenshots\3-GitHub Repository.png
 	EndProjectSection
 EndProject
 Global
