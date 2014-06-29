@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopmentTools", "DevelopmentTools\DevelopmentTools.csproj", "{2E9F5E85-D2B2-400B-B235-DA71ED2AD0F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "logging\Logging.csproj", "{65FA95F7-1CA8-4973-960E-3764AB407748}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F4D33E9-DBA8-44BD-9555-735896CDA0B0}"
+	ProjectSection(SolutionItems) = preProject
+		DevelopmentTools\Screenshots\Github - TortoiseGit.png = DevelopmentTools\Screenshots\Github - TortoiseGit.png
+		DevelopmentTools\Screenshots\JustCode.png = DevelopmentTools\Screenshots\JustCode.png
+		DevelopmentTools\Screenshots\JustDecompile.png = DevelopmentTools\Screenshots\JustDecompile.png
+		DevelopmentTools\Screenshots\Obfuscation.png = DevelopmentTools\Screenshots\Obfuscation.png
+		Repository link.txt = Repository link.txt
+		DevelopmentTools\Screenshots\Sandcastle.png = DevelopmentTools\Screenshots\Sandcastle.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E9F5E85-D2B2-400B-B235-DA71ED2AD0F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E9F5E85-D2B2-400B-B235-DA71ED2AD0F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E9F5E85-D2B2-400B-B235-DA71ED2AD0F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E9F5E85-D2B2-400B-B235-DA71ED2AD0F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65FA95F7-1CA8-4973-960E-3764AB407748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65FA95F7-1CA8-4973-960E-3764AB407748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65FA95F7-1CA8-4973-960E-3764AB407748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65FA95F7-1CA8-4973-960E-3764AB407748}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

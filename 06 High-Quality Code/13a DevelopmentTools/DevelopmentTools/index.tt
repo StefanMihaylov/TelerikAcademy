@@ -1,0 +1,22 @@
+﻿<#@ template language="C#" hostspecific="true" #>
+<#@ output extension=".html" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Text Template Test</title>
+</head>
+<body>
+	<ul>
+	<#  string currentDir = this.Host.ResolvePath(".");
+		string[] files = Directory.GetFiles(currentDir);
+		foreach (string file in files)
+		{
+			FileInfo fileInfo = new FileInfo(file); #>
+	<li><#= fileInfo.Name #></li>
+	<#  } #>
+</ul>
+</body>
+</html>
