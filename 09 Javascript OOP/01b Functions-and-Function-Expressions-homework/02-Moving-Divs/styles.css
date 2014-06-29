@@ -1,0 +1,10 @@
+body, h2, h3{
+    text-align: center;
+    margin: 0;
+}
+.containers {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: inline-block;
+}
