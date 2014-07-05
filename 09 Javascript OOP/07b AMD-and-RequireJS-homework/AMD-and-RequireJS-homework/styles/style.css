@@ -1,0 +1,32 @@
+﻿body, h3, figure, div {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ccc;
+}
+
+#combo-box-container {
+    padding: 20px;
+}
+
+.picture {
+    border-radius: 10px;
+    width: 220px;
+    padding: 5px;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+    .picture img {
+        border-radius: 10px;
+    }
+
+.selected {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}

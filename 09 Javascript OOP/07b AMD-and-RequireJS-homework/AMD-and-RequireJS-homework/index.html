@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Combobox</title>
+    <link href="styles/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="combo-box-container"></div>
+    <script id="combobox-template" type="text/x-handlebars-template">
+        <h3>Choose Trekking Destination</h3>
+        {{#data}}
+        <figure class="picture">
+            <img src="{{image}}" alt="{{title}}" width="200" height="133" />
+            <figcaption>{{title}}</figcaption>
+        </figure>
+        {{/data}}
+    </script>
+
+    <script src="scripts/libs/require.js" data-main="scripts/app"></script>
+</body>
+</html>
