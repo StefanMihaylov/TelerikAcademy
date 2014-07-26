@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Twitter</title>
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>New Twitter API does not allow to take public messages of a user.</h2>
+    <h4>Please, run the file trough server</h4>
+    <div>
+        <label for="widgetID">Enter twitter widgetID:</label>
+        <input type="text" name="widgetID" id="widgetID" value="347099293930377217" />
+        <span>Try 345170787868762112 or 345690956013633536 or other.</span>
+        <span>For more info <a href="https://github.com/jasonmayes/Twitter-Post-Fetcher" target="_blank">Jason Mayes</a></span>
+    </div>
+    <div id="twitter-container"></div>
+
+    <script src="scripts/twitterFetcher_min.js"></script>
+    <script>
+        var input = document.getElementById('widgetID');
+
+        var getTwitts = function () {
+            var widgetId = input.value,
+                tweetsContainerId = 'twitter-container',
+                numberOfTweetsToTake = 6,
+                useLinks = true,
+                showProfilePicture = true,
+                showDateOnPosted = true;
+
+            twitterFetcher.fetch(widgetId, tweetsContainerId, numberOfTweetsToTake, useLinks, showProfilePicture, showDateOnPosted);
+        };
+
+        input.addEventListener('change', getTwitts);
+
+        window.onload = getTwitts();
+
+    </script>
+</body>
+</html>

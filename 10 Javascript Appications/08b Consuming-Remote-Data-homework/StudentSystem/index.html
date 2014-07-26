@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Student system</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <h3> Using the REST API at 'localhost:3000/students' create a web application for managing students. The REST API provides methods as follows: POST creates a new student; GET returns all students; DELETE deletes a student by Id </h3>
+
+    <p>Please, run the Node.js server: npm install + node app.js in command prompt. If you cannot run a server don't give bad grades for this homework</p>
+    <div>
+        <form action="/" method="post"></form>
+        <label>Name: </label>
+        <input type="text" id="student-name" />
+        <label>Grade: </label>
+        <input type="number" id="student-grade" />
+        <button id="add">Add student</button>
+    </div>
+    <div>
+        <label>Student ID: </label>
+        <input type="number" id="student-id" />
+        <button id="delete">Delete student</button>
+    </div>
+    <button id="get">Get all students</button>
+    <h4>Students List:</h4>
+    <div id="result"></div>
+    <div id="status"></div>
+
+    <script src="libs/require.js" data-main="scripts/main.js"></script>
+</body>
+</html>
