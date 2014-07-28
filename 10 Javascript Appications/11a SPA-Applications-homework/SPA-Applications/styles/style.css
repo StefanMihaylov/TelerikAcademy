@@ -1,0 +1,63 @@
+﻿body, div, span, h1, h2, h3, h4, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background-color: skyblue;
+    font-size: 18px;
+}
+
+h1 {
+    margin: 10px;
+}
+
+#nickName {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: blue;
+}
+
+.myMessage {
+    color: blue;
+}
+
+button {
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#messages, #inputMessage {
+    width: 400px;
+    border: 2px outset darkblue;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 3px 10px;
+}
+
+#messages {
+    height: 400px;
+    background-color: lightgray;
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 10px;
+    text-align: left;
+    overflow-y: scroll;
+    word-wrap: break-word;
+}
+
+    #messages ul {
+        margin-left: 15px;
+        list-style-type: square;
+    }
+
+#inputMessage {
+    height: 30px;
+    background-color: white;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
