@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Crowd Share</title>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js"></script>
+    <link href="styles/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Crowd Share</h1>
+    <div id="wrapper">
+        <div id="login"></div>
+        <div id="status"></div>
+                
+        <div id="sort">
+            Sort by:
+            <select id="by-column">
+                <option value="title" >Title</option>
+                <option value="date" selected="selected">Date</option>
+            </select>
+            and
+            <select id="by-type">
+                <option value="0" selected="selected">ascending</option>
+                <option value="1">descending</option>
+            </select>
+            <button id="get-post">Get all posts</button>
+        </div>
+
+        <div id="posts"></div>        
+    </div>
+
+    <script src="libs/require.js" data-main="scripts/main"></script>
+
+    <script id="table-template" type="text/x-handlebars-template">
+        <table class="posts-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Autor</th>
+                    <th>Title</th>
+                    <th>Content</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each table}}
+                <tr>
+                    <td>{{date}}</td>
+                    <td>{{autor}}</td>
+                    <td>{{title}}</td>
+                    <td>{{content}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </script>
+
+</body>
+</html>
