@@ -1,0 +1,41 @@
+Design pattern: Simple Factory
+	SimpleFactory class 
+
+Design pattern: Strategy
+	IMaxSquareValue interface in CPu class
+
+Design pattern: Template Method
+	* 
+
+Design pattern: Abstract factory
+	AbstractFactory namespace(folder) 
+
+Design pattern: Composite
+	* 
+
+Design pattern: Mediator
+	* 
+
+Found bottlenecks:
+	Hard drive initilization by List of discs (or this is a bug??)
+	* 
+
+Found bugs:
+	CPU square of number algorithm 
+	Extract class VideoCard from class HardDriver 
+	Add % sign in "Battery status: {0}%"" 
+
+Single responsibility principle
+	separated the HardDriver and VideoCard class 
+
+Open/closed principle
+	SimpleFactory class can be inherited (Extended)
+
+Liskov substitution principle
+	Only laptop computer has a battery and method Charge() 
+
+Interface segregation principle
+	split the IMotherboard  interface to IDrawable and IStorable interfaces
+
+Dependency inversion principle
+	IMotherboard and IMaxSquareValue interfaces in CPU class
