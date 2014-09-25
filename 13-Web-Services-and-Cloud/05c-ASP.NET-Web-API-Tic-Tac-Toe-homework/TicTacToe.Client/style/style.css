@@ -1,0 +1,33 @@
+﻿body, h1, h6, div, button, input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+}
+
+input, button {
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+#status, #result {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.game-box {
+    border: 2px solid black;
+    background-color: cornflowerblue;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+}
+
+.turn1, .turn2{
+    margin: 5px;
+}
