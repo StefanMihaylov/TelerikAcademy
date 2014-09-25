@@ -1,0 +1,17 @@
+1. Connection string for "Company" database: (location) : "."
+
+2. Connection string for "Cars" database: (location) : "."
+
+3. Relationships for "Company" database: (first-table : second-table - type of relationship)
+	Employees - Employees - one-many (self relationship)
+	Employees - Depatrmemts - one-many
+	Employees - Reports - one-many
+	EMployees - Projects - many-many
+
+4. Relationships for "Cars" database: (first-table : second-table - type of relationship)
+	Cars - Manufacturers - one-many
+	Cars - Dealers - one-many
+	Dealers - Cities - many-many	
+
+5. Query files: (file location in solution)
+	folder "XmlResults" in solution

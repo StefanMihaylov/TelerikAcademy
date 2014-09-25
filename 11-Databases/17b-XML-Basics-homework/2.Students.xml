@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="2.Students.xsl"?>
+<students>
+  <student>
+    <firstName>Peter</firstName>
+    <lastName>Petrov</lastName>
+    <sex>male</sex>
+    <birthday>1990-01-01</birthday>
+    <phoneNumer>+359899887766</phoneNumer>
+    <email>petrov@gmail.com</email>
+    <course>2</course>
+    <specialty>Software engineering</specialty>
+    <facultyNumber>124151418122</facultyNumber>
+    <exams>
+      <exam>
+        <name>Databases</name>
+        <tutor>N/A</tutor>
+        <score>80</score>
+      </exam>
+      <exam>
+        <name>Data structures</name>
+        <tutor>N/A</tutor>
+        <score>95</score>
+      </exam>
+    </exams>
+  </student>
+  <student>
+    <firstName>Penka</firstName>
+    <lastName>Dimitrova</lastName>
+    <sex>female</sex>
+    <birthday>1992-07-12</birthday>
+    <phoneNumer>+359888552233</phoneNumer>
+    <email>kakata@abv.com</email>
+    <course>1</course>
+    <specialty>Informatics</specialty>
+    <facultyNumber>5245822636</facultyNumber>
+    <exams>
+      <exam>
+        <name>High quality code</name>
+        <tutor>N/A</tutor>
+        <score>56</score>
+      </exam>
+      <exam>
+        <name>Javascript</name>
+        <tutor>N/A</tutor>
+        <score>83</score>
+      </exam>
+    </exams>
+  </student>
+</students>

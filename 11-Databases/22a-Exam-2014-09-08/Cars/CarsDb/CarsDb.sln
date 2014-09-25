@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsDB.Model", "CarsDB.Model\CarsDB.Model.csproj", "{37AE0F95-F42F-4E57-AF10-A4724AFD79B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsDB.Data", "CarsDB.Data\CarsDB.Data.csproj", "{B2ECAA83-14E3-4C18-892F-9EBE8CD416CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsDB.ConsoleApp", "CarsDB.ConsoleApp\CarsDB.ConsoleApp.csproj", "{93C5E3FE-632D-40F7-94C5-37785958F739}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8CB00D1E-725E-4E17-A7F4-C612D07CEF35}"
+	ProjectSection(SolutionItems) = preProject
+		data.0.json = data.0.json
+		Queries.xml = Queries.xml
+		Test.xml = Test.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsDB.Import", "CarsDB.Import\CarsDB.Import.csproj", "{C04330C7-90ED-4AA3-834B-F1B83A259DB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsDb.Exporter", "CarsDb.Exporter\CarsDb.Exporter.csproj", "{9746B766-B7FC-4600-BFAD-7BDD570585E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37AE0F95-F42F-4E57-AF10-A4724AFD79B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37AE0F95-F42F-4E57-AF10-A4724AFD79B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37AE0F95-F42F-4E57-AF10-A4724AFD79B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37AE0F95-F42F-4E57-AF10-A4724AFD79B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2ECAA83-14E3-4C18-892F-9EBE8CD416CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2ECAA83-14E3-4C18-892F-9EBE8CD416CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2ECAA83-14E3-4C18-892F-9EBE8CD416CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2ECAA83-14E3-4C18-892F-9EBE8CD416CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93C5E3FE-632D-40F7-94C5-37785958F739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93C5E3FE-632D-40F7-94C5-37785958F739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93C5E3FE-632D-40F7-94C5-37785958F739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93C5E3FE-632D-40F7-94C5-37785958F739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C04330C7-90ED-4AA3-834B-F1B83A259DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C04330C7-90ED-4AA3-834B-F1B83A259DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C04330C7-90ED-4AA3-834B-F1B83A259DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C04330C7-90ED-4AA3-834B-F1B83A259DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9746B766-B7FC-4600-BFAD-7BDD570585E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9746B766-B7FC-4600-BFAD-7BDD570585E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9746B766-B7FC-4600-BFAD-7BDD570585E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9746B766-B7FC-4600-BFAD-7BDD570585E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
