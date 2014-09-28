@@ -7,7 +7,6 @@ using TicTacToe.Data;
 
 namespace TicTacToe.Web.Controllers
 {
-    [Authorize]
     public abstract class BaseApiController : ApiController
     {
         protected ITicTacToeData data;

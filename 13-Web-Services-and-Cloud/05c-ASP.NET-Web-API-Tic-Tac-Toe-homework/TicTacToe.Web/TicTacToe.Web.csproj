@@ -234,8 +234,10 @@
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ScoresController.cs" />
     <Compile Include="DataModels\GameInfoDataModel.cs" />
     <Compile Include="DataModels\PlayRequestDataModel.cs" />
+    <Compile Include="DataModels\ScoreDataModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -17,6 +17,7 @@ using TicTacToe.Web.Models;
 using TicTacToe.Web.Providers;
 using TicTacToe.Web.Results;
 using TicTacToe.Models;
+using TicTacToe.Data;
 
 namespace TicTacToe.Web.Controllers
 {
@@ -29,10 +30,10 @@ namespace TicTacToe.Web.Controllers
 
         public AccountController()
         {
+            this.UserManager = new ApplicationUserManager(new UserStore<User>(new TicTacToeDbContext()));
         }
 
-        public AccountController(ApplicationUserManager userManager,
-            ISecureDataFormat<AuthenticationTicket> accessTokenFormat)
+        public AccountController(ApplicationUserManager userManager, ISecureDataFormat<AuthenticationTicket> accessTokenFormat)
         {
             UserManager = userManager;
             AccessTokenFormat = accessTokenFormat;
@@ -126,7 +127,7 @@ namespace TicTacToe.Web.Controllers
 
             IdentityResult result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword,
                 model.NewPassword);
-            
+
             if (!result.Succeeded)
             {
                 return GetErrorResult(result);
@@ -259,9 +260,9 @@ namespace TicTacToe.Web.Controllers
             if (hasRegistered)
             {
                 Authentication.SignOut(DefaultAuthenticationTypes.ExternalCookie);
-                
-                 ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(UserManager,
-                    OAuthDefaults.AuthenticationType);
+
+                ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(UserManager,
+                   OAuthDefaults.AuthenticationType);
                 ClaimsIdentity cookieIdentity = await user.GenerateUserIdentityAsync(UserManager,
                     CookieAuthenticationDefaults.AuthenticationType);
 
@@ -369,7 +370,7 @@ namespace TicTacToe.Web.Controllers
             result = await UserManager.AddLoginAsync(user.Id, info.Login);
             if (!result.Succeeded)
             {
-                return GetErrorResult(result); 
+                return GetErrorResult(result);
             }
             return Ok();
         }

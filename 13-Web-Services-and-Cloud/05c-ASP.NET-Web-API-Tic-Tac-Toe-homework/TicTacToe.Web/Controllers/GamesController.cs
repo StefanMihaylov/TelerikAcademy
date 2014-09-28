@@ -68,10 +68,10 @@
         public IHttpActionResult Status(string gameId)
         {
             var currentUserId = this.userIdProvider.GetUserId();
-            var idAsGuid = new Guid(gameId);
+            // var idAsGuid = new Guid(gameId);
 
             var game = this.data.Games.All()
-                .Where(x => x.Id == idAsGuid)
+                .Where(x => x.Id.ToString() == gameId)
                 .Select(x => new { x.FirstPlayerId, x.SecondPlayerId })
                 .FirstOrDefault();
             if (game == null)
@@ -86,7 +86,7 @@
             }
 
             var gameInfo = this.data.Games.All()
-                .Where(g => g.Id == idAsGuid)
+                .Where(g => g.Id.ToString() == gameId)
                 .Select(g => new GameInfoDataModel()
                 {
                     Board = g.Board,
@@ -157,24 +157,39 @@
             this.data.SaveChanges();
 
             var gameResult = resultValidator.GetResult(game.Board);
-            switch (gameResult)
+
+            if (gameResult != GameResult.NotFinished)
             {
-                case GameResult.NotFinished:
-                    break;
-                case GameResult.WonByX:
-                    game.State = GameState.WonByX;
-                    this.data.SaveChanges();
-                    break;
-                case GameResult.WonByO:
-                    game.State = GameState.WonByO;
-                    this.data.SaveChanges();
-                    break;
-                case GameResult.Draw:
-                    game.State = GameState.Draw;
-                    this.data.SaveChanges();
-                    break;
-                default:
-                    break;
+                var xPlayer = this.data.Users.Find(game.FirstPlayerId);
+                var oPlayer = this.data.Users.Find(game.SecondPlayerId);
+                switch (gameResult)
+                {
+                    case GameResult.WonByX:
+                        game.State = GameState.WonByX;
+                        xPlayer.Wins++;
+                        xPlayer.Rank = resultValidator.CalculateRank(xPlayer.Wins, xPlayer.Draws, xPlayer.Losses);
+                        oPlayer.Losses++;
+                        oPlayer.Rank = resultValidator.CalculateRank(oPlayer.Wins, oPlayer.Draws, oPlayer.Losses);
+                        break;
+                    case GameResult.WonByO:
+                        game.State = GameState.WonByO;
+                        xPlayer.Losses++;
+                        xPlayer.Rank = resultValidator.CalculateRank(xPlayer.Wins, xPlayer.Draws, xPlayer.Losses);
+                        oPlayer.Wins++;
+                        oPlayer.Rank = resultValidator.CalculateRank(oPlayer.Wins, oPlayer.Draws, oPlayer.Losses);
+                        break;
+                    case GameResult.Draw:
+                        game.State = GameState.Draw;
+                        xPlayer.Draws++;
+                        xPlayer.Rank = resultValidator.CalculateRank(xPlayer.Wins, xPlayer.Draws, xPlayer.Losses);
+                        oPlayer.Draws++;
+                        oPlayer.Rank = resultValidator.CalculateRank(oPlayer.Wins, oPlayer.Draws, oPlayer.Losses);
+                        break;
+                    default:
+                        break;
+                }
+
+                this.data.SaveChanges();
             }
 
             return this.Ok();

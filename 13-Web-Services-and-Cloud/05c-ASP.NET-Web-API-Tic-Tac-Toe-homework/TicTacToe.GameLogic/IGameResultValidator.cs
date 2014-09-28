@@ -9,5 +9,7 @@ namespace TicTacToe.GameLogic
     public interface IGameResultValidator
     {
         GameResult GetResult(string board);
+
+        long CalculateRank(int wins, int draws, int lossess);
     }
 }

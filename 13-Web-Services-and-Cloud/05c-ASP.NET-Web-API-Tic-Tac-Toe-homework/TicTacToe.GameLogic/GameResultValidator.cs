@@ -58,8 +58,13 @@
                 else
                 {
                     return GameResult.Draw;
-                }                
+                }
             }
+        }
+
+        public long CalculateRank(int wins, int draws, int lossess)
+        {
+            return 50L * wins + 10 * draws + 1 * lossess;
         }
 
         private int RowSum(int[,] matrix, int row)
