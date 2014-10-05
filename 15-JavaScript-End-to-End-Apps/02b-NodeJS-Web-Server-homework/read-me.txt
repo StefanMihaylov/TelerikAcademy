@@ -1,0 +1,4 @@
+
+Start the server and see the application on localhost:9876
+
+html should be on separate project, but for this simple app it is not necessary :)
