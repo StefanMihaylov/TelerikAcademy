@@ -1,0 +1,77 @@
+extends ../shared/layout
+block main-content
+    form.row.text-center.form-horizontal(method='POST')
+        .panel.panel-default
+            .panel-heading.text-center
+                | Event Details
+            .panel-body
+                if(!event)
+                    h1.text-center No Event Details
+                else
+                    .row
+                        .col-md-2
+                            strong Title:
+                            p  #{event.title}
+                        .col-md-2
+                            strong Description:
+                            p #{event.description}
+                        .col-md-2
+                            strong Date:
+                            p #{event.date.toUTCString()}
+                        .col-md-2
+                            strong Creator:
+                            p #{event.creatorName}
+                        .col-md-2
+                            strong Category:
+                            p #{event.category}
+                        .col-md-2
+                            strong Type:
+                            p #{event.typeInitiative}, #{event.typeSeason}
+                    .row
+                        .col-md-2
+                            strong Organization
+                            p #{event.organizationPoints}
+                            strong Evaluate
+                            select.form-control(name="organizationPoints")
+                                option(value="", selected="selected") None
+                                option(value="1") 1
+                                option(value="2") 2
+                                option(value="3") 3
+                                option(value="4") 4
+                                option(value="5") 5
+                        .col-md-2
+                            strong Venue
+                            p #{event.venuePoints}
+                            strong Evaluate
+                            select.form-control(name="venuePoints")
+                                option(value="", selected="selected") None
+                                option(value="1") 1
+                                option(value="2") 2
+                                option(value="3") 3
+                                option(value="4") 4
+                                option(value="5") 5
+                        .col-md-4
+                            strong Joined Users
+                            p #{event.users.join(', ')}
+                                .checkbox
+                                    label
+                                        input(type="checkbox", name="join")
+                                        | Join
+                                .checkbox
+                                    label
+                                        input(type="checkbox", name="leave")
+                                        | Leave
+                        .col-md-4
+                            strong Comments
+                            each comment in event.comments
+                                p #{comment}
+                             div
+                                 strong Send Comment
+                             div
+                                 textarea(name="comment", placeholder="Comment")
+
+        .pull-right
+            input.btn.btn-primary(type="submit", value="Send")
+            a.btn.btn-primary(href="/") Cancel
+
+

@@ -1,0 +1,29 @@
+extends shared/layout
+block main-content
+    .row.text-center
+        .panel.panel-default
+            .panel-heading.text-center
+                | Passed events
+            .panel-body
+                table.table.table-bordered
+                    tr
+                        th.text-center Title
+                        th.text-center Description
+                        th.text-center Date
+                        th.text-center Author
+                        th.text-center Category
+                        th.text-center Organization
+                        th.text-center venue
+                    if(!passedEvents)
+                        h1.text-center No Events
+                    else
+                        each event in passedEvents
+                            tr
+                                td #{event.title}
+                                td #{event.description}
+                                td #{event.date.toUTCString()}
+                                td #{event.creatorName}
+                                td #{event.category}
+                                td #{event.organizationPoints}
+                                td #{event.venuePoints}
+

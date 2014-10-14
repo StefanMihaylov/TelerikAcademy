@@ -1,0 +1,54 @@
+extends ../shared/layout
+block main-content
+    .well.col-md-6.col-md-offset-3
+        form.form-horizontal(method='POST')
+            fieldset
+                legend.text-center Create New User
+                .form-group
+                    label.col-md-4.control-label(for="username") Username*
+                    .col-md-8
+                        input.form-control(id="username", type="text", placeholder="Username",pattern="^[a-zA-Z0-9_. ]{6,20}$", name="username", required)
+                .form-group
+                    label.col-md-4.control-label(for="password") Password*
+                    .col-md-8
+                        input.form-control(id="password", type="password", placeholder="Password",pattern=".{5,}", name="password", required)
+                .form-group
+                    label.col-md-4.control-label(for="confirm-password") Confirm Password*
+                    .col-md-8
+                        input.form-control(id="confirm-password", type="password", placeholder="Confirm Password",pattern=".{5,}", name="confirmPassword", required)
+                .form-group
+                    label.col-md-4.control-label(for="first-name") First Name*
+                    .col-md-8
+                        input.form-control(id="first-name", type="text", placeholder="First Name", name="firstName", required)
+                .form-group
+                    label.col-md-4.control-label(for="last-name") Last Name*
+                    .col-md-8
+                        input.form-control(id="last-name", type="text", placeholder="Last Name", name="lastName", required)
+                .form-group
+                    label.col-md-4.control-label(for="email") Email*
+                    .col-md-8
+                        input.form-control(id="email", type="email", placeholder="Email", name="email", required)
+                .form-group
+                    label.col-md-4.control-label(for="phone-number") Phone number
+                    .col-md-8
+                        input.form-control(id="phone-number", type="text", placeholder="Phone number", name="phoneNumber")
+                .form-group
+                    label.col-md-4.control-label(for="facebook-link") Facebook Link
+                    .col-md-8
+                        input.form-control(id="facebook-link", type="url", placeholder="Facebook", name="facebookLink")
+                .form-group
+                    label.col-md-4.control-label(for="twitter-link") Twitter Link
+                    .col-md-8
+                        input.form-control(id="twitter-link", type="url", placeholder="Twitter", name="twitterLink")
+                .form-group
+                    label.col-md-4.control-label(for="google-link") Google Link
+                    .col-md-8
+                        input.form-control(id="google-link", type="url", placeholder="Google", name="googleLink")
+                .form-group
+                    label.col-md-4.control-label(for="linkedIn-link") linkedIn Link
+                    .col-md-8
+                        input.form-control(id="linkedIn-link", type="url", placeholder="linkedIn", name="linkedInLink")
+                .pull-right
+                    input.btn.btn-primary(type="submit", value="Create")
+                    a.btn.btn-primary(href="/") Cancel
+

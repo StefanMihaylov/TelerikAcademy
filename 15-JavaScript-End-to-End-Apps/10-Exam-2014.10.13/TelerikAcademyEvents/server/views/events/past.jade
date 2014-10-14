@@ -1,0 +1,42 @@
+extends ../shared/layout
+block main-content
+    .row.text-center
+        .col-md-4
+            .text-center Page
+            .col-md-2
+                button.btn.btn-info(id='prev-page') Prev
+            .col-md-8
+                input.form-control.text-center(id='page', name='page', type='number', min='1')
+            .col-md-2
+                button.btn.btn-info.pull-right(id='next-page') Next
+    .row.text-center
+        .panel.panel-default
+            .panel-heading.text-center
+                | Past events
+            .panel-body
+                table.table.table-bordered
+                    tr
+                        th.text-center Title
+                        th.text-center Description
+                        th.text-center Date
+                        th.text-center Author
+                        th.text-center Category
+                        th.text-center Organization
+                        th.text-center venue
+                    if(!allEvents)
+                        h1.text-center No Events
+                    else
+                        each event in allEvents
+                            tr
+                                td
+                                    a(href="/details/#{event._id}") #{event.title}
+                                td #{event.description}
+                                td #{event.date.toUTCString()}
+                                td #{event.creatorName}
+                                td #{event.category}
+                                td #{event.organizationPoints}
+                                td #{event.venuePoints}
+block page-scripts
+    script(type="text/javascript" src="/js/profile.js")
+
+

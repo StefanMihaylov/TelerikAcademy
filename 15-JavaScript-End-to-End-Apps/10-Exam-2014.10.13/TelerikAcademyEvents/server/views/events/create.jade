@@ -1,0 +1,47 @@
+extends ../shared/layout
+block main-content
+    .well.col-md-6.col-md-offset-3
+        form.form-horizontal(method='POST')
+            fieldset
+                legend.text-center Create Event
+                .form-group
+                    label.col-md-4.control-label(for="title") Title
+                    .col-md-8
+                        input.form-control(id="title", type="text", placeholder="Title", name="title", required)
+                .form-group
+                    label.col-md-4.control-label(for="description") Description
+                    .col-md-8
+                        textarea.form-control(id="description", placeholder="Description", name="description", required)
+                .form-group
+                    label.col-md-4.control-label(for="date") Date
+                    .col-md-8
+                        input.form-control(id="date", type="date", placeholder="date", name="date", required)
+                .form-group
+                    label.col-md-4.control-label(for="category") Category
+                    .col-md-8
+                        select.form-control(name="category", required)
+                            option(value="", selected="selected") None
+                            each category in categories
+                                option(value="#{category.name}") #{category.name}
+                .form-group
+                    label.col-md-4.control-label(for="category") Type
+                    .col-md-8
+                        select.form-control(name="typeInitiative")
+                            option(value="", selected="selected") None
+                            each initiative in initiatives
+                                option(value="#{initiative.name}") #{initiative.name}
+                        select.form-control(name="typeSeason")
+                            option(value="", selected="selected") None
+                            each season in seasons
+                                option(value="#{season.name}") #{season.name}
+                .form-group
+                    label.col-md-4.control-label(for="") Location
+                    .col-md-8
+                        .com-md-6
+                            input.form-control(type="number", step="any", min="0" placeholder="Latitude", name="locationLatitude")
+                        .com-md-6
+                            input.form-control(type="number", step="any", min="0" placeholder="Longitude", name="locationLongitude")
+                .pull-right
+                    input.btn.btn-primary(type="submit", value="Create")
+                    a.btn.btn-primary(href="/") Cancel
+

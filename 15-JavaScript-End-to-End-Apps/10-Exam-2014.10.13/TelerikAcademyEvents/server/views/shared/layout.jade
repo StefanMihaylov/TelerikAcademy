@@ -1,0 +1,50 @@
+doctype
+html
+    head
+        title Telerik Academy Events
+        link(rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/lib/bootstrap/css/bootstrap-theme.min.css")
+        link(rel="stylesheet" href="/css/site.css")
+    body
+        header.container.navbar-default
+            .navbar-header
+                a.navbar-brand(href="/") Telerik Academy Events
+            button.navbar-toggle(type="button",data-toggle="collapse",data-target=".navbar-responsive-collapse")
+
+            .navbar-collapse.collapse.navbar-responsive-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href="/") Home
+                    if(currentUser)
+                        li
+                            a(href="/active") Active Events
+                        li
+                            a(href="/past") Past Events
+                        li
+                            a(href="/create") Create Event
+
+                ul.nav.navbar-nav.pull-right
+                    if(currentUser)
+                        li.disabled
+                            a(href="") #{currentUser.username}
+                        li
+                            a(href="/profile") Profile
+                        li
+                            a(href="/logout") Logout
+
+                    else
+                        li
+                            a(href="/register") Register
+                        li
+                            a(href="/login") Login
+        .container
+            if(errorMessage)
+                .alert.alert-danger.text-center #{errorMessage}
+
+            block main-content
+
+        footer
+            p.text-center
+                | &reg; Telerik Academy 2014
+
+        include scripts
