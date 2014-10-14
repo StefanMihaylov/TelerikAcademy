@@ -1,0 +1,10 @@
+div(ng-repeat="trip in trips | orderBy: '-date' | limitTo: 10")
+    .row
+        .col-md-3
+            | {{ trip.date | date: 'MMM d yyyy' }}
+        .col-md-3
+            a(href="#/trips/{{ trip._id }}") {{ trip.driver }}
+        .col-md-3
+            | {{ trip.from }}
+        .col-md-3
+            | {{ trip.to }}
