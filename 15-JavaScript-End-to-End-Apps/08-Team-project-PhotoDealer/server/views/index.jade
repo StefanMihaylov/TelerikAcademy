@@ -1,0 +1,47 @@
+extends includes/layout
+block main-content
+    header.navbar-default
+        .container.mrg-btm
+            .navbar-header
+                a.navbar-brand(href="#/")
+                    | Photo Dealer
+            button.navbar-toggle(type="button",data-toggle="collapse",data-target=".navbar-responsive-collapse")
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+
+            .navbar-collapse.collapse.navbar-responsive-collapse
+                ul.nav.navbar-nav(ng-controller="MainCtrl",ng-cloak="true")
+                    li
+                        a(href="#/")
+                            | Home
+                    li
+                        a(href="#/photos")
+                            | Photos
+                    li(ng-show="identity.isAuthenticated()")
+                        a(href="#/photo/upload")
+                            | Upload
+
+                    li.dropdown(ng-show="identity.currentUser.isAdmin()")
+                        a.dropdown-toggle(href="", data-toggle="dropdown")
+                            | Admin
+                            span.caret
+                        ul.dropdown-menu
+                            li
+                                a(href="#/admin/users")
+                                    | Users
+                            li
+                                a(href="#/admin/approve")
+                                    | Authorize Photos
+                            li
+                                a(href="#/admin/transactions")
+                                    | Transactions
+
+                div(ng-include="'partials/account/login'")
+
+    section
+        div(ng-view)
+
+    footer
+        p.text-center
+            | &reg; Team MUSES Telerik Academy 2014

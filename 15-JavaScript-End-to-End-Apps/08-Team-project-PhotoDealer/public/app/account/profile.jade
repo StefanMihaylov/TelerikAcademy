@@ -1,0 +1,41 @@
+.container
+    .well.col-md-6.col-md-offset-3
+        form.form-horizontal(name="profileForm")
+            fieldset
+                legend User Details
+                .container
+                    ul.list-group.col-md-5
+                        li.list-group-item
+                            | Username: {{ user.username }}
+                        li.list-group-item
+                            | Money: {{ user.credits | currency:'$' }}
+                        li.list-group-item
+                            | Uploaded photos: {{ user.ownPhotosIds.length }}
+                        li.list-group-item
+                            | Bought photos: {{ user.boughtPhotosIds.length }}
+                        li.list-group-item
+                            | User role(s): {{ user.roles.join(', ') }}
+                .panel.panel-default
+                    .panel-heading
+                        | Change password
+                    .panel-body
+                        .form-group.row
+                            label.col-md-3.col-md-offset-2.control-label(for="first-name")
+                                | Old Password
+                            .col-md-4
+                                input.form-control(type="password", placeholder="old password", ng-model="newPasswordModel.password", required)
+                        .form-group.row
+                            label.col-md-3.col-md-offset-2.control-label(for="last-name")
+                                | New Password
+                            .col-md-4
+                                input.form-control(type="password", placeholder="new password", ng-model="newPasswordModel.newPassword", required)
+                        .form-group.row
+                            label.col-md-3.col-md-offset-2.control-label(for="password")
+                                | Confirm Password
+                            .col-md-4
+                                input.form-control(type="password", placeholder="confirm password", ng-model="newPasswordModel.confirmPassword", required)
+                        .pull-right.row
+                            button.btn.btn-primary(ng-click="changePassword(newPasswordModel)", ng-disabled="profileForm.$invalid")
+                                | Update
+                            a.btn.btn-primary(href="#/")
+                                | Cancel

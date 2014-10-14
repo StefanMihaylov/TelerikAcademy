@@ -1,0 +1,57 @@
+.container.text-center
+    .well.well-sm
+        .row.form-horizontal.form-group
+            .col-md-2
+                div OrderBy
+                select.form-control(ng-model="sort.orderBy", ng-change='filterBy()')
+                    option(value="", selected="selected") None
+                    option(value="title") Title
+                    option(value="authorName") Author
+                    option(value="published") Date
+                    option(value="price") Price
+            .col-md-2
+                div OrderType
+                select.form-control(ng-model="sort.dir", ng-change='filterBy()')
+                    option(value="", selected="selected") Ascending
+                    option(value="-") Descending
+            .col-md-4.text-center
+                h1.title Photos
+            .col-md-4
+                div Page
+                .col-md-2
+                    button.btn.btn-info(ng-click='decreasePage()',ng-disabled='page <=1') Prev
+                .col-md-8
+                    input.form-control.text-center(ng-model='page', type='number', min='1', placeholder="Page", ng-change='filterBy()')
+                .col-md-2
+                    button.btn.btn-info.pull-right(ng-click='increasePage()', ng-disabled="photos.length ==0") Next
+        .row.form-horizontal.form-group
+            .col-md-2
+                div Title
+                input.form-control(type="text", placeholder='Title', ng-model='filter.title', ng-change='filterBy()')
+            .col-md-2
+                div Author Name
+                input.form-control(type="text", placeholder='Author', ng-model='filter.authorName', ng-change='filterBy()')
+            .col-md-2
+                div Category
+                select.form-control(ng-model='filter.category' ng-change='filterBy()')
+                    option(value="")
+                    option(value="{{category.title}}" ng-repeat="category in categories") {{category.title}}
+            .col-md-2
+                div Tag
+                input.form-control(type="text", placeholder='Tag', ng-model='filter.tags', ng-change='filterBy()')
+            .col-md-2
+                div Price
+                input.form-control(type="number",step="any", min="0", placeholder='Price', ng-model='filter.price', ng-change='filterBy()')
+            .col-md-2(ng-show="identity.isAuthenticated()")
+                div Photos to display
+                select.form-control(ng-model="filter.photosToShow", ng-change='filterBy()')
+                    option(value="", selected="selected") All
+                    option(value="mine") My Uploads
+                    option(value="bought") My Purchases
+    .well.info
+        .row
+            .col-md-4(ng-repeat="photo in photos")
+
+                img.mrg-btm(ng-src="{{photo.pictureUrl}}", width="350px", height="260px" ,ng-click="redirectToDetails(photo._id)")
+
+        h2.text-center(ng-show="photos.length ==0") No More Photos

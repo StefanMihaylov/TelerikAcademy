@@ -1,0 +1,17 @@
+.mrg-btm {
+  margin-bottom: 20px;
+}
+.mrg-btm-0 {
+  margin-bottom: 0;
+}
+.input-sm {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.btn,
+.login-form {
+  margin: 0 2px;
+}
+.title {
+  margin: 0px;
+}

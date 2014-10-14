@@ -1,0 +1,30 @@
+.container
+    .well
+        form.form-horizontal(name="uploadForm", action="/api/photos", enctype="multipart/form-data", method="post")
+            fieldset
+                legend Upload New Photo
+                .form-group
+                    label.col-md-2.control-label(for="title") Picture Title
+                    .col-md-10
+                        input.form-control(type="text", placeholder="Title", name ="title", required)
+                .form-group
+                    label.col-md-2.control-label(for="file") Choose File:
+                    .col-md-10
+                        input.form-control(type="file", accept="image/*", name="upload", required)
+                .form-group
+                    label.col-md-2.control-label(for="category") Category
+                    .col-md-10
+                        select.form-control(name="category" required)
+                            option(value="")
+                            option(value="{{category.title}}" ng-repeat="category in categories") {{category.title}}
+                .form-group
+                    label.col-md-2.control-label(for="price") Price
+                    .col-md-10
+                        input.form-control(type="number",step="any", min="0", placeholder="Price", name="price", required)
+                .form-group
+                    label.col-md-2.control-label(for="tags") Tags
+                    .col-md-10
+                        input.form-control(type="text", placeholder="Tag1, Tag2", name ="tags", required)
+                .pull-right
+                    input.btn.btn-primary(type="submit", value="Send" ng-click="upload()")
+                    a.btn.btn-primary(href="#/") Cancel
