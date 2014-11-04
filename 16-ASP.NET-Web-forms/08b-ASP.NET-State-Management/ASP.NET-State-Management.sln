@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-ClientIP", "ClientIP\01-ClientIP.csproj", "{FFCC5E3A-4998-4BA1-9D09-A8A782053A10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-AppendToSession", "AppendToSession\02-AppendToSession.csproj", "{6C66513B-2868-497A-B557-1FDF698F85FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-LoginCookie", "LoginCookie\03-LoginCookie.csproj", "{C91AA8CD-931B-41B5-84F6-A65403FC57F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-DeleteViewState", "DeleteViewState\04-DeleteViewState.csproj", "{5DFCE7BB-C5E9-4545-B89C-9CF2B49AACE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-JPEGCounter", "JPEGCounter\05-JPEGCounter.csproj", "{D99BF6B2-5ADC-4BAA-80BB-28FD596B4676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-JPEGCounterWithDb", "JPEGCounterWithDb\06-JPEGCounterWithDb.csproj", "{507DFDC5-73FB-48BA-9417-4FF7D2491DBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFCC5E3A-4998-4BA1-9D09-A8A782053A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFCC5E3A-4998-4BA1-9D09-A8A782053A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFCC5E3A-4998-4BA1-9D09-A8A782053A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFCC5E3A-4998-4BA1-9D09-A8A782053A10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C66513B-2868-497A-B557-1FDF698F85FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C66513B-2868-497A-B557-1FDF698F85FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C66513B-2868-497A-B557-1FDF698F85FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C66513B-2868-497A-B557-1FDF698F85FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C91AA8CD-931B-41B5-84F6-A65403FC57F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C91AA8CD-931B-41B5-84F6-A65403FC57F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C91AA8CD-931B-41B5-84F6-A65403FC57F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C91AA8CD-931B-41B5-84F6-A65403FC57F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DFCE7BB-C5E9-4545-B89C-9CF2B49AACE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFCE7BB-C5E9-4545-B89C-9CF2B49AACE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFCE7BB-C5E9-4545-B89C-9CF2B49AACE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFCE7BB-C5E9-4545-B89C-9CF2B49AACE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D99BF6B2-5ADC-4BAA-80BB-28FD596B4676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D99BF6B2-5ADC-4BAA-80BB-28FD596B4676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D99BF6B2-5ADC-4BAA-80BB-28FD596B4676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D99BF6B2-5ADC-4BAA-80BB-28FD596B4676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{507DFDC5-73FB-48BA-9417-4FF7D2491DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507DFDC5-73FB-48BA-9417-4FF7D2491DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507DFDC5-73FB-48BA-9417-4FF7D2491DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507DFDC5-73FB-48BA-9417-4FF7D2491DBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

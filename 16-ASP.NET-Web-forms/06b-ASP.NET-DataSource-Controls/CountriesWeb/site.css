@@ -1,0 +1,21 @@
+﻿div, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.continents, .countries, .towns {
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    vertical-align: top;
+}
+
+    .countries td, .countries th {
+        padding: 5px 10px;
+    }
+
+    .towns td, .towns th, .towns table {
+        border-collapse: collapse;
+        border: 1px solid black;
+        padding: 5px 10px;
+    }

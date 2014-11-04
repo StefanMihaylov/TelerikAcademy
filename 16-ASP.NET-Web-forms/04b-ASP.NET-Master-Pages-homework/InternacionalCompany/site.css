@@ -1,0 +1,60 @@
+﻿.icon {
+    display: inline-block;
+    width: 260px;
+    height: 255px;
+    background-repeat: no-repeat;
+    background-position: 0 -0px;
+}
+
+    .icon:hover {
+        border-radius: 250px;
+    }
+
+.English {
+    background-image: url('images/british.ico');
+}
+
+    .English:hover {
+        background-color: rgba(0, 38, 255,0.5);
+    }
+
+
+.Bulgarian {
+    background-image: url('images/bulgaria.ico');
+}
+
+    .Bulgarian:hover {
+        background-color: rgba(7,115,34,0.5);
+    }
+
+body > header, body > footer {
+    background-color: #279CFF;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    body > header > div.home-link {
+        float: left;
+    }
+
+    body > header > div.tite {
+        display: inline-block;
+    }
+
+    body > header img {
+        width: 45px;
+        height: 45px;
+    }
+
+
+aside {
+    float: left;
+}
+
+.content {
+    display: inline-block;
+    width: 800px;
+    height: 190px;
+    padding-left: 50px;
+    padding-top: 50px;
+}

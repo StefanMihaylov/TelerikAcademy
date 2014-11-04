@@ -1,0 +1,29 @@
+﻿aside {
+    float: left;
+}
+
+section {
+    display: inline-block;
+    border: 1px solid black;
+    width: 1000px;
+    height: 350px;
+    padding-left: 50px;
+    margin-left: 50px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+.profileImg {
+    width: 200px;
+    height: 200px;
+}
+
+.friendImg {
+    width: 50px;
+    height: 50px;
+}
+
+.friendContent {
+    display: inline-block;
+    margin-right: 30px;
+}

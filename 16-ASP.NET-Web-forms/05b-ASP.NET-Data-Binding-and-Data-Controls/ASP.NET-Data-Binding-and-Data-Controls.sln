@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.MobileBg", "MobileBg\01.MobileBg.csproj", "{74962D1E-BC14-49C4-92D4-87579B6A3FF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00.NorthwindData", "NorthwindData\00.NorthwindData.csproj", "{4915EA00-366A-475B-AD6D-20027E59FB80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.EmployeesGridView", "EmployeesGridView\02.EmployeesGridView.csproj", "{3F3BB8A6-1F49-404E-A2F7-77B7176AE40E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.EmployeesFormView", "EmployeesFormView\04.EmployeesFormView.csproj", "{B8378F70-5BB6-4A5E-BB04-4EDCBCE6B1C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.EmployeesRepeater", "EmployeesRepeater\05.EmployeesRepeater.csproj", "{43A9EB38-38BD-4127-9A7B-9B73EF4A2A04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.EmployeesListView", "EmployeesListView\06.EmployeesListView.csproj", "{0DD551D8-7412-49E3-9D29-854EF7A7DC6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74962D1E-BC14-49C4-92D4-87579B6A3FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74962D1E-BC14-49C4-92D4-87579B6A3FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74962D1E-BC14-49C4-92D4-87579B6A3FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74962D1E-BC14-49C4-92D4-87579B6A3FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4915EA00-366A-475B-AD6D-20027E59FB80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4915EA00-366A-475B-AD6D-20027E59FB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4915EA00-366A-475B-AD6D-20027E59FB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4915EA00-366A-475B-AD6D-20027E59FB80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F3BB8A6-1F49-404E-A2F7-77B7176AE40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F3BB8A6-1F49-404E-A2F7-77B7176AE40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F3BB8A6-1F49-404E-A2F7-77B7176AE40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F3BB8A6-1F49-404E-A2F7-77B7176AE40E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8378F70-5BB6-4A5E-BB04-4EDCBCE6B1C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8378F70-5BB6-4A5E-BB04-4EDCBCE6B1C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8378F70-5BB6-4A5E-BB04-4EDCBCE6B1C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8378F70-5BB6-4A5E-BB04-4EDCBCE6B1C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43A9EB38-38BD-4127-9A7B-9B73EF4A2A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43A9EB38-38BD-4127-9A7B-9B73EF4A2A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43A9EB38-38BD-4127-9A7B-9B73EF4A2A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43A9EB38-38BD-4127-9A7B-9B73EF4A2A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DD551D8-7412-49E3-9D29-854EF7A7DC6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD551D8-7412-49E3-9D29-854EF7A7DC6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD551D8-7412-49E3-9D29-854EF7A7DC6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD551D8-7412-49E3-9D29-854EF7A7DC6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

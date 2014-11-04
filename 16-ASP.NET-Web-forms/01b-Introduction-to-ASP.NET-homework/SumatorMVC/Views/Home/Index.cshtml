@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Sumator</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <form class="form-horizontal" action="/Home/AddTwoNumbers" method="post">
+            <label class="col-md-4 control-label">First Number:</label>
+            <div class="col-md-8">
+                <input type="number" name="firstNumber" class="form-control" />
+            </div>
+            <label class="col-md-4 control-label">Second Number:</label>
+            <div class="col-md-8">
+                <input type="number" name="secondNumber" class="form-control" />
+            </div>
+
+            <button class="btn btn-primary col-md-4 col-md-offset-4" type="submit">Calculate Sum</button>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="well col-md-6">
+        Result:<label> @ViewBag.Result</label>
+    </div>
+</div>

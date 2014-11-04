@@ -1,0 +1,28 @@
+﻿body {
+}
+
+div, h3, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+.todoListMaster, .CategoryList {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    vertical-align: top;
+}
+
+    .CategoryList td, .CategoryList th {
+        padding: 5px 10px;
+    }
+
+    .todoList td, .todoList th, .todoList {
+        border-collapse: collapse;
+        border: 1px solid black;
+        padding: 5px 10px;
+    }
