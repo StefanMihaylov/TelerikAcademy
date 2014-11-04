@@ -1,0 +1,20 @@
+<div class="container well">
+    <div class="row text-center">
+        <h1>{{tripDetails.driverName}} - {{tripDetails.departureDate | dateFilter}}</h1>
+        <button class="btn btn-primary pull-right" ng-click="join()">Join trip</button>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h3>From: {{tripDetails.from}} </h3>
+        </div>
+        <div class="col-md-4">
+            <h3>To: {{tripDetails.to}} </h3>
+        </div>
+        <div class="col-md-4">
+            <h3>Number of free seats: {{tripDetails.numberOfFreeSeats}} </h3>
+        </div>
+    </div>
+    <div class="row text-center">
+        <h3>Passengers: {{tripDetails.passengers.join(', ')}}</h3>
+    </div>
+</div>

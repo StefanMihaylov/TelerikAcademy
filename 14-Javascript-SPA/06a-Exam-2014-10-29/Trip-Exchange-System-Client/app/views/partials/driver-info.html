@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row well text-center" ng-if="validData">
+        <div class="col-md-4">
+            <strong>Driver:</strong> {{driverDetails.name}}
+        </div>
+        <div class="col-md-4">
+            <strong>Upcoming Trips:</strong> {{driverDetails.numberOfUpcomingTrips}}
+        </div>
+        <div class="col-md-4">
+            <strong>Total Trips:</strong> {{driverDetails.numberOfTotalTrips}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                    Sort by:
+                    <select ng-model="sort">
+                        <option value="id">None</option>
+                        <option value="from">From</option>
+                        <option value="to">To</option>
+                        <option value="-departureDate">Departure Date</option>
+                    </select>
+            </div>
+            <div class="col-md-6" search-template="Name" search="search.name"></div>
+        </div>
+
+        <table class="table table-bordered table-striped text-center">
+            <tr class="text-center">
+                <th class="text-center">Driver name</th>
+                <th class="text-center">From</th>
+                <th class="text-center">To</th>
+                <th class="text-center">Departure Date</th>
+                <th class="text-center">Free Seats</th>
+                <th class="text-center">Is Mine</th>
+            </tr>
+            <tr ng-repeat="trip in driverDetails.trips | orderBy: sort | filter: search.name">
+                <td>{{trip.driverName}}</td>
+                <td>{{trip.from}}</td>
+                <td>{{trip.to}}</td>
+                <td>{{trip.departureDate |dateFilter}}</td>
+                <td>{{trip.numberOfFreeSeats}}</td>
+                <td>{{trip.isMine | isMineState}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+

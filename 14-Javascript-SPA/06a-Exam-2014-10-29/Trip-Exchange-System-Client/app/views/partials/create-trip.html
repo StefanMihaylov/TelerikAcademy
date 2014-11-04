@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="well col-md-6 col-lg-offset-6">
+            <form name="createForm" class="form-horizontal">
+                <fieldset>
+                    <legend class="text-center">Create new trip</legend>
+                    <div class="form-group row">
+                        <label for="create-from" class="col-md-4 control-label">From:</label>
+
+                        <div class="col-md-8">
+                            <select id="create-from" ng-model="create.from" class="form-control">
+                                <option value=""></option>
+                                <option value="{{city}}" ng-repeat="city in cities">{{city}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="create-to" class="col-md-4 control-label">To:</label>
+
+                        <div class="col-md-8">
+                            <select id="create-to" ng-model="create.to" class="form-control">
+                                <option value=""></option>
+                                <option value="{{city}}" ng-repeat="city in cities">{{city}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="create-seats" class="col-md-4 control-label">Available Seats:</label>
+
+                        <div class="col-md-8">
+                            <input type="number" id="create-seats" ng-model="create.availableSeats"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="create-date" class="col-md-4 control-label">Departure Time:</label>
+
+                        <div class="col-md-8">
+                            <input type="date" id="create-date" ng-model="create.departureTime"
+                                   class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="pull-right">
+                        <button ng-click="createNew(create)" ng-disabled="createForm.$invalid" class="btn btn-success">
+                            Create
+                        </button>
+                        <a href="/trips" class="btn btn-primary">Cancel</a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

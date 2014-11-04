@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Trip Exchange</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/toastr.css" />
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+<body ng-app="myApp" ng-cloak>
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#/" class="navbar-brand">Trip Exchange</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar">1</span>
+                <span class="icon-bar">2</span>
+                <span class="icon-bar">3</span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#/trips">Trips</a>
+                </li>
+                <li>
+                    <a href="#/drivers">Drivers</a>
+                </li>
+            </ul>
+            <div ng-include="'views/partials/login.html'"></div>
+        </div>
+    </div>
+</div>
+
+<div ng-view>
+</div>
+
+<hr />
+<footer class="text-center" ng-cloak>
+    <strong>Copyright:</strong> <a href="http://telerikacademy.com/" target="_blank">Telerik Academy 2014</a>
+	<br />
+	<small> Powered by: <a href="http://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a></small>
+</footer>
+<hr />
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/toastr/toastr.min.js"></script>
+<script src="lib/bootstrap/bootstrap.min.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-resource.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+<script src="lib/angular/angular-cookies.js"></script>
+<script src="js/app.js"></script>
+
+<script src="js/controllers/RegisterCtrl.js"></script>
+<script src="js/controllers/LoginCtrl.js"></script>
+<script src="js/controllers/PaginationController.js"></script>
+
+<script src="js/controllers/TripsController.js"></script>
+<script src="js/controllers/DriversController.js"></script>
+<script src="js/controllers/StatsController.js"></script>
+
+<script src="js/services/account/auth.js"></script>
+<script src="js/services/account/identity.js"></script>
+<script src="js/services/account/authorization.js"></script>
+<script src="js/services/notifier.js"></script>
+
+<script src="js/services/resources/tripData.js"></script>
+<script src="js/services/resources/driverData.js"></script>
+<script src="js/services/resources/statisticData.js"></script>
+<script src="js/services/resources/citiesData.js"></script>
+
+<script src="js/filters/isMineState.js"></script>
+<script src="js/filters/dateFilter.js"></script>
+
+<script src="js/directives/searchTemplate.js"></script>
+<script src="js/directives/tripsPublic.js"></script>
+<script src="js/directives/driversPublic.js"></script>
+<script src="js/directives/pagination.js"></script>
+
+</body>
+</html>

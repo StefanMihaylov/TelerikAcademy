@@ -1,0 +1,26 @@
+<div class="row text-center well" ng-controller="StatsController">
+    <h3>Statistics</h3>
+
+    <div class="col-md-3">
+        <strong>Trips: </strong> <strong>{{stats.trips}}</strong>
+    </div>
+    <div class="col-md-3">
+        <strong>Finished Trips: </strong> <strong>{{stats.finishedTrips}}</strong>
+    </div>
+    <div class="col-md-3">
+        <strong>Users: </strong> <strong>{{stats.users}}</strong>
+    </div>
+    <div class="col-md-3">
+        <strong>Drivers: </strong> <strong>{{stats.drivers}}</strong>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div trip-public></div>
+    </div>
+
+    <div class="col-md-6">
+        <div driver-public></div>
+    </div>
+</div>

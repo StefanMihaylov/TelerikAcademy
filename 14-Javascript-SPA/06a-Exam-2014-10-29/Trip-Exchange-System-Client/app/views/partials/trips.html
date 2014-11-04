@@ -1,0 +1,87 @@
+<div trip-public ng-hide="identity.isAuthenticated();"></div>
+<div class="container" ng-show="identity.isAuthenticated();">
+    <div class="row text-center">
+        <h1>Trips</h1>
+    </div>
+    <div class="row well">
+        <div class="col-md-2">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="search.isFinished" ng-change="newSearch()"> Include finished
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="search.isMine" ng-change="newSearch()"> Only mine
+                </label>
+            </div>
+        </div>
+        <div class="col-md-2 text-center">
+            <div>
+                Sort by:
+            </div>
+            <select ng-model="search.sortBy" ng-change="newSearch()">
+                <option value=""></option>
+                <option value="driver">Driver</option>
+                <option value="date">Date</option>
+                <option value="seats">Free Seats</option>
+                <option value="from">From</option>
+                <option value="to">To</option>
+            </select>
+        </div>
+        <div class="col-md-2 text-center">
+            <div>
+                Order by:
+            </div>
+            <select ng-model="search.orderBy" ng-change="newSearch()">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+        </div>
+        <div class="col-md-2 text-center">
+            <div>
+                From:
+            </div>
+            <select ng-model="search.from" ng-change="newSearch()">
+                <option value=""></option>
+                <option value="{{city}}" ng-repeat="city in cities">{{city}}</option>
+            </select>
+        </div>
+        <div class="col-md-2 text-center">
+            <div>
+                To:
+            </div>
+            <select ng-model="search.to" ng-change="newSearch()">
+                <option value=""></option>
+                <option value="{{city}}" ng-repeat="city in cities">{{city}}</option>
+            </select>
+        </div>
+        <div class="col-md-2 text-center">
+            <button class="btn btn-primary" ng-click="SwitchToNew()">Create Trip</button>
+        </div>
+    </div>
+    <div class="row text-center">
+        <table class="table table-bordered table-striped text-center">
+            <tr class="text-center">
+                <th class="text-center">Driver name</th>
+                <th class="text-center">From</th>
+                <th class="text-center">To</th>
+                <th class="text-center">Departure Date</th>
+                <th class="text-center">Is Mine</th>
+            </tr>
+            <tr ng-repeat="trip in tripsPagged">
+                <td>
+                    <a href="#/trips/{{trip.id}}"> {{trip.driverName}}</a>
+                </td>
+                <td>{{trip.from}}</td>
+                <td>{{trip.to}}</td>
+                <td>
+                    <a href="#/trips/{{trip.id}}"> {{trip.departureDate |dateFilter}}</a>
+                </td>
+                <td>{{trip.isMine | isMineState}}</td>
+            </tr>
+        </table>
+
+        <pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></pagination>
+    </div>
+</div>

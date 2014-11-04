@@ -1,0 +1,35 @@
+<div driver-public ng-hide="identity.isAuthenticated();"></div>
+<div class="container" ng-show="identity.isAuthenticated();">
+    <div class="row text-center">
+        <div class="col-md-6">
+            <h1>Drivers</h1>
+        </div>
+        <div class="col-md-6">
+            <div class="row form-group form-horizontal">
+                <span class="control-label col-md-4 text-center">Search</span>
+
+                <div class="col-md-8">
+                    <input type="text" ng-model="search.name" ng-change="newSearch()" class="form-control"
+                           placeholder="Name">
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped text-center">
+            <tr class="text-center">
+                <th class="text-center">Driver name</th>
+                <th class="text-center">Upcoming Trips</th>
+                <th class="text-center">Total Trips</th>
+            </tr>
+            <tr ng-repeat="driver in driversPagged">
+                <td>
+                    <a href="#/drivers/{{driver.id}}"> {{driver.name}}</a>
+                </td>
+                <td>{{driver.numberOfUpcomingTrips}}</td>
+                <td>{{driver.numberOfTotalTrips}}</td>
+            </tr>
+        </table>
+
+        <pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></pagination>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="row" ng-controller="DriversController">
+    <h3 class="text-center">Latest registered drivers</h3>
+    <table class="table table-bordered table-striped text-center">
+        <tr class="text-center">
+            <th class="text-center">Driver name</th>
+            <th class="text-center">Upcoming Trips</th>
+            <th class="text-center">Total Trips</th>
+        </tr>
+        <tr ng-repeat="driver in drivers">
+            <td>{{driver.name}}</td>
+            <td>{{driver.numberOfUpcomingTrips}}</td>
+            <td>{{driver.numberOfTotalTrips}}</td>
+        </tr>
+    </table>
+</div>
