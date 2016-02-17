@@ -1,0 +1,21 @@
+﻿@using ForumSystem.Web.ViewModels.Home
+@model VotesViewModel
+
+@{
+    const string ActionName = "ChangeVote";
+    const string ControllerName = "Votes";
+    AjaxOptions options = new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "vote-" + Model.PostId };
+}
+
+<div class="well text-center">
+    <div class="row">
+        <div class="col-md-2">
+            @Ajax.ActionLink(" ", ActionName, ControllerName, new { dir = 1, postId = Model.PostId }, options, new { @class = "glyphicon glyphicon-chevron-up" })
+            @Ajax.ActionLink(" ", ActionName, ControllerName, new { dir = -1, postId = Model.PostId }, options, new { @class = "glyphicon glyphicon-chevron-down" })
+        </div>
+        <div class="col-md-10">
+            <div>@Model.Votes</div>
+            <div>Votes</div>
+        </div>
+    </div>
+</div>

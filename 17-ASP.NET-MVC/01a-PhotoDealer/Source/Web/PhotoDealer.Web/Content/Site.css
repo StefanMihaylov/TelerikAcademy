@@ -1,0 +1,80 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/* Custom styles*/
+.pictures {
+    margin: 5px 0;
+}
+
+.search-panel {
+    margin-bottom: 5px;
+}
+
+.home-logo {
+    color: black;
+    background: url(home-logo.jpg) 0 -280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo-text {
+    font-family: 'Freestyle Script';
+    font-size: 90px;
+    margin: 0;
+}
+
+.logo-menu {
+    font-family: 'Freestyle Script';
+    font-size: 40px;
+    margin: 0;
+}
+
+.home-top-pictures {
+    padding: 0 2px;
+}
+
+.col-pictures {
+    padding: 0 3px;
+}
+
+.col-label {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.tags-group {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.tags-panel {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.buttons {
+    margin: 0 10px;
+}

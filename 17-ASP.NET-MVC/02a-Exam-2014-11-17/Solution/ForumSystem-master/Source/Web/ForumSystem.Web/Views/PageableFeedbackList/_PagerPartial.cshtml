@@ -1,0 +1,31 @@
+﻿@{
+    const string ActionName = "ChangePage";
+    const string ControllerName = "PageableFeedbackList";
+    AjaxOptions options = new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "page-container" };
+
+    var currentPage = ViewBag.Page;
+    var maxPage = ViewBag.MaxPage;
+
+    if (maxPage == null || maxPage == 0)
+    {
+        maxPage = 1;
+    }
+
+    int maxCount = Math.Min(maxPage, 5);
+    int startNumber = 1;
+}
+
+<ul class="pagination">
+    <li class="@( currentPage == startNumber ? "disabled" : string.Empty)">
+        @Ajax.ActionLink("«", ActionName, ControllerName, new { page = currentPage - 1 }, options, null)
+    </li>
+    @for (int page = startNumber; page <= maxCount; page++)
+    {
+        <li class="@( currentPage == page ? "active" : string.Empty)">
+            @Ajax.ActionLink(page.ToString(), ActionName, ControllerName, new { page = page }, options, null)
+        </li>
+    }
+    <li class="@( currentPage == maxPage ? "disabled" : string.Empty)">
+        @Ajax.ActionLink("»", ActionName, ControllerName, new { page = currentPage + 1 }, options, null)
+    </li>
+</ul>

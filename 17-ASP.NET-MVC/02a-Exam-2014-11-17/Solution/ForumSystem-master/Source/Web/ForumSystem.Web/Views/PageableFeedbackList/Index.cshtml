@@ -1,0 +1,18 @@
+﻿@using ForumSystem.Web.ViewModels.Feedback
+@model IList<FeedbackViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>All Feedbacks</h2>
+
+<div id="page-container">
+    @{
+        Html.RenderPartial("_FeedbackPagePartial");
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/ajax")
+}

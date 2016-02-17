@@ -1,0 +1,22 @@
+﻿@using PhotoDealer.Web.ViewModels
+@using PhotoDealer.Web.Infrastructure.Search
+@model  IList<SmallPictureViewModel>
+
+@{
+    ViewBag.Title = "Owner";
+}
+
+@{
+    Html.RenderPartial("_SearchPartial", new SearchViewModel() { Page = 1, PageType = PageTypeEnum.PrivateType });
+}
+
+<div id="page-container">
+    @{
+        Html.RenderPartial("_PicturesPagePartial");
+    }
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/dropdownlist.js" type="text/javascript"></script>
+}

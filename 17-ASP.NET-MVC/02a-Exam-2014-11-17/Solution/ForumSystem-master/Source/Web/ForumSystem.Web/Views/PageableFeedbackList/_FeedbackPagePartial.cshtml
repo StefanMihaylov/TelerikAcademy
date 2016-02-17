@@ -1,0 +1,40 @@
+﻿@using ForumSystem.Web.ViewModels.Feedback
+@model IList<FeedbackViewModel>
+
+@if (Model.Count == 0)
+{
+    <div>
+        <h2>No Feedbacks</h2>
+    </div>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th> @Html.LabelFor(m => Model[0].Author)</th>
+                <th> @Html.LabelFor(m => Model[0].Title)</th>
+                <th> @Html.LabelFor(m => Model[0].Content)</th>
+                <th> @Html.LabelFor(m => Model[0].CreatedOn)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var feedback in Model)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(m => feedback.Author)</td>
+                    <td> @Html.DisplayFor(m => feedback.Title)</td>
+                    <td> @Html.DisplayFor(m => feedback.Content)</td>
+                    <td> @Html.DisplayFor(m => feedback.CreatedOn)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="text-center">
+        @{
+    Html.RenderPartial("_PagerPartial");
+        }
+    </div>
+}
+

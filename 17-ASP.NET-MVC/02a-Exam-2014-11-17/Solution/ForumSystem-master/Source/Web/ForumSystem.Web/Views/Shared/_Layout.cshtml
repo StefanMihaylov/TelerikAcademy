@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Forum System</title>
+    @Styles.Render("~/Content/css")
+    @RenderSection("styles", required: false)
+    @Styles.Render("~/Content/custom")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Forum System", "Index", "Home", new { area = string.Empty }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = string.Empty }, null)</li>
+                    <li>@Html.ActionLink("Ask question", "Ask", "Questions", new { area = string.Empty }, null)</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                            Feedback
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("Send", "Create", "Feedback",
+                                    new { area = string.Empty }, null)
+                            </li>
+                            @if (Request.IsAuthenticated)
+                            {
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="/Feedback/All">All Feedbacks</a>
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                    @if (Request.IsAuthenticated)
+                    {
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                            Administration
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("Posts", "Index", "Post",
+                                    new { area = "Administration" }, null)
+                                </li>
+                                @*<li class="divider"></li>*@
+                            </ul>
+                        </li>
+                        }
+
+                </ul>
+
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li class="active">Data</li>
+        </ol>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - <a href="https://github.com/NikolayIT/ForumSystem">open source forum system</a></p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

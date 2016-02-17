@@ -1,0 +1,66 @@
+﻿@using ForumSystem.Web.Areas.Administration.ViewModels
+@{
+    ViewBag.Title = "Index";
+    const string ControllerName = "Post";
+}
+
+<h3>All Posts</h3>
+@(Html.Kendo().Grid<AdminPostViewModel>    ()
+    .Name(ControllerName)
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.Id);
+        columns.Bound(p => p.Author).ClientTemplate(
+        "<span style='word-break: break-all'> #= Author # </span>"
+        ); ;
+        columns.Bound(p => p.Title);
+        columns.Bound(p => p.Content).ClientTemplate(
+        "<span style='word-break: break-all'> #= Content # </span>"
+        );
+        columns.Bound(p => p.CreatedOn).ClientTemplate("#=kendo.toString(CreatedOn, 'dd/MM/yyyy HH:mm:ss')#");
+        columns.Bound(p => p.ModifiedOn);
+        columns.Bound(p => p.IsDeleted).Width(20); ;
+        columns.Command(command => { command.Edit(); command.Destroy(); }).Width(100);
+    })
+    .ToolBar(toolbar => toolbar.Create())
+    .Editable(editable => editable.Mode(GridEditMode.PopUp).TemplateName("popupEditorTemplate")
+            .Window(w => w.HtmlAttributes(new { style = "width:1000px;" })))
+    .HtmlAttributes(new { style = "text-align: center;" })
+    .Sortable()
+    .Pageable(pager => pager.Refresh(true))
+    .Filterable()
+    .DataSource(dataSource => dataSource
+    .Ajax()
+    .PageSize(10)
+    .Events(events => events.Error("error_handler"))
+    .Model(model =>
+    {
+        model.Id(p => p.Id);
+        //model.Field(p => p.Id).Editable(false);
+        //model.Field(p => p.Author).Editable(false);
+        //model.Field(p => p.CreatedOn).Editable(false);
+        //model.Field(p => p.ModifiedOn).Editable(false);
+        //model.Field(p => p.IsDeleted).Editable(false);
+    })
+    .Create(update => update.Action("Create", ControllerName))
+    .Read(read => read.Action("Read", ControllerName))
+    .Update(update => update.Action("Update", ControllerName))
+    .Destroy(update => update.Action("Destroy", ControllerName)))
+)
+
+<script type="text/javascript">
+    function error_handler(e) {
+        if (e.errors) {
+            var message = "Errors:\n";
+            $.each(e.errors, function (key, value) {
+                if ('errors' in value) {
+                    $.each(value.errors, function () {
+                        message += this + "\n";
+                    });
+                }
+            });
+            alert(message);
+        }
+    }
+</script>
+
